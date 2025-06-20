@@ -62,11 +62,11 @@ class ComponentPage extends StatelessWidget {
                     KBuildInfoGroup(
                       infoMap: {
                         'Item': item.item,
-                        'Descrição': item.descricao,
+                        // 'Descrição': item.descricao,
                         'Local Referência': item.localReferencia,
                         'Prateleira': item.prateleira,
                         'Posição': item.posicao,
-                        'Fluxo': item.fluxo,
+                        // 'Fluxo': item.fluxo,
                       },
                     ),
                   ],

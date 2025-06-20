@@ -9,7 +9,7 @@ abstract class ComponentLocalDataSource {
 class ComponentLocalDataSourceImpl implements ComponentLocalDataSource {
   @override
   Future<List<ComponentModel>> getItemsFromJson() async {
-    final String response = await rootBundle.loadString('assets/data/components.json');
+    final String response = await rootBundle.loadString('assets/data/psme_components/psme_components.json');
     final List<dynamic> data = json.decode(response);
 
     return data.map((json) => ComponentModel.fromJson(json)).toList();

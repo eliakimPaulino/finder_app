@@ -4,9 +4,9 @@ class KBuildInfoGroup extends StatelessWidget {
   final Map<String, String> infoMap;
 
   const KBuildInfoGroup({
-    Key? key,
+    super.key,
     required this.infoMap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class KBuildInfoGroup extends StatelessWidget {
                 "${entry.key}: ",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  color: Colors.grey.shade700,
+                  color: Colors.blue.shade700,
                 ),
               ),
               Expanded(
