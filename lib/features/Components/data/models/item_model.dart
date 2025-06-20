@@ -17,7 +17,7 @@ class ComponentModel extends ComponentEntity {
   factory ComponentModel.fromJson(Map<String, dynamic> json) {
     return ComponentModel(
       item: json['item'] ?? '',
-      descricao: json['descricao'] ?? '',
+      descricao: json['description'] ?? '',
       area: json['area'] ?? '',
       localReferencia: json['local_referencia'] ?? '',
       prateleira: json['prateleira'] ?? '',
@@ -32,7 +32,7 @@ class ComponentModel extends ComponentEntity {
   Map<String, dynamic> toJson() {
     return {
       'item': item,
-      'descricao': descricao,
+      'description': descricao,
       'area': area,
       'local_referencia': localReferencia,
       'prateleira': prateleira,
