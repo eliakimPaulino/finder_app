@@ -2,16 +2,16 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import '../models/item_model.dart';
 
-abstract class ItemLocalDataSource {
-  Future<List<ItemModel>> getItemsFromJson();
+abstract class ComponentLocalDataSource {
+  Future<List<ComponentModel>> getItemsFromJson();
 }
 
-class ItemLocalDataSourceImpl implements ItemLocalDataSource {
+class ComponentLocalDataSourceImpl implements ComponentLocalDataSource {
   @override
-  Future<List<ItemModel>> getItemsFromJson() async {
-    final String response = await rootBundle.loadString('assets/data/items.json');
+  Future<List<ComponentModel>> getItemsFromJson() async {
+    final String response = await rootBundle.loadString('assets/data/components.json');
     final List<dynamic> data = json.decode(response);
 
-    return data.map((json) => ItemModel.fromJson(json)).toList();
+    return data.map((json) => ComponentModel.fromJson(json)).toList();
   }
 }

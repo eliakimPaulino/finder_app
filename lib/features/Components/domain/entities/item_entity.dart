@@ -1,4 +1,4 @@
-class ItemEntity {
+class ComponentEntity {
   final String item;
   final String descricao;
   final String area;
@@ -10,7 +10,7 @@ class ItemEntity {
   final String montagem;
   final String fluxo;
 
-  const ItemEntity({
+  const ComponentEntity({
     required this.item,
     required this.descricao,
     required this.area,

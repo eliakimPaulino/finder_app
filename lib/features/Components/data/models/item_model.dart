@@ -1,7 +1,7 @@
 import '../../domain/entities/item_entity.dart';
 
-class ItemModel extends ItemEntity {
-  const ItemModel({
+class ComponentModel extends ComponentEntity {
+  const ComponentModel({
     required super.item,
     required super.descricao,
     required super.area,
@@ -14,8 +14,8 @@ class ItemModel extends ItemEntity {
     required super.fluxo,
   });
 
-  factory ItemModel.fromJson(Map<String, dynamic> json) {
-    return ItemModel(
+  factory ComponentModel.fromJson(Map<String, dynamic> json) {
+    return ComponentModel(
       item: json['item'] ?? '',
       descricao: json['descricao'] ?? '',
       area: json['area'] ?? '',
