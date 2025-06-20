@@ -27,11 +27,12 @@ class ComponentPage extends StatelessWidget {
           }
 
           final items = snapshot.data ?? [];
+           final itemsTransformados = items.map((item) => item.formatarDescricao()).toList();
 
           return ListView.builder(
-            itemCount: items.length,
+            itemCount: itemsTransformados.length,
             itemBuilder: (_, index) {
-              final item = items[index];
+              final item = itemsTransformados[index];
               return Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 padding: const EdgeInsets.all(16),
@@ -62,11 +63,9 @@ class ComponentPage extends StatelessWidget {
                     KBuildInfoGroup(
                       infoMap: {
                         'Item': item.item,
-                        // 'Descrição': item.descricao,
                         'Local Referência': item.localReferencia,
                         'Prateleira': item.prateleira,
                         'Posição': item.posicao,
-                        // 'Fluxo': item.fluxo,
                       },
                     ),
                   ],
