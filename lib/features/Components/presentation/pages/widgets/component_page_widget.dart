@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+class KBuildInfoGroup extends StatelessWidget {
+  final Map<String, String> infoMap;
+
+  const KBuildInfoGroup({
+    Key? key,
+    required this.infoMap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: infoMap.entries.map((entry) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 2),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "${entry.key}: ",
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey.shade700,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  entry.value,
+                  style: TextStyle(color: Colors.grey.shade900),
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
+}
