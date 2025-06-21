@@ -5509,7 +5509,7 @@
 },
   {
   "item": "AA00002442965",
-  "description": "PLACA ID FREIO BOGIE 1 04.45/01",
+  "description": "PLACA ID FREIO BOGGIE 1 04.45/01",
   "area": "Compo",
   "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
   "prateleira": "P375",
@@ -5518,7 +5518,7 @@
 },
   {
   "item": "AA00002442998",
-  "description": "PLACA ID FREIO BOGIE 2 04.45/02",
+  "description": "PLACA ID FREIO BOGGIE 2 04.45/02",
   "area": "Compo",
   "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
   "prateleira": "P375",
@@ -10928,8 +10928,8 @@
   {
   "item": "DTR0009907868",
   "description": "SCREW H M10X45 FLZN 0.15 A3J",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A01",
   "fluxo": "FL06"
@@ -10937,8 +10937,8 @@
   {
   "item": "DTR0009909431",
   "description": "ARRUELA NORD-posicao NL10 CARB ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A02",
   "fluxo": "FL06"
@@ -10947,7 +10947,7 @@
   "item": "DTR0000047355",
   "description": "PARAFUSO H M12X35",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A03",
   "fluxo": "FL06"
@@ -10956,7 +10956,7 @@
   "item": "DTR0009909438",
   "description": "ARRUELA NORD-posicao NL12 CARB ZFL",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A04",
   "fluxo": "FL06"
@@ -10964,8 +10964,8 @@
   {
   "item": "DTR0021183132",
   "description": "PINO ELASTICO - 8X30 - ST - ISO 8752",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A05",
   "fluxo": "FL06"
@@ -10974,7 +10974,7 @@
   "item": "DTR0009907851",
   "description": "PARAF HEX M8X20 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A06",
   "fluxo": "FL06"
@@ -10982,8 +10982,8 @@
   {
   "item": "DTR0009908003",
   "description": "PARAFUSO H M16X65",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A07",
   "fluxo": "FL06"
@@ -10992,7 +10992,7 @@
   "item": "DTR0009907856",
   "description": "PARAFUSO H M8X45 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "A10",
   "fluxo": "FL06"
@@ -11001,7 +11001,7 @@
   "item": "DTR0000002536",
   "description": "PINO ELÁSTICO ø10x45 ISO 8752 C/ 2",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B01",
   "fluxo": "FL06"
@@ -11009,8 +11009,8 @@
   {
   "item": "AR00000224186",
   "description": "CALÇO EM 2 PARTES SOB PRIMÁRIA - 1mm²",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B02",
   "fluxo": "FL04"
@@ -11018,8 +11018,8 @@
   {
   "item": "DTR0024412010",
   "description": "PLUGUE ROSQUEADO INT M16",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B03",
   "fluxo": "FL06"
@@ -11027,8 +11027,8 @@
   {
   "item": "AR00000230425",
   "description": "PLACA DE FIXA��O DE BRA�ADEIRA",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B04",
   "fluxo": "Indefinido"
@@ -11036,8 +11036,8 @@
   {
   "item": "AR00000231438",
   "description": "CHAPA DE FIXA��O DA BRA�ADEIRA",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B05",
   "fluxo": "FL06"
@@ -11046,7 +11046,7 @@
   "item": "DTR0009907853",
   "description": "PARAF CAB HEX RT ISO4017 M8X30 8.8",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B06",
   "fluxo": "FL06"
@@ -11054,8 +11054,8 @@
   {
   "item": "AR00000159922",
   "description": "PLUGUE",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B07",
   "fluxo": "FL06"
@@ -11063,8 +11063,8 @@
   {
   "item": "DTR0009907558",
   "description": "PARAF HSC M8X30 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B08",
   "fluxo": "FL06"
@@ -11073,7 +11073,7 @@
   "item": "DTR0009907555",
   "description": "PARAF CAB CIL ISO4762 M8X16 8.8 ZFL",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B09",
   "fluxo": "FL06"
@@ -11082,7 +11082,7 @@
   "item": "DTR0009445046",
   "description": "ARRUELA DE SEGURANCA VS 8 CARB ZFL",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "B10",
   "fluxo": "FL06"
@@ -11090,8 +11090,8 @@
   {
   "item": "DTR0009907998",
   "description": "PARAF CAB HEX M16x40 - 10.9 ISO 4017",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C01",
   "fluxo": "FL06"
@@ -11100,7 +11100,7 @@
   "item": "DTR0000078771",
   "description": "PINO EL C 2 CHANF ISO8752 10X30 CAR",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C02",
   "fluxo": "Indefinido"
@@ -11109,7 +11109,7 @@
   "item": "DTR0009907096",
   "description": "ARRUELA PLANA L M10 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C03",
   "fluxo": "FL06"
@@ -11118,7 +11118,7 @@
   "item": "DTR0009907240",
   "description": "ARRU. CS M M10 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C04",
   "fluxo": "FL06"
@@ -11127,7 +11127,7 @@
   "item": "DTR0009907869",
   "description": "PARAF HEX M10X50 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C05",
   "fluxo": "FL06"
@@ -11135,8 +11135,8 @@
   {
   "item": "DTR0000228857",
   "description": "TAMPA PARAFUSADA DE DI�METRO INTERNO M26",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C06",
   "fluxo": "FL06"
@@ -11144,8 +11144,8 @@
   {
   "item": "AR00000224178",
   "description": "CALÇO EM 2 PARTES SOB PRIMÁRIA - 5mm²",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C07",
   "fluxo": "FL06"
@@ -11153,8 +11153,8 @@
   {
   "item": "HY00000007237",
   "description": "CN.SV4",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C08",
   "fluxo": "Indefinido"
@@ -11162,8 +11162,8 @@
   {
   "item": "HY00000007231",
   "description": "CN.SV3",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C09",
   "fluxo": "Indefinido"
@@ -11171,8 +11171,8 @@
   {
   "item": "HY00000007148",
   "description": "CN.SV1",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P109",
   "posicao": "C10",
   "fluxo": "Indefinido"
@@ -11180,8 +11180,8 @@
   {
   "item": "DTR0009907987",
   "description": "SCREW H M12X40 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A01",
   "fluxo": "FL06"
@@ -11189,8 +11189,8 @@
   {
   "item": "DTR0009908492",
   "description": "PARAF H ISO 4014 - M6X50-18-8.8 ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A02",
   "fluxo": "FL06"
@@ -11198,8 +11198,8 @@
   {
   "item": "DTR0009907247",
   "description": "ARRU. CS M M12 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A03",
   "fluxo": "FL06"
@@ -11207,8 +11207,8 @@
   {
   "item": "DTR0000001794",
   "description": "GRAMPO (HS) DIAM. 6",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A04",
   "fluxo": "FL06"
@@ -11216,8 +11216,8 @@
   {
   "item": "DTR0009907877",
   "description": "PARAF HEX M12X30 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A05",
   "fluxo": "FL06"
@@ -11225,8 +11225,8 @@
   {
   "item": "DTR0009907201",
   "description": "PORCA TRAVA HEX 2 ENC. HG M16 FLZN0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A06",
   "fluxo": "FL06"
@@ -11234,8 +11234,8 @@
   {
   "item": "DTR0000147409",
   "description": "BASE HAN 24HPR",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A07",
   "fluxo": "FL06"
@@ -11243,8 +11243,8 @@
   {
   "item": "DTR0021234074",
   "description": "ANEL ELASTICO RETENCAO DIN472 170X4",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A08",
   "fluxo": "FL06"
@@ -11252,8 +11252,8 @@
   {
   "item": "DTR0009909457",
   "description": "WEDGE posicao WASHER - M24 -STEEL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A09",
   "fluxo": "FL06"
@@ -11261,8 +11261,8 @@
   {
   "item": "DTR0009445023",
   "description": "ARRU. VS M16 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "A10",
   "fluxo": "FL06"
@@ -11270,8 +11270,8 @@
   {
   "item": "DTR0009909440",
   "description": "WASHER posicao L M12 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B01",
   "fluxo": "FL06"
@@ -11279,8 +11279,8 @@
   {
   "item": "DTR0009907228",
   "description": "NUT H posicao 2 SLOTS M6 ZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B02",
   "fluxo": "FL06"
@@ -11288,8 +11288,8 @@
   {
   "item": "AR00000159267",
   "description": "BARRA ROSCADA",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B04",
   "fluxo": "FL06"
@@ -11297,8 +11297,8 @@
   {
   "item": "DTR0000553376",
   "description": "SELF-THREADING SCREW TCB TORX M4X8",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B06",
   "fluxo": "FL06"
@@ -11306,8 +11306,8 @@
   {
   "item": "AR00000139276",
   "description": "PLACA DE IDENTIFICAÇÃO PADR�O",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B07",
   "fluxo": "FL04"
@@ -11315,8 +11315,8 @@
   {
   "item": "DTR0000553437",
   "description": "FLAT WHASHER 4.2X8.0X2 PA 6.6",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B08",
   "fluxo": "FL06"
@@ -11324,8 +11324,8 @@
   {
   "item": "DTR0009907946",
   "description": "PARAF CAB HEX RT ISO4017 M24X60 8.8",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B09",
   "fluxo": "FL06"
@@ -11333,8 +11333,8 @@
   {
   "item": "DTR0009907946",
   "description": "PARAF CAB HEX RT ISO4017 M24X60 8.8",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "B10",
   "fluxo": "FL06"
@@ -11342,8 +11342,8 @@
   {
   "item": "AR00000159378",
   "description": "MANGUEIRA DO DISTRIBUIDOR - BICO 2",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C01",
   "fluxo": "Indefinido"
@@ -11351,8 +11351,8 @@
   {
   "item": "DTR0009907405",
   "description": "PARAFUSO CABECA CILINDRICA HEXAGONAL INT",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C02",
   "fluxo": "Indefinido"
@@ -11360,8 +11360,8 @@
   {
   "item": "DTR0000250086",
   "description": "PORCA BULKHEAD D.E. 10 - M16x1,5 -",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C03",
   "fluxo": "FL06"
@@ -11369,8 +11369,8 @@
   {
   "item": "DTR0000042186",
   "description": "ML.UNION BODY BSPP+SEAL ED D10-G1/4",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C04",
   "fluxo": "Indefinido"
@@ -11378,8 +11378,8 @@
   {
   "item": "DTR0009445023",
   "description": "ARRU. VS M16 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C05",
   "fluxo": "FL06"
@@ -11387,8 +11387,8 @@
   {
   "item": "DTR0009907929",
   "description": "PARAFUSO H M20X55",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C06",
   "fluxo": "FL06"
@@ -11396,8 +11396,8 @@
   {
   "item": "DTR0009907953",
   "description": "PARAF CAB HEX RT ISO4017 M24X120 8.",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C07",
   "fluxo": "FL06"
@@ -11405,8 +11405,8 @@
   {
   "item": "DTR0009908331",
   "description": "PARAF CAB HEX  M16X75 8.8  ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C08",
   "fluxo": "FL06"
@@ -11414,8 +11414,8 @@
   {
   "item": "DTR0009445028",
   "description": "ARRU. VS M20 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "C09",
   "fluxo": "FL06"
@@ -11423,8 +11423,8 @@
   {
   "item": "DTR0009907201",
   "description": "PORCA TRAVA HEX 2 ENC. HG M16 FLZN0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D02",
   "fluxo": "FL06"
@@ -11432,8 +11432,8 @@
   {
   "item": "DTR0009908331",
   "description": "PARAF CAB HEX  M16X75 8.8  ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D03",
   "fluxo": "FL06"
@@ -11441,8 +11441,8 @@
   {
   "item": "DTR0009908331",
   "description": "PARAF CAB HEX  M16X75 8.8  ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D04",
   "fluxo": "FL06"
@@ -11450,8 +11450,8 @@
   {
   "item": "DTR0000147409",
   "description": "BASE HAN 24HPR",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D05",
   "fluxo": "FL06"
@@ -11459,8 +11459,8 @@
   {
   "item": "DTR0021234074",
   "description": "ANEL ELASTICO RETENCAO DIN472 170X4",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D06",
   "fluxo": "FL06"
@@ -11468,8 +11468,8 @@
   {
   "item": "DTR0009907946",
   "description": "PARAF CAB HEX RT ISO4017 M24X60 8.8",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D07",
   "fluxo": "FL06"
@@ -11477,8 +11477,8 @@
   {
   "item": "DTR0009907929",
   "description": "PARAFUSO H M20X55",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D08",
   "fluxo": "FL06"
@@ -11486,8 +11486,8 @@
   {
   "item": "DTR0009907953",
   "description": "PARAF CAB HEX RT ISO4017 M24X120 8.",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "D09",
   "fluxo": "FL06"
@@ -11495,8 +11495,8 @@
   {
   "item": "DTR0000002608",
   "description": "CLAMP (HS) DIAM. 10",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "E01",
   "fluxo": "FL06"
@@ -11504,8 +11504,8 @@
   {
   "item": "DTR0009907201",
   "description": "PORCA TRAVA HEX 2 ENC. HG M16 FLZN0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "E02",
   "fluxo": "FL06"
@@ -11513,8 +11513,8 @@
   {
   "item": "DTR0009908331",
   "description": "PARAF CAB HEX  M16X75 8.8  ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P112",
   "posicao": "E03",
   "fluxo": "FL06"
@@ -11522,8 +11522,8 @@
   {
   "item": "DTR0009909555",
   "description": "ARRUELA CONICA TREP 3L 6 INOX PAS",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A01",
   "fluxo": "FL06"
@@ -11531,8 +11531,8 @@
   {
   "item": "DTR0021186796",
   "description": "PIN.ISO1234-2X14-STEEL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A02",
   "fluxo": "FL06"
@@ -11540,8 +11540,8 @@
   {
   "item": "DTR0009907059",
   "description": "ARRUELA LISA 8 CARB ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A03",
   "fluxo": "FL06"
@@ -11549,8 +11549,8 @@
   {
   "item": "DTR0000054385",
   "description": "HINGE PIN ISO 2341 B-6-20-2",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A04",
   "fluxo": "FL06"
@@ -11558,8 +11558,8 @@
   {
   "item": "DTR0021186365",
   "description": "PIN.ISO1234-3.2X20-STEEL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A05",
   "fluxo": "FL06"
@@ -11567,8 +11567,8 @@
   {
   "item": "DTR0009907054",
   "description": "ARRU. LISA M M6 ZN 0.15 200HV",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A06",
   "fluxo": "FL06"
@@ -11576,8 +11576,8 @@
   {
   "item": "DTR0021186873",
   "description": "PIN.ISO1234-6.3X71-STEEL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A07",
   "fluxo": "FL06"
@@ -11585,8 +11585,8 @@
   {
   "item": "DTR0009907245",
   "description": "ARRUELA CS M M12",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A08",
   "fluxo": "FL06"
@@ -11594,8 +11594,8 @@
   {
   "item": "DTR0009907050",
   "description": "ARRU. LISA M M5 ZN 0.15 200HV",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A09",
   "fluxo": "FL06"
@@ -11603,8 +11603,8 @@
   {
   "item": "DTR0000006876",
   "description": "ABRACADEIRA P/ CABO S 8/330/30-85 P",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "A10",
   "fluxo": "FL06"
@@ -11612,8 +11612,8 @@
   {
   "item": "DTR0009907095",
   "description": "ARRUELA LISA LARGA 8 CARB ZFL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B01",
   "fluxo": "FL06"
@@ -11621,8 +11621,8 @@
   {
   "item": "DTR0000341202",
   "description": "SUPORTES GIRATORIOS TIPO TM3-X2-COY",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B02",
   "fluxo": "FL06"
@@ -11630,8 +11630,8 @@
   {
   "item": "DTR0000021196",
   "description": "PORCA H FR 2 FT.NFE25-411-M10-A4-70",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B03",
   "fluxo": "FL06"
@@ -11639,8 +11639,8 @@
   {
   "item": "DTR0000124441",
   "description": "PIN.ISO8752-10X24-STEEL",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B04",
   "fluxo": "FL06"
@@ -11648,8 +11648,8 @@
   {
   "item": "DTR0009907000",
   "description": "ARRUELA LISA ISO7089 10 INOX PAS",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B05",
   "fluxo": "FL06"
@@ -11657,8 +11657,8 @@
   {
   "item": "DTR0009907193",
   "description": "PORCA H FR 2 SLOT.NFE25-411-M12-A4-",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B06",
   "fluxo": "FL06"
@@ -11666,8 +11666,8 @@
   {
   "item": "DTR0009907016",
   "description": "ARRU. LISA M M16 FLZN 0.15 300HV",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B07",
   "fluxo": "FL06"
@@ -11675,8 +11675,8 @@
   {
   "item": "DTR0025211765",
   "description": "TERMINAL CU 10mm²",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B08",
   "fluxo": "Indefinido"
@@ -11684,8 +11684,8 @@
   {
   "item": "DTR0009907005",
   "description": "ARRUELA PLANA M M12",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B09",
   "fluxo": "FL06"
@@ -11693,8 +11693,8 @@
   {
   "item": "DTR0009907559",
   "description": "PARAFUSO CH M8X35",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "B10",
   "fluxo": "FL06"
@@ -11702,8 +11702,8 @@
   {
   "item": "DTR0009907910",
   "description": "PARAF HEX M16X80 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "C01",
   "fluxo": "FL06"
@@ -11711,8 +11711,8 @@
   {
   "item": "AR00000251461",
   "description": "ARRUELA ESPECIAL �31/56 ROSCA 5.5",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "C02",
   "fluxo": "FL06"
@@ -11720,8 +11720,8 @@
   {
   "item": "DTR0009907885",
   "description": "PARAF HEX M12X70 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "C03",
   "fluxo": "FL06"
@@ -11729,8 +11729,8 @@
   {
   "item": "DTR0009908005",
   "description": "PARAF HEX M16X80 FLZN 0.15 10.9",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "C04",
   "fluxo": "FL06"
@@ -11738,8 +11738,8 @@
   {
   "item": "DTR0009907883",
   "description": "PARAF HEX M12X60 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "C05",
   "fluxo": "FL06"
@@ -11747,8 +11747,8 @@
   {
   "item": "DTR0009907875",
   "description": "SCREW H M10X90 FLZN 0.15",
-  "area": "BOGIE",
-  "local_referencia": "BOGIE",
+  "area": "BOGGIE",
+  "local_referencia": "BOGGIE",
   "prateleira": "P207",
   "posicao": "C06",
   "fluxo": "Indefinido"
@@ -11757,7 +11757,7 @@
   "item": "DTR0009907859",
   "description": "PARAFUSO HEX M8X60 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "A09",
   "fluxo": "FL06"
@@ -11766,7 +11766,7 @@
   "item": "DTR0024412003",
   "description": "PLUG, KAPSTO ROSQUEADO GPN 700 M 10",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "A10",
   "fluxo": "FL06"
@@ -11775,7 +11775,7 @@
   "item": "DTR0009909555",
   "description": "ARRUELA CONICA TREP 3L 6 INOX PAS",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B01",
   "fluxo": "FL06"
@@ -11784,7 +11784,7 @@
   "item": "DTR0009907303",
   "description": "WASHER CS E25-511-8-18-1.4-A4-80",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B02",
   "fluxo": "FL06"
@@ -11793,7 +11793,7 @@
   "item": "AR00000244599",
   "description": "ABRACADEIRA 3X DIA.20 - METADE",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B03",
   "fluxo": "FL06"
@@ -11802,7 +11802,7 @@
   "item": "DTR0009908100",
   "description": "PARAF HEX M6X16 INOX A2-70",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B04",
   "fluxo": "FL06"
@@ -11811,7 +11811,7 @@
   "item": "DTR0009907098",
   "description": "WASHER ISO7093-1-14-300HV-STEEL",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B05",
   "fluxo": "FL06"
@@ -11820,7 +11820,7 @@
   "item": "AR00000243142",
   "description": "ABRACADEIRA DIA. 28.5 METADE",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B06",
   "fluxo": "FL06"
@@ -11829,7 +11829,7 @@
   "item": "DTR0000377178",
   "description": "NCR - D18 - ST/SST/NBR - 8434-1L",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B07",
   "fluxo": "FL06"
@@ -11838,7 +11838,7 @@
   "item": "AR00000243323",
   "description": "ARRUELA D9-20-H11",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B08",
   "fluxo": "Indefinido"
@@ -11847,7 +11847,7 @@
   "item": "DTR0009908144",
   "description": "PARAF CAB HEX RT ISO4017 M12X60 A2-",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B09",
   "fluxo": "FL06"
@@ -11856,7 +11856,7 @@
   "item": "DTR0009908121",
   "description": "PARAF CAB HEX RT ISO4017 M8X70 A2-70 PAS",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "B10",
   "fluxo": "FL06"
@@ -11865,7 +11865,7 @@
   "item": "AR00000242334",
   "description": "ABRACADEIRA 1-2 DIA. 15",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C01",
   "fluxo": "FL06"
@@ -11874,7 +11874,7 @@
   "item": "DTR0009907054",
   "description": "ARRU. LISA M M6 ZN 0.15 200HV",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C02",
   "fluxo": "FL06"
@@ -11883,7 +11883,7 @@
   "item": "DTR0009908119",
   "description": "PARAF HEX. ISO4017-M8X60-A2-70",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C03",
   "fluxo": "FL06"
@@ -11892,7 +11892,7 @@
   "item": "DTR0009907559",
   "description": "PARAFUSO CH M8X35",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C04",
   "fluxo": "FL06"
@@ -11901,7 +11901,7 @@
   "item": "DTR0009908116",
   "description": "PARAFUSO H M8X45",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C05",
   "fluxo": "FL06"
@@ -11910,7 +11910,7 @@
   "item": "DTR0009908005",
   "description": "PARAF HEX M16X80 FLZN 0.15 10.9",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C06",
   "fluxo": "FL06"
@@ -11919,7 +11919,7 @@
   "item": "DTR0009908464",
   "description": "SCREW H M24X120-54 FLZN 0.15",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C07",
   "fluxo": "FL06"
@@ -11928,7 +11928,7 @@
   "item": "DTR0009907898",
   "description": "SCREW H.ISO4017-M14X65-8.8",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C08",
   "fluxo": "FL06"
@@ -11937,7 +11937,7 @@
   "item": "DTR0009907936",
   "description": "PARAFUSO H M20X110",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "C10",
   "fluxo": "FL06"
@@ -11946,7 +11946,7 @@
   "item": "DTR0009907003",
   "description": "ARRUELA LISA 10 CARB ZFL",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D01",
   "fluxo": "FL06"
@@ -11955,7 +11955,7 @@
   "item": "AR00000247569",
   "description": "HALF CLAMP 2X�27.4",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D02",
   "fluxo": "FL06"
@@ -11964,7 +11964,7 @@
   "item": "DTR0000423158",
   "description": "WASHER FLAT L M6",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D03",
   "fluxo": "FL06"
@@ -11973,7 +11973,7 @@
   "item": "DTR00252112JN",
   "description": "TERM,BARE,TUB CU 50 D10W21 AL PR150",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D04",
   "fluxo": "Indefinido"
@@ -11982,7 +11982,7 @@
   "item": "DTR0009907193",
   "description": "PORCA H FR 2 SLOT.NFE25-411-M12-A4-",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D05",
   "fluxo": "FL06"
@@ -11991,7 +11991,7 @@
   "item": "DTR0021234074",
   "description": "ANEL RET.P/FURO",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D06",
   "fluxo": "FL06"
@@ -12000,7 +12000,7 @@
   "item": "DTR0009907892",
   "description": "SCREW H.ISO4017-M14X35-8.8",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D07",
   "fluxo": "FL06"
@@ -12009,7 +12009,7 @@
   "item": "DTR0025211235",
   "description": "TERMINAL TUBULAR TN 185mm² M12",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D08",
   "fluxo": "FL06"
@@ -12018,7 +12018,7 @@
   "item": "DTR0000002091",
   "description": "ABRACADEIRA DIAMETRO DE 25mm² COM EPDM",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D09",
   "fluxo": "FL06"
@@ -12027,7 +12027,7 @@
   "item": "DTR0009908303",
   "description": "SCREW H.ISO4017-M10X140-8.8",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "D10",
   "fluxo": "FL06"
@@ -12036,7 +12036,7 @@
   "item": "DTR0009907900",
   "description": "SCREW H.ISO4017-M14X80-8.8",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E01",
   "fluxo": "FL06"
@@ -12045,7 +12045,7 @@
   "item": "DTR0000341202",
   "description": "SUPORTES GIRATORIOS TIPO TM3-X2-COY",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E02",
   "fluxo": "FL06"
@@ -12054,7 +12054,7 @@
   "item": "DTR0009907934",
   "description": "SCREW H M20X90 FLZN 0.15",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E03",
   "fluxo": "FL06"
@@ -12063,7 +12063,7 @@
   "item": "DTR0000021196",
   "description": "PORCA H FR 2 FT.NFE25-411-M10-A4-70",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E04",
   "fluxo": "FL06"
@@ -12072,7 +12072,7 @@
   "item": "AR00000242831",
   "description": "PARAFUSO DE FIXACAO - M20 COMPR. 210",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E05",
   "fluxo": "FL06"
@@ -12081,7 +12081,7 @@
   "item": "DTR0000006876",
   "description": "ABRACADEIRA P/ CABO S 8/330/30-85 P",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E06",
   "fluxo": "FL06"
@@ -12090,7 +12090,7 @@
   "item": "AR00000245162",
   "description": "ABRACADEIRA 2X CABOS DIA.25 - METADE",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E07",
   "fluxo": "FL06"
@@ -12099,7 +12099,7 @@
   "item": "AR00000243797",
   "description": "PINO DO MANIPULO",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E08",
   "fluxo": "FL06"
@@ -12108,7 +12108,7 @@
   "item": "DTR0009908013",
   "description": "SCREW H M20X50 FLZN 0.15",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E09",
   "fluxo": "FL06"
@@ -12117,7 +12117,7 @@
   "item": "DTR0000166095",
   "description": "HEXAGON HEAD SCREW EN 1662� M12X45",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "E10",
   "fluxo": "FL06"
@@ -12126,7 +12126,7 @@
   "item": "DTR0000189280",
   "description": "LUVA PARA BRA�ADEIRA DE MONTAG DUPLA D22",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F01",
   "fluxo": "FL06"
@@ -12135,7 +12135,7 @@
   "item": "AR00000244495",
   "description": "ABRACADEIRA DIA. 13",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F02",
   "fluxo": "FL06"
@@ -12144,7 +12144,7 @@
   "item": "DTR0009907106",
   "description": "ARRU. LISA L M8 INOX A2",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F03",
   "fluxo": "FL06"
@@ -12153,7 +12153,7 @@
   "item": "DTR0009908114",
   "description": "PARAFUSO H M8X35",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F05",
   "fluxo": "FL06"
@@ -12162,7 +12162,7 @@
   "item": "DTR0009908112",
   "description": "PARAF HEX M8X25 INOX A2-70",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F06",
   "fluxo": "FL06"
@@ -12171,7 +12171,7 @@
   "item": "DTR0009907880",
   "description": "PARAF CAB HEX RT ISO4017 M12X45 8.8",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F07",
   "fluxo": "FL06"
@@ -12180,7 +12180,7 @@
   "item": "DTR0009907902",
   "description": "PARAFUSO H M16X35",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F08",
   "fluxo": "FL06"
@@ -12189,7 +12189,7 @@
   "item": "DTR0009907232",
   "description": "PORCA H 2 ENTALHES M8 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F09",
   "fluxo": "FL06"
@@ -12198,7 +12198,7 @@
   "item": "DTR0009907059",
   "description": "ARRUELA LISA 8 CARB ZFL",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "F10",
   "fluxo": "FL06"
@@ -12207,7 +12207,7 @@
   "item": "DTR0009908126",
   "description": "PARAFUSO H M10X35",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G01",
   "fluxo": "FL06"
@@ -12216,7 +12216,7 @@
   "item": "DTR0009907571",
   "description": "PARAFUSO HSC M10X30",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G02",
   "fluxo": "FL06"
@@ -12225,7 +12225,7 @@
   "item": "DTR0009907881",
   "description": "PARAF HEX M12X50 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G03",
   "fluxo": "FL06"
@@ -12234,7 +12234,7 @@
   "item": "DTR0021186796",
   "description": "PIN.ISO1234-2X14-STEEL",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G04",
   "fluxo": "FL06"
@@ -12243,7 +12243,7 @@
   "item": "DTR0009907254",
   "description": "ARRU. CS M16 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G05",
   "fluxo": "FL06"
@@ -12252,7 +12252,7 @@
   "item": "DTR0009907191",
   "description": "PORCA TRAVA HEX 2ENCAIXES M12 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G06",
   "fluxo": "FL06"
@@ -12261,7 +12261,7 @@
   "item": "DTR0009907855",
   "description": "PARAF HEX M8X40 FLZN 0.15",
   "area": "COMPO ",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G07",
   "fluxo": "FL06"
@@ -12270,7 +12270,7 @@
   "item": "DTR0009907954",
   "description": "SCREW H M24X140 FLZN 0.15",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G08",
   "fluxo": "FL06"
@@ -12279,7 +12279,7 @@
   "item": "DTR0009909538",
   "description": "WASHER TREP-3L-14-XC75",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G09",
   "fluxo": "FL06"
@@ -12288,7 +12288,7 @@
   "item": "DTR0009907252",
   "description": "ARRUELA CS M14 - XC60",
   "area": "Compo",
-  "local_referencia": "BOGIE A",
+  "local_referencia": "BOGGIE A",
   "prateleira": "P23",
   "posicao": "G10",
   "fluxo": "FL06"
@@ -25651,7 +25651,7 @@
 },
   {
   "item": "AA00002442965",
-  "description": "PLACA ID FREIO BOGIE 1 04.45/01",
+  "description": "PLACA ID FREIO BOGGIE 1 04.45/01",
   "area": "Fitting",
   "local_referencia": "Fitting",
   "prateleira": "P390",
@@ -25660,7 +25660,7 @@
 },
   {
   "item": "AA00002442998",
-  "description": "PLACA ID FREIO BOGIE 2 04.45/02",
+  "description": "PLACA ID FREIO BOGGIE 2 04.45/02",
   "area": "Fitting",
   "local_referencia": "Fitting",
   "prateleira": "P390",
