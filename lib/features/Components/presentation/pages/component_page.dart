@@ -1,92 +1,58 @@
-import 'package:finder_app/features/Components/data/datasources/component_local_data_source.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../data/datasources/component_local_data_source.dart';
+import '../../data/repositories/component_repository_impl.dart';
+import '../../domain/usecases/get_items.dart';
+import '../controllers/component_controller.dart';
 import '../../../../core/constants/finder_app_colors.dart';
 import '../../../../core/constants/sizes.dart';
-import '../../domain/entities/item_entity.dart';
-import '../../domain/usecases/get_items.dart';
-import '../../data/repositories/component_repository_impl.dart';
 import 'widgets/component_page_widget.dart';
 
-class ComponentPage extends StatefulWidget {
+class ComponentPage extends StatelessWidget {
   const ComponentPage({super.key});
 
   @override
-  State<ComponentPage> createState() => _ComponentPageState();
-}
-
-class _ComponentPageState extends State<ComponentPage> {
-  final GetItems getItems = GetItems(
-    ComponentRepositoryImpl(localDataSource: ComponentLocalDataSourceImpl()),
-  );
-
-  final TextEditingController searchController = TextEditingController();
-
-  List<ComponentEntity> _allItems = [];
-  List<ComponentEntity> _filteredItems = [];
-  bool _isLoading = true;
-  String _error = '';
-
-  @override
-  void initState() {
-    super.initState();
-    _fetchItems();
-  }
-
-  Future<void> _fetchItems() async {
-    try {
-      final items = await getItems();
-      setState(() {
-        _allItems = items;
-        _filteredItems = items;
-        _isLoading = false;
-      });
-    } catch (e) {
-      setState(() {
-        _error = e.toString();
-        _isLoading = false;
-      });
-    }
-  }
-
-  void searchComponent(String query) {
-    final filtered = _allItems.where((item) {
-      final codigoItem = item.item.toLowerCase();
-      final search = query.toLowerCase();
-      return codigoItem.contains(search);
-    }).toList();
-
-    setState(() {
-      _filteredItems = filtered;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Itens')),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: TextField(
-              controller: searchController,
-              decoration: const InputDecoration(
-                labelText: 'Buscar',
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.search),
-              ),
-              onChanged: searchComponent,
-            ),
+    return ChangeNotifierProvider(
+      create: (_) => ComponentController(
+        getItemsUseCase: GetItems(
+          ComponentRepositoryImpl(
+            localDataSource: ComponentLocalDataSourceImpl(),
           ),
-          Expanded(
-            child: _isLoading
-                ? const Center(child: CircularProgressIndicator())
-                : _error.isNotEmpty
-                ? Center(child: Text('Erro: $_error'))
-                : ListView.builder(
-                    itemCount: _filteredItems.length,
+        ),
+      )..loadItems(),
+      child: Scaffold(
+        appBar: AppBar(title: const Text('Itens')),
+        body: Consumer<ComponentController>(
+          builder: (context, controller, _) {
+            if (controller.isLoading) {
+              return const Center(child: CircularProgressIndicator());
+            }
+
+            if (controller.error.isNotEmpty) {
+              return Center(child: Text('Erro: ${controller.error}'));
+            }
+
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: TextField(
+                    controller: controller.searchController,
+                    decoration: const InputDecoration(
+                      labelText: 'Buscar',
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.search),
+                    ),
+                    onChanged: controller.search,
+                  ),
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: controller.items.length,
                     itemBuilder: (_, index) {
-                      final item = _filteredItems[index].formatarDescricao();
+                      final item = controller.items[index].formatarDescricao();
                       return Container(
                         margin: const EdgeInsets.symmetric(
                           horizontal: 16,
@@ -129,8 +95,11 @@ class _ComponentPageState extends State<ComponentPage> {
                       );
                     },
                   ),
-          ),
-        ],
+                ),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
