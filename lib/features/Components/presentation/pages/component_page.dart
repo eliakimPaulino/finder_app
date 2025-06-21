@@ -41,7 +41,7 @@ class ComponentPage extends StatelessWidget {
                   child: TextField(
                     controller: controller.searchController,
                     decoration: const InputDecoration(
-                      labelText: 'Buscar',
+                      labelText: 'DTR',
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.search),
                     ),
@@ -88,6 +88,7 @@ class ComponentPage extends StatelessWidget {
                                 'Local Referência': item.localReferencia,
                                 'Prateleira': item.prateleira,
                                 'Posição': item.posicao,
+                                'Fluxo': item.fluxo,
                               },
                             ),
                           ],

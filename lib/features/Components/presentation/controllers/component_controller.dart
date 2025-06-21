@@ -36,9 +36,8 @@ class ComponentController extends ChangeNotifier {
   }
 
   void search(String query) {
-    final lower = query.toLowerCase();
     _filteredItems = _allItems
-        .where((item) => item.item.toLowerCase().contains(lower))
+        .where((item) => item.item.toLowerCase().contains(query))
         .toList();
     notifyListeners();
   }

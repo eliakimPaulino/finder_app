@@ -26,7 +26,7 @@ class KBuildInfoGroup extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Text(
+                child: SelectableText(
                   entry.value,
                 ),
               ),
