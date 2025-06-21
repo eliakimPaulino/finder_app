@@ -58,6 +58,24 @@ class _ComponentPageState extends State<ComponentPage> {
                     ],
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        'Total: ${controller.items.length} itens',
+                        style: const TextStyle(fontSize: 16),
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.refresh),
+                      onPressed: () {
+                        controller.loadItems();
+                      },
+                    ),
+                  ],
+                ),
                 Expanded(
                   child: ListView.builder(
                     itemCount: controller.items.length,
