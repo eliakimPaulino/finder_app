@@ -28,7 +28,6 @@ class KBuildInfoGroup extends StatelessWidget {
               Expanded(
                 child: Text(
                   entry.value,
-                  style: TextStyle(color: Colors.grey.shade900),
                 ),
               ),
             ],

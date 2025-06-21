@@ -1,7 +1,7 @@
 [
   {
     "item": "DTR0000019362",
-    "description": "CONECTOR FEMEA HAN DD 108",
+    "description": "CONECTOR FÊMEA HAN DD 108",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -19,7 +19,7 @@
   },
   {
     "item": "DTR0000021462",
-    "description": "CONTATO PRATEADO FEMEA 2.5MM2 HAN C",
+    "description": "CONTATO PRATEADO FÊMEA 2.5mm² HAN C",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -37,7 +37,7 @@
   },
   {
     "item": "DTR0000021761",
-    "description": "PINO FEMEA MODULO HAN",
+    "description": "PINO FÊMEA MODULO HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -46,7 +46,7 @@
   },
   {
     "item": "DTR0000028812",
-    "description": "CONTATO PRATEADO MACHO 1mm2 HAN DD",
+    "description": "CONTATO PRATEADO MACHO 1mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -55,7 +55,7 @@
   },
   {
     "item": "DTR0000028813",
-    "description": "CONTATO PRATEADO FEM 1.5MM2 HAN DD",
+    "description": "CONTATO PRATEADO FEM 1.5mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -64,7 +64,7 @@
   },
   {
     "item": "DTR0000028814",
-    "description": "CONTATO PRATEADO FEM 2.5mm2 HAN DD",
+    "description": "CONTATO PRATEADO FEM 2.5mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -73,7 +73,7 @@
   },
   {
     "item": "DTR0000030129",
-    "description": "CONTATO PRATEADO MACHO 1mm2 HAN DD",
+    "description": "CONTATO PRATEADO MACHO 1mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -82,7 +82,7 @@
   },
   {
     "item": "DTR0000030130",
-    "description": "CONTATO PRATEADO MACHO 2.5mm2 HAN DD",
+    "description": "CONTATO PRATEADO MACHO 2.5mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -91,7 +91,7 @@
   },
   {
     "item": "DTR0000059960",
-    "description": "CONTATO FEMEA HAN C 6.0MM2 PRATA",
+    "description": "CONTATO FÊMEA HAN C 6.0mm² PRATA",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -118,7 +118,7 @@
   },
   {
     "item": "DTR0000082959",
-    "description": "CONTATO PRATEADO FEMEA 4MM2 HAN E",
+    "description": "CONTATO PRATEADO FÊMEA 4mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -136,7 +136,7 @@
   },
   {
     "item": "DTR0000103683",
-    "description": "CONTATO PRATEADO MACHO 0.5-1MM2 HAN E",
+    "description": "CONTATO PRATEADO MACHO 0.5-1mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -163,7 +163,7 @@
   },
   {
     "item": "DTR0000139501",
-    "description": "CONTATO FEMEA DOURADO HAN D 1.6MM-1MM2",
+    "description": "CONTATO FÊMEA DOURADO HAN D 1.6mm²-1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -172,7 +172,7 @@
   },
   {
     "item": "DTR0000139502",
-    "description": "CONTATO GOLDTEC MACHO 0.5-1MM2 HAN D",
+    "description": "CONTATO GOLDTEC MACHO 0.5-1mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -181,7 +181,7 @@
   },
   {
     "item": "DTR0000139523",
-    "description": "CONTATO DOURADO FEMEA 0.5MM2 HAN D",
+    "description": "CONTATO DOURADO FÊMEA 0.5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -190,7 +190,7 @@
   },
   {
     "item": "DTR0000139539",
-    "description": "CONTATO GOLDTEC FEMEA 0.5-1MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 0.5-1mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -199,7 +199,7 @@
   },
   {
     "item": "DTR0000139774",
-    "description": "CONTATO MACHO DOURADO HAN D 1.6MM-1MM2",
+    "description": "CONTATO MACHO DOURADO HAN D 1.6mm²-1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -208,7 +208,7 @@
   },
   {
     "item": "DTR0000142895",
-    "description": "MODULO FEMEA 4 VIAS HAN EE",
+    "description": "MODULO FÊMEA 4 VIAS HAN EE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -226,7 +226,7 @@
   },
   {
     "item": "DTR0000152941",
-    "description": "CONTATO GOLDTEC FEMEA 2,5MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 2,5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -235,7 +235,7 @@
   },
   {
     "item": "DTR0000172671",
-    "description": "ADAPTADOR DE FIXACAO COM PARAFUSO",
+    "description": "ADAPTADOR DE FIXAÇÃO COM PARAFUSO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -253,7 +253,7 @@
   },
   {
     "item": "DTR0000232750",
-    "description": "CONTATO GOLDTEC FEMEA 1.5MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 1.5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -262,7 +262,7 @@
   },
   {
     "item": "DTR0000237398",
-    "description": "ADAPTADOR DE FIXACAO COM PARAFUSO",
+    "description": "ADAPTADOR DE FIXAÇÃO COM PARAFUSO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -271,7 +271,7 @@
   },
   {
     "item": "DTR0000261685",
-    "description": "CONTATO MACHO SUBD M12 0.13-0.33MM2",
+    "description": "CONTATO MACHO SUBD M12 0.13-0.33mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -280,7 +280,7 @@
   },
   {
     "item": "DTR0000261686",
-    "description": "CONTATO FEMEA SUBD M12 0.13-0.33MM2",
+    "description": "CONTATO FÊMEA SUBD M12 0.13-0.33mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -298,7 +298,7 @@
   },
   {
     "item": "DTR0000273619",
-    "description": "CONECTOR FEMEA HAN",
+    "description": "CONECTOR FÊMEA HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -307,7 +307,7 @@
   },
   {
     "item": "DTR0000352664",
-    "description": "MODULO FEMEA HAN MEGABIT",
+    "description": "MODULO FÊMEA HAN MEGABIT",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -325,7 +325,7 @@
   },
   {
     "item": "DTR0009201615",
-    "description": "TERMINAL CU 95MM2 M10",
+    "description": "TERMINAL CU 95mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -334,7 +334,7 @@
   },
   {
     "item": "DTR0009203998",
-    "description": "CONECTOR FEMEA HAN DD 108",
+    "description": "CONECTOR FÊMEA HAN DD 108",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -343,7 +343,7 @@
   },
   {
     "item": "DTR0009204019",
-    "description": "TERMINAL ISOLADO 2.5MM2 M6",
+    "description": "TERMINAL ISOLADO 2.5mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -352,7 +352,7 @@
   },
   {
     "item": "DTR0025139CFR",
-    "description": "CONTATO FEMEA DIAMETRO 2.5MM PRATA",
+    "description": "CONTATO FÊMEA DIAMETRO 2.5MM PRATA",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -370,7 +370,7 @@
   },
   {
     "item": "DTR0025139CMU",
-    "description": "CONTATO PRATEADO MACHO 1.5MM2 HAN E",
+    "description": "CONTATO PRATEADO MACHO 1.5mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -379,7 +379,7 @@
   },
   {
     "item": "DTR0025246224",
-    "description": "CLIP 6.35X0.8 INS. 1MM2",
+    "description": "CLIP 6.35X0.8 INS. 1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -397,7 +397,7 @@
   },
   {
     "item": "DTR0000049627",
-    "description": "MODULO FEMEA 12 VIAS HAN DD",
+    "description": "MODULO FÊMEA 12 VIAS HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -406,7 +406,7 @@
   },
   {
     "item": "DTR0000049628",
-    "description": "MODULO FEMEA 8 VIAS HAN EE",
+    "description": "MODULO FÊMEA 8 VIAS HAN EE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P001",
@@ -478,7 +478,7 @@
   },
   {
     "item": "DTR0000115665",
-    "description": "MODULO FEMEA 20 VIAS HAN EEE",
+    "description": "MODULO FÊMEA 20 VIAS HAN EEE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P002",
@@ -487,7 +487,7 @@
   },
   {
     "item": "DTR0000172695",
-    "description": "ADAPTADOR DE FIXACAO COM PARAFUSO",
+    "description": "ADAPTADOR DE FIXAÇÃO COM PARAFUSO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P002",
@@ -496,7 +496,7 @@
   },
   {
     "item": "DTR0000199408",
-    "description": "MODULO FEMEA HAN MEGABIT",
+    "description": "MODULO FÊMEA HAN MEGABIT",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P002",
@@ -514,7 +514,7 @@
   },
   {
     "item": "DTR0000239956",
-    "description": "MODULO FEMEA 2 VIAS HAN70",
+    "description": "MODULO FÊMEA 2 VIAS HAN70",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P002",
@@ -523,7 +523,7 @@
   },
   {
     "item": "DTR0000239967",
-    "description": "CONTATO PRATEADO FEMEA 25MM2 HAN TC70A",
+    "description": "CONTATO PRATEADO FÊMEA 25mm² HAN TC70A",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P002",
@@ -550,7 +550,7 @@
   },
   {
     "item": "DTR0000353685",
-    "description": "MODULO FEMEA GIGABIT 8 VIAS CAT6A",
+    "description": "MODULO FÊMEA GIGABIT 8 VIAS CAT6A",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P002",
@@ -955,7 +955,7 @@
   },
   {
     "item": "DTR0009445987",
-    "description": "TERMINAL INSULATED 2.5MM2 M4",
+    "description": "TERMINAL INSULATED 2.5mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -991,7 +991,7 @@
   },
   {
     "item": "DTR0000564060",
-    "description": "CONECTOR CIRCULAR CM23,P 5+PE FEMEA",
+    "description": "CONECTOR CIRCULAR CM23,P 5+PE FÊMEA",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1081,7 +1081,7 @@
   },
   {
     "item": "DTR0025241977",
-    "description": "TERMINAL ISOLADO 6MM2 M6",
+    "description": "TERMINAL ISOLADO 6mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1099,7 +1099,7 @@
   },
   {
     "item": "DTR0025241977",
-    "description": "TERMINAL ISOLADO 6MM2 M6",
+    "description": "TERMINAL ISOLADO 6mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1108,7 +1108,7 @@
   },
   {
     "item": "DTR0000100520",
-    "description": "END PIECE ROUND INS 2,5MM2 L12",
+    "description": "END PIECE ROUND INS 2,5mm² L12",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1117,7 +1117,7 @@
   },
   {
     "item": "DTR0025241371",
-    "description": "END PIECE ROUND INS. 2.6 MM2 L",
+    "description": "END PIECE ROUND INS. 2.6 mm² L",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1126,7 +1126,7 @@
   },
   {
     "item": "DTR0000059960",
-    "description": "CONTATO FEMEA HAN C 6.0MM2 PRATA",
+    "description": "CONTATO FÊMEA HAN C 6.0mm² PRATA",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1135,7 +1135,7 @@
   },
   {
     "item": "DTR0009203998",
-    "description": "CONTATO PRATEADO FEMEA 2.5MM2 HAN E",
+    "description": "CONTATO PRATEADO FÊMEA 2.5mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1144,7 +1144,7 @@
   },
   {
     "item": "DTR0009445989",
-    "description": "TERMINAL ISOLADO 2.5MM2 M6",
+    "description": "TERMINAL ISOLADO 2.5mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1162,7 +1162,7 @@
   },
   {
     "item": "DTR0025241881",
-    "description": "TERMINAL INSULATED 10MM2 M6",
+    "description": "TERMINAL INSULATED 10mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1216,7 +1216,7 @@
   },
   {
     "item": "S4025151P1520",
-    "description": "CONECTOR FEMEA SUB-D 15 WAY",
+    "description": "CONECTOR FÊMEA SUB-D 15 WAY",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P05",
@@ -1693,7 +1693,7 @@
   },
   {
     "item": "DTR0025241898",
-    "description": "TERMINAL ISOLADO 6 2.5MM2",
+    "description": "TERMINAL ISOLADO 6 2.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P07",
@@ -1738,7 +1738,7 @@
   },
   {
     "item": "DTR0000139541",
-    "description": "CONTATO FEMEA GOLD TEC HAN D - 0,14-0,37",
+    "description": "CONTATO FÊMEA GOLD TEC HAN D - 0,14-0,37",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1747,7 +1747,7 @@
   },
   {
     "item": "DTR0000139774",
-    "description": "CONTATO MACHO DOURADO HAN D 1.6MM-1MM2",
+    "description": "CONTATO MACHO DOURADO HAN D 1.6mm²-1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1756,7 +1756,7 @@
   },
   {
     "item": "DTR0000152941",
-    "description": "CONTATO GOLDTEC FEMEA 2,5MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 2,5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1765,7 +1765,7 @@
   },
   {
     "item": "DTR0000222460",
-    "description": "CONTATO GOLDTEC MACHO 1.5MM2 HAN D",
+    "description": "CONTATO GOLDTEC MACHO 1.5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1774,7 +1774,7 @@
   },
   {
     "item": "DTR0000232183",
-    "description": "CONTATO FEMEA DOURADO DIAM. 1,5MM  - 0,5",
+    "description": "CONTATO FÊMEA DOURADO DIAM. 1,5MM  - 0,5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1783,7 +1783,7 @@
   },
   {
     "item": "DTR0000246117",
-    "description": "CONTATO FEMEA SUBD M12 0.33-0.82MM2",
+    "description": "CONTATO FÊMEA SUBD M12 0.33-0.82mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1810,7 +1810,7 @@
   },
   {
     "item": "DTR0000308148",
-    "description": "INSERTO FEMEA Q12",
+    "description": "INSERTO FÊMEA Q12",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1819,7 +1819,7 @@
   },
   {
     "item": "DTR0000352664",
-    "description": "MODULO FEMEA HAN MEGABIT",
+    "description": "MODULO FÊMEA HAN MEGABIT",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1828,7 +1828,7 @@
   },
   {
     "item": "DTR0000383000",
-    "description": "CONTATO MACHO  REP V2 0,5-2,5MM2",
+    "description": "CONTATO MACHO  REP V2 0,5-2,5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1855,7 +1855,7 @@
   },
   {
     "item": "DTR0025241901",
-    "description": "TERMINAL OLHAL AZUL M4 2.5MM2",
+    "description": "TERMINAL OLHAL AZUL M4 2.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1873,7 +1873,7 @@
   },
   {
     "item": "DTR0000246116",
-    "description": "CONTATO MACHO SUBD M12 0.33-0.82MM2",
+    "description": "CONTATO MACHO SUBD M12 0.33-0.82mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P100",
@@ -1900,7 +1900,7 @@
   },
   {
     "item": "DTR0025241885",
-    "description": "TERMINAL ISOLADO 16MM2 M5",
+    "description": "TERMINAL ISOLADO 16mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -1927,7 +1927,7 @@
   },
   {
     "item": "AA00002377027",
-    "description": "REDUTOR RSC MACHO G1\" X RSC FEMEA G1/2\"",
+    "description": "REDUTOR RSC MACHO G1\" X RSC FÊMEA G1/2\"",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -1963,7 +1963,7 @@
   },
   {
     "item": "DTR0000273619",
-    "description": "CONECTOR FEMEA HAN",
+    "description": "CONECTOR FÊMEA HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2017,7 +2017,7 @@
   },
   {
     "item": "DTR0000103683",
-    "description": "CONTATO PRATEADO MACHO 0.5-1MM2 HAN E",
+    "description": "CONTATO PRATEADO MACHO 0.5-1mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2062,7 +2062,7 @@
   },
   {
     "item": "DTR0025211765",
-    "description": "TERMINAL CU 10MM2",
+    "description": "TERMINAL CU 10mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2197,7 +2197,7 @@
   },
   {
     "item": "DTR0025211757",
-    "description": "TERMINAL TUBULAR 16MM2 M8",
+    "description": "TERMINAL TUBULAR 16mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2206,7 +2206,7 @@
   },
   {
     "item": "DTR0025211219",
-    "description": "TERMINAL TUB CU 70MM2 D10.3 W23",
+    "description": "TERMINAL TUB CU 70mm² D10.3 W23",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2215,7 +2215,7 @@
   },
   {
     "item": "DTR0025242138",
-    "description": "TERMINAL AL 240MM2",
+    "description": "TERMINAL AL 240mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2224,7 +2224,7 @@
   },
   {
     "item": "DTR0025211210",
-    "description": "TERMINAL TUB CU 35 MM2 M10W18",
+    "description": "TERMINAL TUB CU 35 mm² M10W18",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2251,7 +2251,7 @@
   },
   {
     "item": "DTR00252112V5",
-    "description": "TERMINAL 25MM2 - M6 - 90 graus",
+    "description": "TERMINAL 25mm² - M6 - 90 graus",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P268",
@@ -2440,7 +2440,7 @@
   },
   {
     "item": "DTR0000019362",
-    "description": "CONECTOR FEMEA HAN DD 108",
+    "description": "CONECTOR FÊMEA HAN DD 108",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2467,7 +2467,7 @@
   },
   {
     "item": "DTR0000021761",
-    "description": "PINO FEMEA MODULO HAN",
+    "description": "PINO FÊMEA MODULO HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2530,7 +2530,7 @@
   },
   {
     "item": "DTR0000142895",
-    "description": "MODULO FEMEA 4 VIAS HAN EE",
+    "description": "MODULO FÊMEA 4 VIAS HAN EE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2584,7 +2584,7 @@
   },
   {
     "item": "DTR0000246117",
-    "description": "CONTATO FEMEA SUBD M12 0.33-0.82MM2",
+    "description": "CONTATO FÊMEA SUBD M12 0.33-0.82mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2611,7 +2611,7 @@
   },
   {
     "item": "DTR0000261686",
-    "description": "CONTATO FEMEA SUBD M12 0.13-0.33MM2",
+    "description": "CONTATO FÊMEA SUBD M12 0.13-0.33mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2647,7 +2647,7 @@
   },
   {
     "item": "DTR0000358230",
-    "description": "CONTATO MACHO 95MM2  CRIMP. TC350",
+    "description": "CONTATO MACHO 95mm²  CRIMP. TC350",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2674,7 +2674,7 @@
   },
   {
     "item": "DTR0025241889",
-    "description": "TERMINAL ISOLADO 6MM2 M8",
+    "description": "TERMINAL ISOLADO 6mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2701,7 +2701,7 @@
   },
   {
     "item": "DTR0009445989",
-    "description": "TERMINAL ISOLADO 2.5MM2 M6",
+    "description": "TERMINAL ISOLADO 2.5mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2773,7 +2773,7 @@
   },
   {
     "item": "DTR00251338KL",
-    "description": "CONTATO FEMEA 0.5-1.5MM2",
+    "description": "CONTATO FÊMEA 0.5-1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2782,7 +2782,7 @@
   },
   {
     "item": "DTR0025211214",
-    "description": "Terminal Olhal 50mm2 M10",
+    "description": "Terminal Olhal 50mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2791,7 +2791,7 @@
   },
   {
     "item": "DTR0025211215",
-    "description": "TERMINAL TUB CU 50MM2 D12.8 W21",
+    "description": "TERMINAL TUB CU 50mm² D12.8 W21",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2800,7 +2800,7 @@
   },
   {
     "item": "DTR0025211222",
-    "description": "TERMINAL CU 95MM2 M8",
+    "description": "TERMINAL CU 95mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2809,7 +2809,7 @@
   },
   {
     "item": "DTR0025211656",
-    "description": "TERMINAL TRS 240MM2 - M12 - 2 FUROS",
+    "description": "TERMINAL TRS 240mm² - M12 - 2 FUROS",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2818,7 +2818,7 @@
   },
   {
     "item": "DTR0025241874",
-    "description": "INSULATED TERMINAL 6MM2 M4",
+    "description": "INSULATED TERMINAL 6mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2827,7 +2827,7 @@
   },
   {
     "item": "DTR0025241977",
-    "description": "TERMINAL ISOLADO 6MM2 M6",
+    "description": "TERMINAL ISOLADO 6mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2836,7 +2836,7 @@
   },
   {
     "item": "DTR0025246211",
-    "description": "TERM. FASTON PREISOLADO 6.35X0.8 1.5MM2",
+    "description": "TERM. FASTON PREISOLADO 6.35X0.8 1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2854,7 +2854,7 @@
   },
   {
     "item": "DTR0009445988",
-    "description": "TERMINAL ISOLADO 2.5MM2 M5",
+    "description": "TERMINAL ISOLADO 2.5mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2863,7 +2863,7 @@
   },
   {
     "item": "DTR0025241934",
-    "description": "TERMINAL ISOLADO VERMELHO 1.5MM2 M5",
+    "description": "TERMINAL ISOLADO VERMELHO 1.5mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2872,7 +2872,7 @@
   },
   {
     "item": "DTR0000049796",
-    "description": "TERMINAL OLHAL PREISOLADO 2.5-6MM2 M10",
+    "description": "TERMINAL OLHAL PREISOLADO 2.5-6mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2881,7 +2881,7 @@
   },
   {
     "item": "DTR0000355544",
-    "description": "TERM TUB COMPRESSAO 70MM2 - M8",
+    "description": "TERM TUB COMPRESSAO 70mm² - M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2890,7 +2890,7 @@
   },
   {
     "item": "DTR0000101633",
-    "description": "TERMINAL FORQUILHA 1-2,6 MM2 B.3,5",
+    "description": "TERMINAL FORQUILHA 1-2,6 mm² B.3,5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2899,7 +2899,7 @@
   },
   {
     "item": "DTR0000239967",
-    "description": "CONTATO PRATEADO FEMEA 25MM2 HAN TC70A",
+    "description": "CONTATO PRATEADO FÊMEA 25mm² HAN TC70A",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2908,7 +2908,7 @@
   },
   {
     "item": "DTR0000414101",
-    "description": "CONTATO PRATEADO MACHO 70MM2 - HAN TC350",
+    "description": "CONTATO PRATEADO MACHO 70mm² - HAN TC350",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2917,7 +2917,7 @@
   },
   {
     "item": "DTR0009204019",
-    "description": "CONTATO PRATEADO MACHO 1.5mm2 HAN DD",
+    "description": "CONTATO PRATEADO MACHO 1.5mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2926,7 +2926,7 @@
   },
   {
     "item": "DTR0025211209",
-    "description": "TERMINAL TUBULAR 35 MM2 M8",
+    "description": "TERMINAL TUBULAR 35 mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2935,7 +2935,7 @@
   },
   {
     "item": "DTR0000049628",
-    "description": "MODULO FEMEA 8 VIAS HAN EE",
+    "description": "MODULO FÊMEA 8 VIAS HAN EE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2944,7 +2944,7 @@
   },
   {
     "item": "DTR0000049636",
-    "description": "CONTATO DOURADO FEMEA 1MM2 HAN E",
+    "description": "CONTATO DOURADO FÊMEA 1mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2953,7 +2953,7 @@
   },
   {
     "item": "DTR0000570404",
-    "description": "CONTATO PRATEADO FEMEA 50MM2 - HAN TC350",
+    "description": "CONTATO PRATEADO FÊMEA 50mm² - HAN TC350",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -2962,7 +2962,7 @@
   },
   {
     "item": "DTR0000355483",
-    "description": "TERM TUB COMPRESSAO 50MM2-M10",
+    "description": "TERM TUB COMPRESSAO 50mm²-M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P272",
@@ -3088,7 +3088,7 @@
   },
   {
     "item": "DTR0025241850",
-    "description": "TERM OLHAL 1-2.5MM2 M8",
+    "description": "TERM OLHAL 1-2.5mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3097,7 +3097,7 @@
   },
   {
     "item": "DTR0025241976",
-    "description": "TERMINAL ISOLADO 6MM2 M5",
+    "description": "TERMINAL ISOLADO 6mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3169,7 +3169,7 @@
   },
   {
     "item": "DTR0025211759",
-    "description": "TERMINAL TUBULAR 16MM2 M8",
+    "description": "TERMINAL TUBULAR 16mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3214,7 +3214,7 @@
   },
   {
     "item": "DTR0000237398",
-    "description": "ADAPTADOR DE FIXACAO COM PARAFUSO",
+    "description": "ADAPTADOR DE FIXAÇÃO COM PARAFUSO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3223,7 +3223,7 @@
   },
   {
     "item": "DTR0000304849",
-    "description": "CONTATO CRIMP. FEMEA  HAN HC-350",
+    "description": "CONTATO CRIMP. FÊMEA  HAN HC-350",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3232,7 +3232,7 @@
   },
   {
     "item": "DTR0000352664",
-    "description": "MODULO FEMEA HAN MEGABIT",
+    "description": "MODULO FÊMEA HAN MEGABIT",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3268,7 +3268,7 @@
   },
   {
     "item": "DTR0025241882",
-    "description": "TERMINAL INSULATED 10MM2 M8",
+    "description": "TERMINAL INSULATED 10mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3277,7 +3277,7 @@
   },
   {
     "item": "DTR0000139539",
-    "description": "CONTATO GOLDTEC FEMEA 0.5-1MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 0.5-1mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3286,7 +3286,7 @@
   },
   {
     "item": "DTR0000028812",
-    "description": "CONTATO PRATEADO MACHO 1mm2 HAN DD",
+    "description": "CONTATO PRATEADO MACHO 1mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3295,7 +3295,7 @@
   },
   {
     "item": "DTR0000028813",
-    "description": "CONTATO PRATEADO FEM 1.5MM2 HAN DD",
+    "description": "CONTATO PRATEADO FEM 1.5mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3304,7 +3304,7 @@
   },
   {
     "item": "DTR0000028814",
-    "description": "CONTATO PRATEADO FEM 2.5mm2 HAN DD",
+    "description": "CONTATO PRATEADO FEM 2.5mm² HAN DD",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3313,7 +3313,7 @@
   },
   {
     "item": "DTR0025241885",
-    "description": "TERMINAL ISOLADO 16MM2 M5",
+    "description": "TERMINAL ISOLADO 16mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -3322,7 +3322,7 @@
   },
   {
     "item": "DTR0000103683",
-    "description": "CONTATO PRATEADO MACHO 0.5-1MM2 HAN E",
+    "description": "CONTATO PRATEADO MACHO 0.5-1mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P275",
@@ -4276,7 +4276,7 @@
   },
   {
     "item": "DTR0000186173",
-    "description": "CONTATO GOLDTEC MACHO 2,5MM2 HAN D",
+    "description": "CONTATO GOLDTEC MACHO 2,5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P357",
@@ -4294,7 +4294,7 @@
   },
   {
     "item": "DTR0000087928",
-    "description": "PORTA CONTATO QUINTAX Z FEMEA 3-9.5",
+    "description": "PORTA CONTATO QUINTAX Z FÊMEA 3-9.5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P357",
@@ -4312,7 +4312,7 @@
   },
   {
     "item": "DTR0000172671",
-    "description": "ADAPTADOR DE FIXACAO COM PARAFUSO",
+    "description": "ADAPTADOR DE FIXAÇÃO COM PARAFUSO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P357",
@@ -4537,7 +4537,7 @@
   },
   {
     "item": "DTR0000198410",
-    "description": "INSERTO FEMEA PARA CONECTOR RECTANGULAR",
+    "description": "INSERTO FÊMEA PARA CONECTOR RECTANGULAR",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4573,7 +4573,7 @@
   },
   {
     "item": "DTR0000273619",
-    "description": "CONECTOR FEMEA HAN",
+    "description": "CONECTOR FÊMEA HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4582,7 +4582,7 @@
   },
   {
     "item": "DTR0000304849",
-    "description": "CONTATO CRIMP. FEMEA  HAN HC-350",
+    "description": "CONTATO CRIMP. FÊMEA  HAN HC-350",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4591,7 +4591,7 @@
   },
   {
     "item": "DTR0000305406",
-    "description": "TERMINAL TUB CU 95MM2D10W21",
+    "description": "TERMINAL TUB CU 95mm²D10W21",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4627,7 +4627,7 @@
   },
   {
     "item": "DTR0000358232",
-    "description": "CONTATO FEMEA 95MM2  CRIMP. TC350",
+    "description": "CONTATO FÊMEA 95mm²  CRIMP. TC350",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4645,7 +4645,7 @@
   },
   {
     "item": "DTR0000430407",
-    "description": "PLUG FEMEA 2 MODULOS",
+    "description": "PLUG FÊMEA 2 MODULOS",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4807,7 +4807,7 @@
   },
   {
     "item": "DTR00251338KL",
-    "description": "CONTATO FEMEA 0.5-1.5MM2",
+    "description": "CONTATO FÊMEA 0.5-1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4825,7 +4825,7 @@
   },
   {
     "item": "DTR0025211205",
-    "description": "TERMINAL CU 25MM2 M8",
+    "description": "TERMINAL CU 25mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4834,7 +4834,7 @@
   },
   {
     "item": "DTR0025211206",
-    "description": "TERMINAL OLHAL  25MM2 10.3MM",
+    "description": "TERMINAL OLHAL  25mm² 10.3MM",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4843,7 +4843,7 @@
   },
   {
     "item": "DTR0025211212",
-    "description": "TERMINAL TUB CU/SN TN 50MM2 M6",
+    "description": "TERMINAL TUB CU/SN TN 50mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4852,7 +4852,7 @@
   },
   {
     "item": "DTR00252112DG",
-    "description": "TERMINAL LUG TUBULAR RETANGULAR 50MM2 10",
+    "description": "TERMINAL LUG TUBULAR RETANGULAR 50mm² 10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4870,7 +4870,7 @@
   },
   {
     "item": "DTR0025211655",
-    "description": "TERMINAL LUG TUBULAR RETANGULAR 240MM2 1",
+    "description": "TERMINAL LUG TUBULAR RETANGULAR 240mm² 1",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4879,7 +4879,7 @@
   },
   {
     "item": "DTR0025211765",
-    "description": "TERMINAL CU 10MM2",
+    "description": "TERMINAL CU 10mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4897,7 +4897,7 @@
   },
   {
     "item": "DTR0025241874",
-    "description": "INSULATED TERMINAL 6MM2 M4",
+    "description": "INSULATED TERMINAL 6mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4906,7 +4906,7 @@
   },
   {
     "item": "DTR0025241881",
-    "description": "TERMINAL OLHAL PREISOLADO 6MM2 M10",
+    "description": "TERMINAL OLHAL PREISOLADO 6mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4915,7 +4915,7 @@
   },
   {
     "item": "DTR0025241882",
-    "description": "TERMINAL INSULATED 10MM2 M8",
+    "description": "TERMINAL INSULATED 10mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4942,7 +4942,7 @@
   },
   {
     "item": "DTR0025241976",
-    "description": "TERMINAL ISOLADO 6MM2 M5",
+    "description": "TERMINAL ISOLADO 6mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4951,7 +4951,7 @@
   },
   {
     "item": "DTR0025241977",
-    "description": "TERMINAL ISOLADO 6MM2 M6",
+    "description": "TERMINAL ISOLADO 6mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -4960,7 +4960,7 @@
   },
   {
     "item": "DTR0025242138",
-    "description": "TERMINAL AL 240MM2",
+    "description": "TERMINAL AL 240mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P373",
@@ -5032,7 +5032,7 @@
   },
   {
     "item": "DTR0025211213",
-    "description": "TERMINAL TUB CU 50MM2 D8.3 W21",
+    "description": "TERMINAL TUB CU 50mm² D8.3 W21",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5122,7 +5122,7 @@
   },
   {
     "item": "DTR0000232750",
-    "description": "CONTATO GOLDTEC FEMEA 1.5MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 1.5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5158,7 +5158,7 @@
   },
   {
     "item": "DTR0025246206",
-    "description": "FASTON 5X0.8 INSULATED 2.5MM2",
+    "description": "FASTON 5X0.8 INSULATED 2.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5167,7 +5167,7 @@
   },
   {
     "item": "DTR0000139501",
-    "description": "CONTATO FEMEA DOURADO HAN D 1.6MM-1MM2",
+    "description": "CONTATO FÊMEA DOURADO HAN D 1.6mm²-1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5176,7 +5176,7 @@
   },
   {
     "item": "DTR0000019362",
-    "description": "CONECTOR FEMEA HAN DD 108",
+    "description": "CONECTOR FÊMEA HAN DD 108",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5185,7 +5185,7 @@
   },
   {
     "item": "DTR0000120100",
-    "description": "CONTATO DOURADO FEMEA HAN E 2.5MM-2.5MM2",
+    "description": "CONTATO DOURADO FÊMEA HAN E 2.5mm²-2.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5194,7 +5194,7 @@
   },
   {
     "item": "DTR0025211214",
-    "description": "Terminal Olhal 50mm2 M10",
+    "description": "Terminal Olhal 50mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5221,7 +5221,7 @@
   },
   {
     "item": "DTR0000021761",
-    "description": "PINO FEMEA MODULO HAN",
+    "description": "PINO FÊMEA MODULO HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5230,7 +5230,7 @@
   },
   {
     "item": "DTR0000142895",
-    "description": "MODULO FEMEA 4 VIAS HAN EE",
+    "description": "MODULO FÊMEA 4 VIAS HAN EE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5239,7 +5239,7 @@
   },
   {
     "item": "DTR0025241886",
-    "description": "TERMINAL ISOLADO 15MM2 M6",
+    "description": "TERMINAL ISOLADO 15mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5248,7 +5248,7 @@
   },
   {
     "item": "DTR00252414AM",
-    "description": "TERMINAL OLHAL PRE-ISOLADO VERM 1MM2 M4",
+    "description": "TERMINAL OLHAL PRE-ISOLADO VERM 1mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5257,7 +5257,7 @@
   },
   {
     "item": "DTR0025241938",
-    "description": "TERMINAL ISOLADO 1.5MM2 M4",
+    "description": "TERMINAL ISOLADO 1.5mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5275,7 +5275,7 @@
   },
   {
     "item": "DTR0025246211",
-    "description": "TERM. FASTON PREISOLADO 6.35X0.8 1.5MM2",
+    "description": "TERM. FASTON PREISOLADO 6.35X0.8 1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5320,7 +5320,7 @@
   },
   {
     "item": "DTR0025139CF0",
-    "description": "CONTATO CRIMP. FEMEA 0.5-1.5MM2",
+    "description": "CONTATO CRIMP. FÊMEA 0.5-1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5329,7 +5329,7 @@
   },
   {
     "item": "DTR0025211257",
-    "description": "TERMINAL CU  120MM2 M10",
+    "description": "TERMINAL CU  120mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5338,7 +5338,7 @@
   },
   {
     "item": "DTR0025241887",
-    "description": "TERMINAL ISOLADO AZUL TUBULAR 16MM2 M8",
+    "description": "TERMINAL ISOLADO AZUL TUBULAR 16mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5347,7 +5347,7 @@
   },
   {
     "item": "DTR0000355451",
-    "description": "TERM TUB COMPRESSAO 16MM2-M8",
+    "description": "TERM TUB COMPRESSAO 16mm²-M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5446,7 +5446,7 @@
   },
   {
     "item": "DTR0000049628",
-    "description": "MODULO FEMEA 8 VIAS HAN EE",
+    "description": "MODULO FÊMEA 8 VIAS HAN EE",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5464,7 +5464,7 @@
   },
   {
     "item": "DTR0025241888",
-    "description": "TERMINAL ISOLADO 16MM2 M10",
+    "description": "TERMINAL ISOLADO 16mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5500,7 +5500,7 @@
   },
   {
     "item": "DTR00252112WG",
-    "description": "TERMINAL LUG TUBULAR RETANGULAR 50MM2 10",
+    "description": "TERMINAL LUG TUBULAR RETANGULAR 50mm² 10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5527,7 +5527,7 @@
   },
   {
     "item": "DTR0009445988",
-    "description": "TERMINAL ISOLADO 2.5MM2 M5",
+    "description": "TERMINAL ISOLADO 2.5mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5536,7 +5536,7 @@
   },
   {
     "item": "DTR0025241934",
-    "description": "TERMINAL ISOLADO VERMELHO 1.5MM2 M5",
+    "description": "TERMINAL ISOLADO VERMELHO 1.5mm² M5",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5545,7 +5545,7 @@
   },
   {
     "item": "DTR0000241542",
-    "description": "CONTATO MACHO HAN70A 16MM2 PRATEADO",
+    "description": "CONTATO MACHO HAN70A 16mm² PRATEADO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5554,7 +5554,7 @@
   },
   {
     "item": "DTR0000196712",
-    "description": "TERMINAL FEMEA PRATA 16MM2",
+    "description": "TERMINAL FÊMEA PRATA 16mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5563,7 +5563,7 @@
   },
   {
     "item": "DTR0025242100",
-    "description": " TERMINAL TUBULAR  AL 50 MM2 M10",
+    "description": " TERMINAL TUBULAR  AL 50 mm² M10",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5572,7 +5572,7 @@
   },
   {
     "item": "DTR0025241889",
-    "description": "TERMINAL ISOLADO 6MM2 M8",
+    "description": "TERMINAL ISOLADO 6mm² M8",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5581,7 +5581,7 @@
   },
   {
     "item": "DTR0000139572",
-    "description": "CONTATO DOURADO FEMEA 1MM2 HAN E",
+    "description": "CONTATO DOURADO FÊMEA 1mm² HAN E",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5590,7 +5590,7 @@
   },
   {
     "item": "DTR0000179380",
-    "description": "CONTATO DOURADO FEMEA 0.35-0.5MM2 CRIMP",
+    "description": "CONTATO DOURADO FÊMEA 0.35-0.5mm² CRIMP",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5599,7 +5599,7 @@
   },
   {
     "item": "DTR0000120105",
-    "description": "TERMINAL FEMEA DOURADO 0,5-1MM2",
+    "description": "TERMINAL FÊMEA DOURADO 0,5-1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P375",
@@ -5860,7 +5860,7 @@
   },
   {
     "item": "DTR0000139539",
-    "description": "CONTATO GOLDTEC FEMEA 0.5-1MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 0.5-1mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -5932,7 +5932,7 @@
   },
   {
     "item": "DTR0000239956",
-    "description": "MODULO FEMEA 2 VIAS HAN70",
+    "description": "MODULO FÊMEA 2 VIAS HAN70",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -5941,7 +5941,7 @@
   },
   {
     "item": "DTR0000019362",
-    "description": "CONECTOR FEMEA HAN DD 108",
+    "description": "CONECTOR FÊMEA HAN DD 108",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -5950,7 +5950,7 @@
   },
   {
     "item": "DTR0000232750",
-    "description": "CONTATO GOLDTEC FEMEA 1.5MM2 HAN D",
+    "description": "CONTATO GOLDTEC FÊMEA 1.5mm² HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -5968,7 +5968,7 @@
   },
   {
     "item": "DTR0000261686",
-    "description": "CONTATO FEMEA SUBD M12 0.13-0.33MM2",
+    "description": "CONTATO FÊMEA SUBD M12 0.13-0.33mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -5977,7 +5977,7 @@
   },
   {
     "item": "DTR0009445957",
-    "description": "TERM. FASTON PREISOLADO 6.35X0.8 0,75MM2",
+    "description": "TERM. FASTON PREISOLADO 6.35X0.8 0,75mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -6004,7 +6004,7 @@
   },
   {
     "item": "DTR0000139501",
-    "description": "CONTATO FEMEA DOURADO HAN D 1.6MM-1MM2",
+    "description": "CONTATO FÊMEA DOURADO HAN D 1.6mm²-1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -6013,7 +6013,7 @@
   },
   {
     "item": "DTR0000021761",
-    "description": "PINO FEMEA MODULO HAN",
+    "description": "PINO FÊMEA MODULO HAN",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P45",
@@ -6148,7 +6148,7 @@
   },
   {
     "item": "DTR0000019362",
-    "description": "CONECTOR FEMEA HAN DD 108",
+    "description": "CONECTOR FÊMEA HAN DD 108",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6229,7 +6229,7 @@
   },
   {
     "item": "DTR0025246211",
-    "description": "TERM. FASTON PREISOLADO 6.35X0.8 1.5MM2",
+    "description": "TERM. FASTON PREISOLADO 6.35X0.8 1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6274,7 +6274,7 @@
   },
   {
     "item": "DTR0000172671",
-    "description": "ADAPTADOR DE FIXACAO COM PARAFUSO",
+    "description": "ADAPTADOR DE FIXAÇÃO COM PARAFUSO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6310,7 +6310,7 @@
   },
   {
     "item": "DTR0025246222",
-    "description": "TERMINAL FASTON 2.8X0.5 PREISOL 1.5MM2",
+    "description": "TERMINAL FASTON 2.8X0.5 PREISOL 1.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6328,7 +6328,7 @@
   },
   {
     "item": "DTR0000246116",
-    "description": "CONTATO MACHO SUBD M12 0.33-0.82MM2",
+    "description": "CONTATO MACHO SUBD M12 0.33-0.82mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6436,7 +6436,7 @@
   },
   {
     "item": "DTR0000014198",
-    "description": "BG 10MM2 / 250MM / M6",
+    "description": "BG 10mm² / 250MM / M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6463,7 +6463,7 @@
   },
   {
     "item": "DTR0025241886",
-    "description": "TERMINAL ISOLADO 15MM2 M6",
+    "description": "TERMINAL ISOLADO 15mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6472,7 +6472,7 @@
   },
   {
     "item": "DTR0009445953",
-    "description": "TERMINAL 5X0.8 ISOLADO 0,75MM2",
+    "description": "TERMINAL 5X0.8 ISOLADO 0,75mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6499,7 +6499,7 @@
   },
   {
     "item": "DTR0025246224",
-    "description": "CLIP 6.35X0.8 INS. 1MM2",
+    "description": "CLIP 6.35X0.8 INS. 1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6517,7 +6517,7 @@
   },
   {
     "item": "DTR0000548139",
-    "description": "CONTATO FEMEA GOLDTEC HAN D",
+    "description": "CONTATO FÊMEA GOLDTEC HAN D",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6526,7 +6526,7 @@
   },
   {
     "item": "DTR0025246247",
-    "description": "TERMINAL FASTON 2.8 X 0.5 PREISOL 1MM2",
+    "description": "TERMINAL FASTON 2.8 X 0.5 PREISOL 1mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6544,7 +6544,7 @@
   },
   {
     "item": "DTR0025241914",
-    "description": "TERMINAL ISOLADO 6MM2 M4",
+    "description": "TERMINAL ISOLADO 6mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6553,7 +6553,7 @@
   },
   {
     "item": "DTR0025241930",
-    "description": "TERMINAL INSULATED 25MM2 M6",
+    "description": "TERMINAL INSULATED 25mm² M6",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6562,7 +6562,7 @@
   },
   {
     "item": "DTR0025246213",
-    "description": "FASTON 6.35X0.8 ISOLADO 2.5MM2",
+    "description": "FASTON 6.35X0.8 ISOLADO 2.5mm²",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6598,7 +6598,7 @@
   },
   {
     "item": "DTR00252414AM",
-    "description": "TERMINAL OLHAL PRE-ISOLADO VERM 1MM2 M4",
+    "description": "TERMINAL OLHAL PRE-ISOLADO VERM 1mm² M4",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
@@ -6625,7 +6625,7 @@
   },
   {
     "item": "DTR0000355219",
-    "description": "TERM OLHAL 1.0-2.5MM2 M5 REFORCADO",
+    "description": "TERM OLHAL 1.0-2.5mm² M5 REFORCADO",
     "area": "Compo",
     "local_referencia": "P.S.M.E. - Pequenas Sub-Montagens Elétricas",
     "prateleira": "P50",
