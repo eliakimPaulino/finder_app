@@ -25,4 +25,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/data/psme_components/psme_components.json
+    - assets/data/components/components.json
