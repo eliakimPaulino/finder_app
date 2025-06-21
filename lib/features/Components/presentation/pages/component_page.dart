@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../../data/datasources/component_local_data_source.dart';
@@ -50,7 +51,11 @@ class _ComponentPageState extends State<ComponentPage> {
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.search),
                     ),
+                    keyboardType: TextInputType.number,
                     onChanged: controller.search,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly, 
+                    ],
                   ),
                 ),
                 Expanded(
