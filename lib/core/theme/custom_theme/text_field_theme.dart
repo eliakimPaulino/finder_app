@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:finder_app/core/constants/finder_app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -25,15 +27,15 @@ class KTextFormFieldTheme {
     ), // Borda quando habilitado
     focusedBorder:const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(KSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: KColors.dark),
+      borderSide: const BorderSide(width: 1, color: KColors.darkBackground),
     ), // Borda quando focado
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(KSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: KColors.warning),
+      borderSide: const BorderSide(width: 1, color: KColors.warningPrimary),
     ), // Borda em caso de erro
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(KSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 2, color: KColors.warning),
+      borderSide: const BorderSide(width: 2, color: KColors.warningMedium),
     ), // Borda em caso de erro e focado
   );
 
@@ -59,11 +61,11 @@ class KTextFormFieldTheme {
     ), // Borda quando focado
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(KSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: KColors.warning),
+      borderSide: const BorderSide(width: 1, color: KColors.warningPrimary),
     ), // Borda em caso de erro
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(KSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 2, color: KColors.warning),
+      borderSide: const BorderSide(width: 2, color: KColors.warningMedium),
     ), // Borda em caso de erro e focado
   );
 }

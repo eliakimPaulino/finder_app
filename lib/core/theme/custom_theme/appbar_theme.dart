@@ -12,11 +12,11 @@ class KAppBarTheme{
     elevation: 0, // Sem sombra
     centerTitle: false, // Título não centralizado
     scrolledUnderElevation: 0, // Sem sombra ao rolar
-    backgroundColor: KColors.accent, // Cor de fundo transparente
+    backgroundColor: KColors.neutralPrimary, // Cor de fundo transparente
     surfaceTintColor: Colors.transparent, // Sem cor de superfície
     iconTheme: IconThemeData(color: KColors.black, size: KSizes.iconMd), // Cor e tamanho dos ícones
     actionsIconTheme: IconThemeData(color: KColors.black, size: KSizes.iconMd), // Cor e tamanho dos ícones de ação
-    titleTextStyle: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: KColors.black), // Estilo do texto do título
+    titleTextStyle: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: KColors.darkBackground), // Estilo do texto do título
   );
 
   /// Tema para AppBar Escuro
@@ -26,7 +26,7 @@ class KAppBarTheme{
     elevation: 0, // Sem sombra
     centerTitle: false, // Título não centralizado
     scrolledUnderElevation: 0, // Sem sombra ao rolar
-    backgroundColor: KColors.primary, // Cor de fundo transparente
+    backgroundColor: KColors.darkerGrey, // Cor de fundo transparente
     surfaceTintColor: Colors.transparent, // Sem cor de superfície
     iconTheme: IconThemeData(color: KColors.white, size: KSizes.iconMd), // Cor e tamanho dos ícones
     actionsIconTheme: IconThemeData(color: KColors.white, size: KSizes.iconMd), // Cor e tamanho dos ícones de ação

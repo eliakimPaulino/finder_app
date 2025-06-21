@@ -9,9 +9,14 @@ import '../../../../core/constants/finder_app_colors.dart';
 import '../../../../core/constants/sizes.dart';
 import 'widgets/component_page_widget.dart';
 
-class ComponentPage extends StatelessWidget {
+class ComponentPage extends StatefulWidget {
   const ComponentPage({super.key});
 
+  @override
+  State<ComponentPage> createState() => _ComponentPageState();
+}
+
+class _ComponentPageState extends State<ComponentPage> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -23,7 +28,7 @@ class ComponentPage extends StatelessWidget {
         ),
       )..loadItems(),
       child: Scaffold(
-        appBar: AppBar(title: const Text('Itens')),
+        appBar: AppBar(title: const Text('Componentes')),
         body: Consumer<ComponentController>(
           builder: (context, controller, _) {
             if (controller.isLoading) {
@@ -63,13 +68,7 @@ class ComponentPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(
                             KSizes.inputFieldRadius,
                           ),
-                          boxShadow: [
-                            const BoxShadow(
-                              blurRadius: 6,
-                              offset: Offset(0, 2),
-                            ),
-                          ],
-                          border: Border.all(color: KColors.darkGrey),
+                          border: Border.all(color: KColors.borderPrimary),
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

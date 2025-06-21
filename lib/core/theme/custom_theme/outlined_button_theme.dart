@@ -22,7 +22,7 @@ class KOutlinedButtonTheme {
   /* -- Tema Escuro -- */
   static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      foregroundColor: KColors.light, // Cor do texto/borda do botão no tema escuro
+      foregroundColor: KColors.lightBackground, // Cor do texto/borda do botão no tema escuro
       side: const BorderSide(color: KColors.borderPrimary), // Cor da borda
       textStyle: const TextStyle(fontSize: 16, color: KColors.textWhite, fontWeight: FontWeight.w600), // Estilo do texto
       padding: const EdgeInsets.symmetric(vertical: KSizes.buttonHeight, horizontal: 20), // Espaçamento interno

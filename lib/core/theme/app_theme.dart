@@ -25,7 +25,7 @@ class AppTheme {
     primaryColor: Colors.blue,
     textTheme: KTextTheme.lightTheme,
     chipTheme: KChipTheme.lightChipTheme,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: KColors.lightBackground,
     appBarTheme: KAppBarTheme.lightAppBarTheme,
     checkboxTheme: KCheckboxTheme.lightCheckboxTheme,
     bottomSheetTheme: KBottomSheetTheme.lightBottomSheetTheme,
@@ -72,11 +72,11 @@ class AppTheme {
   /*----------------- TEMA ESCURO -----------------*/
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-    brightness: Brightness.light,
-    primaryColor: Colors.blue,
+    brightness: Brightness.dark,
+    primaryColor: Colors.blueGrey,
     textTheme: KTextTheme.darkTheme,
     chipTheme: KChipTheme.darkChipTheme,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: Color(0xFF252525),
     appBarTheme: KAppBarTheme.darkAppBarTheme,
     checkboxTheme: KCheckboxTheme.darkCheckboxTheme,
     bottomSheetTheme: KBottomSheetTheme.darkBottomSheetTheme,

@@ -1,39 +1,40 @@
+import 'package:finder_app/core/constants/finder_app_colors.dart';
 import 'package:flutter/material.dart';
 
 class KBuildInfoGroup extends StatelessWidget {
   final Map<String, String> infoMap;
 
-  const KBuildInfoGroup({
-    super.key,
-    required this.infoMap,
-  });
+  const KBuildInfoGroup({super.key, required this.infoMap});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: infoMap.entries.map((entry) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 2),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "${entry.key}: ",
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  color: Colors.blue.shade700,
-                ),
+    return Builder(
+      builder: (context) {
+        bool darkMode = Theme.of(context).brightness == Brightness.dark;
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: infoMap.entries.map((entry) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 2),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "${entry.key}: ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: darkMode
+                          ? KColors.buttonPrimary
+                          : KColors.buttonSecondary,
+                    ),
+                  ),
+                  Expanded(child: SelectableText(entry.value)),
+                ],
               ),
-              Expanded(
-                child: SelectableText(
-                  entry.value,
-                ),
-              ),
-            ],
-          ),
+            );
+          }).toList(),
         );
-      }).toList(),
+      },
     );
   }
 }
