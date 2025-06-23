@@ -53,9 +53,7 @@ class _ComponentPageState extends State<ComponentPage> {
                     ),
                     keyboardType: TextInputType.number,
                     onChanged: controller.search,
-                    inputFormatters: [
-                      FilteringTextInputFormatter.digitsOnly, 
-                    ],
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                   ),
                 ),
                 Row(
@@ -68,14 +66,9 @@ class _ComponentPageState extends State<ComponentPage> {
                         style: const TextStyle(fontSize: 16),
                       ),
                     ),
-                    IconButton(
-                      icon: const Icon(Icons.refresh),
-                      onPressed: () {
-                        controller.loadItems();
-                      },
-                    ),
                   ],
                 ),
+                const SizedBox(height: 8),
                 Expanded(
                   child: ListView.builder(
                     itemCount: controller.items.length,

@@ -24,8 +24,8 @@ class KBuildInfoGroup extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       color: darkMode
-                          ? KColors.buttonPrimary
-                          : KColors.buttonSecondary,
+                          ? KColors.textInformationSoft
+                          : KColors.textInformationPrimary,
                     ),
                   ),
                   Expanded(child: SelectableText(entry.value)),

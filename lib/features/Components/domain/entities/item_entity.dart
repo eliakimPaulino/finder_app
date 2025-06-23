@@ -29,7 +29,7 @@ class ComponentEntity {
     List<String> excecoes = ['de', 'da', 'do', 'dos', 'das', 'a', 'o', 'os', 'as', 'para', 'em', 'com', 'sobre', 'entre'];
 
     // Lista de palavras que devem ser mantidas em maiúsculas
-    List<String> maintainCapitalize = ['DD', 'EE', 'MM', 'AA', 'CC', 'DDC', 'DDA', 'DDE', 'DDAA', 'DDCC', 'DDMM', 'DDMMCC'];
+    List<String> maintainCapitalize = ['GIRATORIA-D28-LATAO-ISO8434-1L', 'TRS', 'DD', 'HAN', 'EE', 'MM', 'AA', 'CC', 'DDC', 'DDA', 'DDE', 'DDAA', 'DDCC', 'DDMM', 'DDMMCC'];
     
     // Separar a string em palavras
     List<String> palavras = texto.split(" ");
