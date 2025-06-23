@@ -28,3 +28,6 @@ flutter:
     - assets/data/components/components.json
     - assets/data/pep/pep_440_rev6.json
     - assets/images/
+    - assets/images/components/
+    - assets/images/tools/
+    - assets/images/tools/posicionador/

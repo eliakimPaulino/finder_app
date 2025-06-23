@@ -43,47 +43,94 @@ class PepComponentDetailPage extends StatelessWidget {
         title: const Text("Component Details"),
         leading: const BackButton(),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(child: Image.asset(itemImage, height: 200)),
-            const SizedBox(height: 16),
-            Text("Item Code: $itemCode", style: const TextStyle(fontWeight: FontWeight.bold)),
-            Text("Description: $description", style: const TextStyle(color: Colors.blueGrey)),
-            Text("Stripping Length: $stripping", style: const TextStyle(color: Colors.blueGrey)),
-            const SizedBox(height: 24),
-            const Text("Tooling", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            const Divider(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(
+                    16,
+                  ), // Ajuste o raio como quiser
+                  child: Image.asset(
+                    itemImage,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                "DTR: $itemCode",
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              Text(
+                "Descrição: $description",
+                style: const TextStyle(color: Colors.grey, fontSize: 14),
+              ),
+              Text(
+                "Decapagem: $stripping",
+                style: const TextStyle(color: Colors.grey, fontSize: 14),
+              ),
+              const SizedBox(height: 12),
+              // const Text(
+              //   "Ferramenta(s)",
+              //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              // ),
+              // const SizedBox(height: 8),
+              const Divider(),
 
-            /// Tabela de dois blocos lado a lado
-            _buildToolingTable(context),
-          ],
+              /// Tabela de dois blocos lado a lado
+              _buildToolingTable(context),
+            ],
+          ),
         ),
       ),
     );
   }
 
   Widget _buildToolingTable(BuildContext context) {
+    // final entries = [
+    //   ["Imagem da Ferramenta", toolImage,"Código da Ferramenta", toolCode],
+    //   ["Posicionador Tourret", turretPositioning, "Imagem Posicionador", turretPositioningImage],
+    //   ["Ajuste de Ferramenta", "Ajuste: $toolAdjustment", "Código Segunda Ferramenta", secondToolCode],
+    //   ["Imagem Segunda Ferramenta", secondToolImage, "Segunda Matriz de Posicionamento", secondMatrixPositioning],
+    //   ["Imagem Segunda Matriz de Posicionamento", secondMatrixPositioningImage, "Ajuste Segunda Ferramenta", "Ajuste: $secondToolAdjustment"],
+    // ];
     final entries = [
-      ["Tool Code", toolCode, "Tool Image", toolImage],
-      ["Turret Positioning", turretPositioning, "Turret Positioning Image", turretPositioningImage],
-      ["Tool Adjustments", "Adjustments: ${toolAdjustment}mm", "Second Tool Code", secondToolCode],
-      ["Second Tool Image", secondToolImage, "Second Matrix Positioning", secondMatrixPositioning],
-      ["Second Matrix Positioning Image", secondMatrixPositioningImage, "Second Tool Adjustments", "Adjustments: $secondToolAdjustment"],
+      ["", toolImage, "", secondToolImage],
+      ["Ferramenta", toolCode, "Ferramenta", secondToolCode],
+      ["Ajuste", toolAdjustment, "Ajuste", secondToolAdjustment],
+      [
+        "Posicionador Tourret",
+        turretPositioning,
+        "Posicionador Tourret",
+        secondMatrixPositioning,
+      ],
+      [
+        "Imagem Posicionador",
+        turretPositioningImage,
+        "Imagem Posicionador",
+        secondMatrixPositioningImage,
+      ],
     ];
 
     return Column(
       children: entries.map((e) {
         return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 6.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(width: 20),
               Expanded(child: _buildLabelValue(e[0], e[1])),
-              const SizedBox(width: 16),
+              const SizedBox(width: 30),
               Expanded(child: _buildLabelValue(e[2], e[3])),
             ],
           ),
@@ -93,71 +140,60 @@ class PepComponentDetailPage extends StatelessWidget {
   }
 
   Widget _buildLabelValue(String label, String value) {
-    final isImage = value.endsWith('.png') || value.endsWith('.jpg');
+    final isImage = value.endsWith('.png');
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: const TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold)),
+        Text(
+          label,
+          style: const TextStyle(
+            color: Colors.blueGrey,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         const SizedBox(height: 4),
         isImage
-            ? Image.asset(
-                value,
-                height: 50,
-                width: 50,
-                errorBuilder: (_, __, ___) => const Text("No image", style: TextStyle(fontSize: 12)),
+            ?
+              // CircleAvatar(
+              //     radius: 35,
+              //     child: ClipOval(
+              //       child: Image.asset(
+              //         value,
+              //         height: 70,
+              //         width: 70,
+              //         fit: BoxFit.cover,
+              //         errorBuilder: (_, __, ___) => const Text(
+              //           "Sem imagem",
+              //           style: TextStyle(fontSize: 12),
+              //         ),
+              //       ),
+              //     ),
+              //   )
+              ClipRRect(
+                borderRadius: BorderRadius.circular(
+                  12,
+                ), // Raio da borda arredondada
+                child: Image.asset(
+                  value,
+                  width: 120,
+                  height: 70,
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => Container(
+                    width: 70,
+                    height: 70,
+                    color: Colors.grey.shade300,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Sem imagem",
+                      style: TextStyle(fontSize: 12),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
               )
             : Text(value, style: const TextStyle(fontSize: 14)),
       ],
     );
   }
 }
-
-// class PepComponentDetailPage extends StatelessWidget {
-//   final PepComponentEntity component;
-
-//   const PepComponentDetailPage({super.key, required this.component});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: const Text("Component Details")),
-//       body: SingleChildScrollView(
-//         padding: const EdgeInsets.all(16),
-//         child: Column(
-//           children: [
-//             Image.asset(component.itemImage),
-//             const SizedBox(height: 16),
-//             Text("Item Code: ${component.item}", style: const TextStyle(fontWeight: FontWeight.bold)),
-//             Text("Description: ${component.description}"),
-//             Text("Stripping Length: ${component.stripping}"),
-//             const SizedBox(height: 20),
-//             const Text("Tooling", style: TextStyle(fontWeight: FontWeight.bold)),
-//             const Divider(),
-//             // Exibição dos demais campos como na imagem
-//             _toolingItem("Tool Code", component.toolCode),
-//             _toolingItem("Tool Image", component.toolImage),
-//             _toolingItem("Turret Positioning", component.turretPositioning),
-//             _toolingItem("Tool Adjustment", component.toolAdjustment),
-//             _toolingItem("Second Tool Code", component.secondToolCode),
-//             _toolingItem("Second Tool Image", component.secondToolImage),
-//             _toolingItem("Second Matrix Positioning", component.secondMatrixPositioning),
-//             _toolingItem("Second Tool Adjustment", component.secondToolAdjustment),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-
-//   Widget _toolingItem(String label, String value) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(vertical: 4),
-//       child: Row(
-//         children: [
-//           Expanded(flex: 2, child: Text("$label:", style: const TextStyle(fontWeight: FontWeight.bold))),
-//           Expanded(flex: 3, child: Text(value)),
-//         ],
-//       ),
-//     );
-//   }
-// }
