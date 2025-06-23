@@ -45,7 +45,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 VERMELHO",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_VERMELHO.png",
-    "second_tool_adjustment": "0.22mm² - 0.25mm²  - 2mm² | 0.5mm² - 4.0mm²"
+    "second_tool_adjustment": "0.22mm² • 0.25mm² • 2mm²\n0.5mm² • 4.0mm²"
   },
   {
     "item": "DTR0000139523",
@@ -61,7 +61,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 AZUL",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_AZUL.png",
-    "second_tool_adjustment": "0.5mm² - 4.0mm² | 1.0mm² - 5.0mm²"
+    "second_tool_adjustment": "0.5mm² • 4.0mm²\n1.0mm² • 5.0mm²"
   },
   {
     "item": "DTR0000139529",
@@ -77,7 +77,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 VERMELHO",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_VERMELHO.png",
-    "second_tool_adjustment": "0.5mm² - 4.0mm² |  0.75mm² - 1.0mm² - 5.0mm² | 1.5mm² - 6.0mm²"
+    "second_tool_adjustment": "0.5mm² • 4.0mm²\n0.75mm² • 1.0mm² • 5.0mm²\n1.5mm² • 6.0mm²"
   },
   {
     "item": "DTR0000029087",
@@ -93,7 +93,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "UH2-5",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/UH2_5.png",
-    "second_tool_adjustment": "0.75mm²  - 5.0mm²"
+    "second_tool_adjustment": "0.75mm² • 5.0mm²"
   },
   {
     "item": "DTR0000139774",
@@ -109,7 +109,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 VERMELHO",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_VERMELHO.png",
-    "second_tool_adjustment": "0.5mm² - 4.0mm² |  0.75mm² - 1.0mm² - 5.0mm² | 1.5mm² - 6.0mm²"
+    "second_tool_adjustment": "0.5mm² • 4.0mm²\n0.75mm² • 1.0mm² • 5.0mm²\n1.5mm² • 6.0mm²"
   },
   {
     "item": "DTR0000030129",
@@ -125,7 +125,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 VERMELHO",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_VERMELHO.png",
-    "second_tool_adjustment": "1.0 mm² - 5.0mm² | 1.5mm² - 6.0mm² | 2.5mm² - 7.0mm²"
+    "second_tool_adjustment": "1.0 mm² • 5.0mm²\n1.5mm² • 6.0mm²\n2.5mm² • 7.0mm²"
   },
   {
     "item": "DTR0000139541",
@@ -141,7 +141,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 AZUL",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_AZUL.png",
-    "second_tool_adjustment": "0.22mm² - 0.25mm²  - 2.0mm²"
+    "second_tool_adjustment": "0.22mm² • 0.25mm² • 2.0mm²"
   },
   {
     "item": "DTR0000120107",
@@ -157,7 +157,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 531 - AZUL",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_531.png",
-    "second_tool_adjustment": "1.5mm² - 6.0mm²"
+    "second_tool_adjustment": "1.5mm² • 6.0mm²"
   },
   {
     "item": "DTR0000120152",
@@ -173,7 +173,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 531 - AZUL",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_531.png",
-    "second_tool_adjustment": "1.5mm² - 6.0mm² | 2.5mm² - 7.0mm²"
+    "second_tool_adjustment": "1.5mm² • 6.0mm²\n2.5mm² • 7.0mm²"
   },
   {
     "item": "DTR0000028814",
@@ -189,7 +189,7 @@
     "second_tool_image": "assets/images/tools/dmc_ft8.png",
     "second_matrix_positioning": "TH 493-1 - AZUL",
     "second_matrix_positioning_image": "assets/images/tools/posicionador/TH_493_1_AZUL.png",
-    "second_tool_adjustment": "1.5mm² - 6.0mm² | 2.5mm² - 7.0mm²"
+    "second_tool_adjustment": "1.5mm² • 6.0mm²\n2.5mm² • 7.0mm²"
   },
   {
     "item": "DTR0000069162",

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../domain/entities/pep_component_entity.dart';
-
 class PepComponentDetailPage extends StatelessWidget {
   final String itemCode;
   final String description;
@@ -39,16 +37,34 @@ class PepComponentDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Component Details"),
-        leading: const BackButton(),
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Component Details"),
+      //   leading: const Icon(Icons.arrow_back_ios_rounded),
+      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back_ios_rounded),
+                    onPressed: () => Navigator.of(context).pop(),
+                  ),
+                  const Text(
+                    "Detalhes do Terminal",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(width: 48), // Espaço para o ícone de voltar
+                ],
+              ),
+              const SizedBox(height: 16),
               Center(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(
@@ -62,29 +78,37 @@ class PepComponentDetailPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 12),
               Text(
-                "DTR: $itemCode",
+                itemCode,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 18,
                 ),
               ),
               Text(
                 "Descrição: $description",
-                style: const TextStyle(color: Colors.grey, fontSize: 14),
+                style: const TextStyle(
+                  color: Colors.blueGrey,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               Text(
                 "Decapagem: $stripping",
-                style: const TextStyle(color: Colors.grey, fontSize: 14),
+                style: const TextStyle(
+                  color: Colors.blueGrey,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-              const SizedBox(height: 12),
-              // const Text(
-              //   "Ferramenta(s)",
-              //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              // ),
-              // const SizedBox(height: 8),
+              const SizedBox(height: 16),
               const Divider(),
+              const Text(
+                "Para crimpagem use as seguintes ferramentas:",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              // const SizedBox(height: 8),
 
               /// Tabela de dois blocos lado a lado
               _buildToolingTable(context),
@@ -96,13 +120,6 @@ class PepComponentDetailPage extends StatelessWidget {
   }
 
   Widget _buildToolingTable(BuildContext context) {
-    // final entries = [
-    //   ["Imagem da Ferramenta", toolImage,"Código da Ferramenta", toolCode],
-    //   ["Posicionador Tourret", turretPositioning, "Imagem Posicionador", turretPositioningImage],
-    //   ["Ajuste de Ferramenta", "Ajuste: $toolAdjustment", "Código Segunda Ferramenta", secondToolCode],
-    //   ["Imagem Segunda Ferramenta", secondToolImage, "Segunda Matriz de Posicionamento", secondMatrixPositioning],
-    //   ["Imagem Segunda Matriz de Posicionamento", secondMatrixPositioningImage, "Ajuste Segunda Ferramenta", "Ajuste: $secondToolAdjustment"],
-    // ];
     final entries = [
       ["", toolImage, "", secondToolImage],
       ["Ferramenta", toolCode, "Ferramenta", secondToolCode],
@@ -149,31 +166,15 @@ class PepComponentDetailPage extends StatelessWidget {
           label,
           style: const TextStyle(
             color: Colors.blueGrey,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w600,
           ),
         ),
         const SizedBox(height: 4),
         isImage
-            ?
-              // CircleAvatar(
-              //     radius: 35,
-              //     child: ClipOval(
-              //       child: Image.asset(
-              //         value,
-              //         height: 70,
-              //         width: 70,
-              //         fit: BoxFit.cover,
-              //         errorBuilder: (_, __, ___) => const Text(
-              //           "Sem imagem",
-              //           style: TextStyle(fontSize: 12),
-              //         ),
-              //       ),
-              //     ),
-              //   )
-              ClipRRect(
+            ? ClipRRect(
                 borderRadius: BorderRadius.circular(
                   12,
-                ), // Raio da borda arredondada
+                ),
                 child: Image.asset(
                   value,
                   width: 120,

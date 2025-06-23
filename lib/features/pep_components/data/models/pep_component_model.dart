@@ -49,4 +49,23 @@ class PepComponentModel {
       secondToolAdjustment: json['second_tool_adjustment'] ?? '',
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'item': item,
+      'description': description,
+      'stripping': stripping,
+      'item_image': itemImage,
+      'tool_code': toolCode,
+      'tool_image': toolImage,
+      'turret_positioning': turretPositioning,
+      'tourret_positioning_image': turretPositioningImage,
+      'tool_adjustment': toolAdjustment,
+      'second_tool_code': secondToolCode,
+      'second_tool_image': secondToolImage,
+      'second_matrix_positioning': secondMatrixPositioning,
+      'second_matrix_positioning_image': secondMatrixPositioningImage,
+      'second_tool_adjustment': secondToolAdjustment,
+    };
+  }
 }

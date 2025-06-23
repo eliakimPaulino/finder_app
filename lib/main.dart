@@ -22,7 +22,7 @@ void main() {
               ),
             );
             controller.loadItems(); // Chamada fora do construtor, para evitar problemas de ciclo de vida
-            // Isso garante que a lista de itens seja carregada antes de ser usada na UI
+            // Garante que a lista de itens seja carregada antes de ser usada na UI
             return controller;
           },
         ),

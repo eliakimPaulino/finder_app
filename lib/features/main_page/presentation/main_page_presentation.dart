@@ -10,82 +10,124 @@ class SelectOptionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Selecione uma opção'),
-          centerTitle: true,
-        ),
+        // appBar: AppBar(
+        //   title: const Text('Selecione uma opção'),
+        //   centerTitle: true,
+        // ),
         body: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
               const Text(
-                'Selecione',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                'Bem-vindo ao\nFinder',
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
               ),
-              const SizedBox(height: 32),
-
-              // Primeiro container
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/dtr-finder');
-                },
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  margin: const EdgeInsets.only(bottom: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade50,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 6,
-                        offset: Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Row(
+              const SizedBox(height: 16),
+              const Text(
+                'Encontre o que precisa, de forma rápida e fácil',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: KColors.darkGrey,
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
                     children: [
-                      Icon(Icons.build, color: Colors.blue.shade700),
-                      const SizedBox(width: 16),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/dtr-finder');
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(20),
+                          margin: const EdgeInsets.only(bottom: 16),
+                          decoration: BoxDecoration(
+                            color: Colors.blue.shade50,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            children: [
+                              Icon(Icons.search, color: Colors.blue.shade700),
+                              const SizedBox(width: 16),
+                              const Text(
+                                'BIN',
+                                style: TextStyle(
+                                  fontSize: KSizes.lg,
+                                  color: KColors.textInformationPrimary,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                       const Text(
-                        'Ir para busca DTR',
-                        style: TextStyle(fontSize: KSizes.lg, color: KColors.textInformationPrimary),
+                        ' Encontrar\nDouble Bin',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: KColors.darkGrey,
+                        ),
                       ),
                     ],
                   ),
-                ),
-              ),
-
-              // Segundo container
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/pep-finder');
-                },
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.green.shade50,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 6,
-                        offset: Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Row(
+                  Column(
                     children: [
-                      Icon(Icons.settings, color: Colors.green.shade700),
-                      const SizedBox(width: 16),
-                      Text(
-                        'Ir para busca PEP',
-                        style: TextStyle(fontSize: KSizes.lg, color: Colors.green.shade700),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/pep-finder');
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(20),
+                          margin: const EdgeInsets.only(bottom: 16),
+                          decoration: BoxDecoration(
+                            color: Colors.green.shade50,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            children: [
+                              Icon(Icons.search, color: Colors.green.shade700),
+                              const SizedBox(width: 16),
+                              Text(
+                                'PEP',
+                                style: TextStyle(
+                                  fontSize: KSizes.lg,
+                                  color: Colors.green.shade700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const Text(
+                        '       Buscar\nOrientação PEP',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: KColors.darkGrey,
+                        ),
                       ),
                     ],
                   ),
-                ),
+                ],
               ),
             ],
           ),

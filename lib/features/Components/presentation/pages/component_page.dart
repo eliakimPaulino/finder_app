@@ -29,7 +29,6 @@ class _ComponentPageState extends State<ComponentPage> {
         ),
       )..loadItems(),
       child: Scaffold(
-        appBar: AppBar(title: const Text('Componentes')),
         body: Consumer<ComponentController>(
           builder: (context, controller, _) {
             if (controller.isLoading) {
@@ -40,79 +39,108 @@ class _ComponentPageState extends State<ComponentPage> {
               return Center(child: Text('Erro: ${controller.error}'));
             }
 
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextField(
-                    controller: controller.searchController,
-                    decoration: const InputDecoration(
-                      labelText: 'DTR',
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.search),
-                    ),
-                    keyboardType: TextInputType.number,
-                    onChanged: controller.search,
-                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Text(
-                        'Total: ${controller.items.length} itens',
-                        style: const TextStyle(fontSize: 16),
+            return SafeArea(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back_ios_rounded),
+                        onPressed: () => Navigator.of(context).pop(),
                       ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 8),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: controller.items.length,
-                    itemBuilder: (_, index) {
-                      final item = controller.items[index].formatarDescricao();
-                      return Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 8,
+                      const Text(
+                        'Componentes',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
                         ),
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                            KSizes.inputFieldRadius,
-                          ),
-                          border: Border.all(color: KColors.borderPrimary),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              item.descricao,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const SizedBox(height: 8),
-                            KBuildInfoGroup(
-                              infoMap: {
-                                'Item': item.item,
-                                'Local Referência': item.localReferencia,
-                                'Prateleira': item.prateleira,
-                                'Posição': item.posicao,
-                                'Fluxo': item.fluxo,
-                              },
-                            ),
-                          ],
-                        ),
-                      );
-                    },
+                      ),
+                      const SizedBox(width: 48), // Placeholder for alignment
+                    ],
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: TextField(
+                      controller: controller.searchController,
+                      decoration: const InputDecoration(
+                        labelText: 'DTR',
+                        labelStyle: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: KColors.darkGrey,
+                        ),
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.search),
+                      ),
+                      keyboardType: TextInputType.number,
+                      onChanged: controller.search,
+                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Text(
+                          'Total: ${controller.items.length} itens',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: KColors.darkGrey,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: controller.items.length,
+                      itemBuilder: (_, index) {
+                        final item = controller.items[index]
+                            .formatarDescricao();
+                        return Container(
+                          margin: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 8,
+                          ),
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                              KSizes.inputFieldRadius,
+                            ),
+                            border: Border.all(color: KColors.borderPrimary),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item.descricao,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              KBuildInfoGroup(
+                                infoMap: {
+                                  'Item': item.item,
+                                  'Local Referência': item.localReferencia,
+                                  'Prateleira': item.prateleira,
+                                  'Posição': item.posicao,
+                                  'Fluxo': item.fluxo,
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
             );
           },
         ),
