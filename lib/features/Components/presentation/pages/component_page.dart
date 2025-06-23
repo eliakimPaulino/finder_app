@@ -50,7 +50,7 @@ class _ComponentPageState extends State<ComponentPage> {
                         onPressed: () => Navigator.of(context).pop(),
                       ),
                       const Text(
-                        'Componentes',
+                        'Componentes Double Bin',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w600,
@@ -58,6 +58,15 @@ class _ComponentPageState extends State<ComponentPage> {
                       ),
                       const SizedBox(width: 48), // Placeholder for alignment
                     ],
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Encontre, buscando pelo código DTR do componente.',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: KColors.darkGrey,
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),

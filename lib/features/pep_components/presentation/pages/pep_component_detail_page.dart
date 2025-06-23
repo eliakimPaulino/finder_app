@@ -37,10 +37,6 @@ class PepComponentDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text("Component Details"),
-      //   leading: const Icon(Icons.arrow_back_ios_rounded),
-      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
@@ -58,7 +54,7 @@ class PepComponentDetailPage extends StatelessWidget {
                     "Detalhes do Terminal",
                     style: TextStyle(
                       fontSize: 22,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   const SizedBox(width: 48), // Espaço para o ícone de voltar

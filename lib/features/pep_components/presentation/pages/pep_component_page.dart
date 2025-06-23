@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../../../../core/constants/finder_app_colors.dart';
 import '../controllers/pep_component_controller.dart';
 import 'pep_component_detail_page.dart';
 
@@ -36,6 +38,7 @@ class _PepComponentPageState extends State<PepComponentPage> {
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   spacing: 8.0,
                   children: [
                     Row(
@@ -55,26 +58,47 @@ class _PepComponentPageState extends State<PepComponentPage> {
                         const SizedBox(width: 48), // Placeholder for alignment
                       ],
                     ),
-                    const Text(
-                          'Encontre aqui as informações sobre ferramenta, comprimento de decapagem, posicionamento de matriz e ajuste de ferramenta.\nBasta buscar pelo código DTR do componente.',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey,
-                          ),
-                        ),
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: const Text(
+                        'Encontre as informações sobre ferramenta, comprimento de decapagem, posicionamento de matriz e ajuste de ferramenta.\nBasta buscar pelo código DTR do componente.',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
                       child: TextField(
                         controller: controller.searchController,
-                        decoration: InputDecoration(
-                          hintText: 'Pesquisar...',
-                          prefixIcon: const Icon(Icons.search),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.0),
+                        decoration: const InputDecoration(
+                          labelText: 'DTR',
+                          labelStyle: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: KColors.darkGrey,
                           ),
+                          border: OutlineInputBorder(),
+                          prefixIcon: Icon(Icons.search),
                         ),
+                        keyboardType: TextInputType.number,
                         onChanged: controller.search,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        'Total: ${controller.items.length} itens',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: KColors.darkGrey,
+                        ),
                       ),
                     ),
                     Expanded(
@@ -82,53 +106,77 @@ class _PepComponentPageState extends State<PepComponentPage> {
                         itemCount: controller.items.length,
                         itemBuilder: (context, index) {
                           final item = controller.items[index];
-                          return Container(
-                            margin: const EdgeInsets.all(8),
-                            child: ListTile(
-                              leading: CircleAvatar(
-                                  radius: 30,
-                                  child: ClipOval(
-                                    child: Image.asset(
-                                      item.itemImage,
-                                      fit: BoxFit.cover,
-                                      width: 60,
-                                      height: 60,
-                                      errorBuilder: (context, error, stackTrace) {
-                                        return const Icon(
-                                          Icons.broken_image,
-                                          size: 30,
-                                        );
-                                      },
+                          return SizedBox(
+                            child: Column(
+                              children: [
+                                ListTile(
+                                  tileColor: Colors.transparent,
+                                  leading: CircleAvatar(
+                                    radius: 30,
+                                    child: ClipOval(
+                                      child: Image.asset(
+                                        item.itemImage,
+                                        fit: BoxFit.cover,
+                                        width: 60,
+                                        height: 60,
+                                        errorBuilder:
+                                            (context, error, stackTrace) {
+                                              return const Icon(
+                                                Icons.broken_image,
+                                                size: 30,
+                                              );
+                                            },
+                                      ),
+                                    ),
+                                  ),
+                                  title: Text(
+                                    item.item,
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  subtitle: Text(
+                                    item.description,
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  trailing: const Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                  ),
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          PepComponentDetailPage(
+                                            itemCode: item.item,
+                                            description: item.description,
+                                            stripping: item.stripping,
+                                            itemImage: item.itemImage,
+                                            toolCode: item.toolCode,
+                                            toolImage: item.toolImage,
+                                            turretPositioning:
+                                                item.turretPositioning,
+                                            turretPositioningImage:
+                                                item.turretPositioningImage,
+                                            toolAdjustment: item.toolAdjustment,
+                                            secondToolCode: item.secondToolCode,
+                                            secondToolImage:
+                                                item.secondToolImage,
+                                            secondMatrixPositioning:
+                                                item.secondMatrixPositioning,
+                                            secondMatrixPositioningImage: item
+                                                .secondMatrixPositioningImage,
+                                            secondToolAdjustment:
+                                                item.secondToolAdjustment,
+                                          ),
                                     ),
                                   ),
                                 ),
-                              title: Text(item.item),
-                              subtitle: Text(item.description),
-                              trailing: const Icon(Icons.arrow_forward_ios_rounded),
-                              onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => PepComponentDetailPage(
-                                    itemCode: item.item,
-                                    description: item.description,
-                                    stripping: item.stripping,
-                                    itemImage: item.itemImage,
-                                    toolCode: item.toolCode,
-                                    toolImage: item.toolImage,
-                                    turretPositioning: item.turretPositioning,
-                                    turretPositioningImage:
-                                        item.turretPositioningImage,
-                                    toolAdjustment: item.toolAdjustment,
-                                    secondToolCode: item.secondToolCode,
-                                    secondToolImage: item.secondToolImage,
-                                    secondMatrixPositioning:
-                                        item.secondMatrixPositioning,
-                                    secondMatrixPositioningImage:
-                                        item.secondMatrixPositioningImage,
-                                    secondToolAdjustment: item.secondToolAdjustment,
-                                  ),
-                                ),
-                              ),
+                              ],
                             ),
                           );
                         },

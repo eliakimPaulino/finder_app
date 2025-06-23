@@ -47,7 +47,7 @@ class SelectOptionPage extends StatelessWidget {
                           padding: const EdgeInsets.all(20),
                           margin: const EdgeInsets.only(bottom: 16),
                           decoration: BoxDecoration(
-                            color: Colors.blue.shade50,
+                            color: Colors.grey.shade50,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: [
                               BoxShadow(
@@ -92,7 +92,7 @@ class SelectOptionPage extends StatelessWidget {
                           padding: const EdgeInsets.all(20),
                           margin: const EdgeInsets.only(bottom: 16),
                           decoration: BoxDecoration(
-                            color: Colors.green.shade50,
+                            color: Colors.grey.shade50,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: [
                               BoxShadow(
