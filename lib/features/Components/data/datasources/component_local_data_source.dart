@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import '../models/item_model.dart';
+import '../models/component_model.dart';
 
 abstract class ComponentLocalDataSource {
   Future<List<ComponentModel>> getItemsFromJson();
