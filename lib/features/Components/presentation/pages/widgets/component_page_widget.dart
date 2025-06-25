@@ -1,40 +1,41 @@
-import 'package:finder_app/core/constants/finder_app_colors.dart';
 import 'package:flutter/material.dart';
 
-class KBuildInfoGroup extends StatelessWidget {
-  final Map<String, String> infoMap;
+class KBuildComponentInfo extends StatelessWidget {
+  final String name;
+  final String local;
+  final String shelf;
+  final String position;
+  final String flow;
 
-  const KBuildInfoGroup({super.key, required this.infoMap});
+  const KBuildComponentInfo({
+    super.key,
+    required this.name,
+    required this.local,
+    required this.shelf,
+    required this.position,
+    required this.flow,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Builder(
-      builder: (context) {
-        bool darkMode = Theme.of(context).brightness == Brightness.dark;
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: infoMap.entries.map((entry) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 2),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "${entry.key}: ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      color: darkMode
-                          ? KColors.textInformationSoft
-                          : KColors.textInformationPrimary,
-                    ),
-                  ),
-                  Expanded(child: SelectableText(entry.value)),
-                ],
-              ),
-            );
-          }).toList(),
-        );
-      },
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+      child: Column(
+        spacing: 4.0,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            name,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(height: 2.0),
+          Text(local),
+          Text('Prateleira: $shelf'),
+          Text('Posição: $position'),
+          Text('Fluxo: $flow'),
+        ],
+      ),
     );
   }
 }

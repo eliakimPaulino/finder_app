@@ -1,4 +1,3 @@
-
 class KSizes {
   // Padding and margin sizes
   static const double xs = 4.0;
@@ -13,10 +12,14 @@ class KSizes {
   static const double iconMd = 24.0;
   static const double iconLg = 32.0;
 
-  // Font sizes
-  static const double fontSizeSm = 14.0;
-  static const double fontSizeMd = 16.0;
-  static const double fontSizeLg = 18.0;
+  // Font sizes (Text)
+  static const double fontSizeXs = 12.0; // Pequeno - detalhes, legendas
+  static const double fontSizeSm = 14.0; // Corpo de texto secundário
+  static const double fontSizeMd = 16.0; // Corpo de texto principal
+  static const double fontSizeLg = 18.0; // Subtítulo
+  static const double fontSizeXl = 20.0; // Título pequeno
+  static const double fontSizeXxl = 24.0; // Título médio
+  static const double fontSizeDisplay = 32.0; // Título grande ou destaque
 
   // Button sizes
   static const double buttonHeight = 18.0;
@@ -43,7 +46,7 @@ class KSizes {
   // Divider height
   static const double dividerHeight = 1.0;
 
-  // Product item dimensions
+  // Product or item dimensions
   static const double productImageSize = 120.0;
   static const double productImageRadius = 16.0;
   static const double productItemHeight = 160.0;
@@ -68,6 +71,3 @@ class KSizes {
   // Grid view spacing
   static const double gridViewSpacing = 16.0;
 }
-
-
-

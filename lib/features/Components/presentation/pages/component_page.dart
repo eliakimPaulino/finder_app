@@ -108,7 +108,7 @@ class _ComponentPageState extends State<ComponentPage> {
                     child: ListView.builder(
                       itemCount: controller.items.length,
                       itemBuilder: (_, index) {
-                        final item = controller.items[index]
+                        final component = controller.items[index]
                             .formatarDescricao();
                         return Container(
                           margin: const EdgeInsets.symmetric(
@@ -126,21 +126,19 @@ class _ComponentPageState extends State<ComponentPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                item.descricao,
+                                component.descricao,
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const SizedBox(height: 8),
-                              KBuildInfoGroup(
-                                infoMap: {
-                                  'Item': item.item,
-                                  'Local Referência': item.localReferencia,
-                                  'Prateleira': item.prateleira,
-                                  'Posição': item.posicao,
-                                  'Fluxo': item.fluxo,
-                                },
+                              const SizedBox(height: 2),
+                              KBuildComponentInfo(
+                                name: component.item,
+                                local: component.localReferencia,
+                                shelf: component.prateleira,
+                                position: component.posicao,
+                                flow: component.fluxo,
                               ),
                             ],
                           ),

@@ -2,12 +2,12 @@
 class KTexts {
 
   // -- Textos GLOBAIS
-  static const String and = "Lorem";
-  static const String skip = "Ipsum";
-  static const String done = "Dolor";
-  static const String submit = "Sit";
-  static const String appName = "Lorem Ipsum App";
-  static const String tContinue = "Amet";
+  static const String and = "e";
+  static const String skip = "Pular";
+  static const String done = "Pronto";
+  static const String submit = "Enviar";
+  static const String appName = "Finder";
+  static const String kContinue = "Continuar";
 
 
   // -- Textos de OnBoarding
@@ -21,25 +21,25 @@ class KTexts {
 
 
   // -- Formulários de Autenticação
-  static const String firstName = "Lorem";
-  static const String lastName = "Ipsum";
-  static const String email = "Dolor";
-  static const String password = "Sit";
-  static const String newPassword = "Amet";
-  static const String username = "Consectetur";
-  static const String phoneNo = "Adipiscing";
-  static const String rememberMe = "Elit";
-  static const String forgetPassword = "Sed do?";
-  static const String signIn = "Eiusmod";
-  static const String createAccount = "Tempor";
-  static const String orSignInWith = "Ou sign in";
-  static const String orSignUpWith = "Ou sign up";
+  static const String firstName = "Nome";
+  static const String lastName = "Sobrenome";
+  static const String email = "E-mail";
+  static const String password = "Senha";
+  static const String newPassword = "Nova Senha";
+  static const String username = "Nome de Usuário";
+  static const String phoneNo = "Número de Telefone";
+  static const String rememberMe = "Lembre-me";
+  static const String forgetPassword = "Esqueceu a senha?";
+  static const String signIn = "Cadastrar-se";
+  static const String createAccount = "Criar conta";
+  static const String orSignInWith = "Ou entre com";
+  static const String orSignUpWith = "Ou cadastre-se com";
   static const String iAgreeTo = "Eu concordo";
-  static const String privacyPolicy = "Política de Lorem";
-  static const String termsOfUse = "Termos de Ipsum";
-  static const String verificationCode = "Código lorem";
-  static const String resendEmail = "Reenviar ipsum";
-  static const String resendEmailIn = "Reenviar em";
+  static const String privacyPolicy = "Política de Privacidade";
+  static const String termsOfUse = "Termos de Uso";
+  static const String verificationCode = "Código de Verificação";
+  static const String resendEmail = "Reenviar e-mail";
+  static const String resendEmailIn = "Reenviar e-mail em";
 
 
   // -- Títulos de Autenticação
@@ -57,12 +57,12 @@ class KTexts {
   static const String yourAccountCreatedSubTitle = "Bem-vindo ao lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 
-  // -- Produto
+  // -- Produto ou Componente
   static const String popularProducts = "Produtos lorem";
 
   // -- Home
   static const String homeAppbarTitle = "Home Lorem";
-  static const String homeAppbarSubTitle = "Home App Bar Sub Title";
+  static const String homeAppbarSubTitle = "Home App Bar Finder Sub Title";
 
 
 }
