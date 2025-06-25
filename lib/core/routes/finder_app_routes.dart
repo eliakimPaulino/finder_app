@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../features/Components/presentation/pages/component_page.dart';
+import '../../features/components/presentation/pages/component_page.dart';
 import '../../features/main_page/presentation/main_page_presentation.dart';
 import '../../features/pep_components/presentation/pages/pep_component_page.dart';
 

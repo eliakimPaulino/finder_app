@@ -3,10 +3,10 @@ import 'package:provider/provider.dart';
 
 import 'core/routes/finder_app_routes.dart';
 import 'core/theme/app_theme.dart';
-import 'features/Components/data/datasources/component_local_data_source.dart';
-import 'features/Components/data/repositories/component_repository_impl.dart';
-import 'features/Components/domain/usecases/get_items.dart';
-import 'features/Components/presentation/controllers/component_controller.dart';
+import 'features/components/data/datasources/component_local_data_source.dart';
+import 'features/components/data/repositories/component_repository_impl.dart';
+import 'features/components/domain/usecases/get_items.dart';
+import 'features/components/presentation/controllers/component_controller.dart';
 
 void main() {
   runApp(

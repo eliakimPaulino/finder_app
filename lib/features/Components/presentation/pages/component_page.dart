@@ -50,6 +50,7 @@ class _ComponentPageState extends State<ComponentPage> {
                   constraints: const BoxConstraints(maxWidth: 600),
                   child: Column(
                     children: [
+                      const SizedBox(height: 16),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
