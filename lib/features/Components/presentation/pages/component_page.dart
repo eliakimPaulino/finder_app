@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -6,8 +8,7 @@ import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
 import '../../domain/usecases/get_items.dart';
 import '../controllers/component_controller.dart';
-import '../../../../core/constants/finder_app_colors.dart';
-import '../../../../core/constants/sizes.dart';
+import '../../../../core/constants/colors.dart';
 import 'widgets/component_page_widget.dart';
 
 class ComponentPage extends StatefulWidget {
@@ -20,6 +21,9 @@ class ComponentPage extends StatefulWidget {
 class _ComponentPageState extends State<ComponentPage> {
   @override
   Widget build(BuildContext context) {
+    final dark = MediaQuery.of(context).platformBrightness == Brightness.dark;
+    // Usando ChangeNotifierProvider para fornecer o ComponentController
+    // e carregar os itens assim que a página for construída.
     return ChangeNotifierProvider(
       create: (_) => ComponentController(
         getItemsUseCase: GetItems(
@@ -117,10 +121,17 @@ class _ComponentPageState extends State<ComponentPage> {
                           ),
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              KSizes.inputFieldRadius,
-                            ),
-                            border: Border.all(color: KColors.borderPrimary),
+                            color: dark
+                                ? KColors.darkContainer
+                                : KColors.lightContainer,
+                            borderRadius: BorderRadius.circular(12),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 6,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,9 +143,14 @@ class _ComponentPageState extends State<ComponentPage> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const SizedBox(height: 2),
+                              Text(
+                                component.item,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                               KBuildComponentInfo(
-                                name: component.item,
                                 local: component.localReferencia,
                                 shelf: component.prateleira,
                                 position: component.posicao,

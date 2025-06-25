@@ -29,10 +29,8 @@ class KColors {
   static const Color primaryBackground = Color(0xFFF3F5FF); // Fundo principal
 
   // Cores para containers de fundo
-  static const Color lightContainer = Color(0xFFF6F6F6); // Container claro
-  static Color darkContainer = KColors.white.withOpacity(
-    0.1,
-  ); // Container escuro com opacidade
+  static const Color lightContainer = Color(0xFFEFEFF1); // Container claro
+  static Color darkContainer = Color(0xFF2C2C2C); // Container escuro
 
   // Cores de botões
   static const Color buttonPrimary = Color(0xFF4b68ff); // Botão primário

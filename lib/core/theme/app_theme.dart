@@ -1,4 +1,4 @@
-import 'package:finder_app/core/constants/finder_app_colors.dart';
+import 'package:finder_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_theme/appbar_theme.dart';

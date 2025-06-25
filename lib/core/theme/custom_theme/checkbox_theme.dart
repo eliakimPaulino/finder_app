@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants/finder_app_colors.dart';
+import '../../constants/colors.dart';
 import '../../constants/sizes.dart';
 
 /// Classe customizada para temas de Checkbox Claro & Escuro

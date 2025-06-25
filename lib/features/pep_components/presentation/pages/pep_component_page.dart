@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import '../../../../core/constants/finder_app_colors.dart';
+import '../../../../core/constants/colors.dart';
 import '../controllers/pep_component_controller.dart';
 import 'pep_component_detail_page.dart';
 

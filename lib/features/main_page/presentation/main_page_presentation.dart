@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/finder_app_colors.dart';
+import '../../../core/constants/colors.dart';
 import '../../../core/constants/sizes.dart';
 
 class SelectOptionPage extends StatelessWidget {

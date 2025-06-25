@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class KBuildComponentInfo extends StatelessWidget {
-  final String name;
   final String local;
   final String shelf;
   final String position;
@@ -9,7 +8,6 @@ class KBuildComponentInfo extends StatelessWidget {
 
   const KBuildComponentInfo({
     super.key,
-    required this.name,
     required this.local,
     required this.shelf,
     required this.position,
@@ -19,21 +17,34 @@ class KBuildComponentInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+      padding: EdgeInsets.all(16),
       child: Column(
-        spacing: 4.0,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 4),
           Text(
-            name,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            local,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.greenAccent,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-          const SizedBox(height: 2.0),
-          Text(local),
-          Text('Prateleira: $shelf'),
-          Text('Posição: $position'),
-          Text('Fluxo: $flow'),
+          SizedBox(height: 12),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Prateleira: $shelf",
+                style: TextStyle(color: Colors.grey[300]),
+              ),
+              Text(
+                'Posição: $position',
+                style: TextStyle(color: Colors.grey[300]),
+              ),
+              Text("Fluxo: $flow", style: TextStyle(color: Colors.grey[300])),
+            ],
+          ),
         ],
       ),
     );

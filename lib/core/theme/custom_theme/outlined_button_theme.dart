@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/finder_app_colors.dart';
+import '../../constants/colors.dart';
 import '../../constants/sizes.dart';
 
 /* -- Temas de Outlined Button para Claro & Escuro -- */

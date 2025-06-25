@@ -1,6 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:finder_app/core/constants/finder_app_colors.dart';
+import 'package:finder_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/sizes.dart';
