@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../core/constants/sizes.dart';
 import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
 import '../../domain/usecases/get_items.dart';
@@ -64,24 +65,24 @@ class _ComponentPageState extends State<ComponentPage> {
                     ],
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    'Encontre, buscando pelo código DTR do componente.',
+                  Text(
+                    'Encontre o componente pelo código DTR.',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: KColors.darkGrey,
+                      color: dark ? KColors.textPrimaryDark : KColors.textPrimaryLight,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: TextField(
                       controller: controller.searchController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         labelText: 'DTR',
                         labelStyle: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
-                          color: KColors.darkGrey,
+                          color: dark ? KColors.textPrimaryDark : KColors.textPrimaryLight,
                         ),
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.search),
@@ -101,7 +102,9 @@ class _ComponentPageState extends State<ComponentPage> {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            color: KColors.darkGrey,
+                            color: dark
+                                ? KColors.textPrimaryDark
+                                : KColors.textPrimaryLight,
                           ),
                         ),
                       ),
@@ -139,14 +142,14 @@ class _ComponentPageState extends State<ComponentPage> {
                               Text(
                                 component.descricao,
                                 style: const TextStyle(
-                                  fontSize: 16,
+                                  fontSize: KSizes.fontSizeLg,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
                                 component.item,
                                 style: const TextStyle(
-                                  fontSize: 16,
+                                  fontSize: KSizes.fontSizeLg,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

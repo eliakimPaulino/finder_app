@@ -1,3 +1,5 @@
+import 'package:finder_app/core/constants/colors.dart';
+import 'package:finder_app/core/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class KBuildComponentInfo extends StatelessWidget {
@@ -16,6 +18,7 @@ class KBuildComponentInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Container(
       padding: EdgeInsets.all(16),
       child: Column(
@@ -25,8 +28,8 @@ class KBuildComponentInfo extends StatelessWidget {
           Text(
             local,
             style: TextStyle(
-              fontSize: 14,
-              color: Colors.greenAccent,
+              fontSize: KSizes.fontSizeMd,
+              color: dark ? KColors.textPrimaryDark : KColors.textPrimaryLight,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -36,13 +39,14 @@ class KBuildComponentInfo extends StatelessWidget {
             children: [
               Text(
                 "Prateleira: $shelf",
-                style: TextStyle(color: Colors.grey[300]),
+                 
+                style: TextStyle(fontSize: KSizes.fontSizeSm, color: dark ? KColors.textSecondaryDark : KColors.textSecondaryLight),
               ),
               Text(
                 'Posição: $position',
-                style: TextStyle(color: Colors.grey[300]),
+                style: TextStyle(fontSize: KSizes.fontSizeSm, color: dark ? KColors.textSecondaryDark : KColors.textSecondaryLight),
               ),
-              Text("Fluxo: $flow", style: TextStyle(color: Colors.grey[300])),
+              Text("Fluxo: $flow", style: TextStyle(fontSize: KSizes.fontSizeSm, color: dark ? KColors.textSecondaryDark : KColors.textSecondaryLight)),
             ],
           ),
         ],

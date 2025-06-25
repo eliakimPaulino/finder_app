@@ -15,13 +15,22 @@ class KColors {
     colors: [Color(0xFF4b68ff), Color(0xFFFFE24B), Color(0xFFb0c7ff)],
   );
 
-  // Cores para textos
-  static const Color textPrimary = Color(0xFF333333); // Texto principal
-  static const Color textSecondary = Color(0xFF6C757D); // Texto secundário
-  static const Color textWhite = Colors.white; // Texto branco
-  static const Color textInformationSoft = Color(0xFF20A5FA); // Texto informativo suave
-  static const Color textInformationMedium = Color(0xFF2085FA); // Texto informativo médio
-  static const Color textInformationPrimary = Color(0xFF2065FA); // Texto informativo primário
+  // 🌞 Texto - Tema Claro
+  static const Color textPrimaryLight = Color(0xFF333333);     // Bem legível no fundo claro
+  static const Color textSecondaryLight = Color(0xFF6C757D);   // Cinza suave para textos de apoio
+  static const Color textWhiteLight = Colors.white;
+  static const Color textInformationSoftLight = Color(0xFF20A5FA);    // Azul claro
+  static const Color textInformationMediumLight = Color(0xFF2085FA);  // Azul médio
+  static const Color textInformationPrimaryLight = Color(0xFF2065FA); // Azul forte
+
+  // 🌙 Texto - Tema Escuro
+  static const Color textPrimaryDark = Color(0xFFF1F1F1);        // Quase branco para contraste
+  static const Color textSecondaryDark = Color(0xFFB0B3B8);      // Cinza médio para apoio
+  static const Color textWhiteDark = Colors.white;
+  static const Color textInformationSoftDark = Color(0xFF64B5F6);    // Azul claro no escuro
+  static const Color textInformationMediumDark = Color(0xFF42A5F5);  // Azul médio no escuro
+  static const Color textInformationPrimaryDark = Color(0xFF2196F3); // Azul padrão no escuro
+
 
   // Cores de fundo
   static const Color lightBackground = Color(0xFFF3F5F7); // Fundo claro

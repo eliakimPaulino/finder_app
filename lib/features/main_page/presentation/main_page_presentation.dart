@@ -65,7 +65,7 @@ class SelectOptionPage extends StatelessWidget {
                                 'BIN',
                                 style: TextStyle(
                                   fontSize: KSizes.lg,
-                                  color: KColors.textInformationPrimary,
+                                  color: KColors.textInformationPrimaryLight,
                                 ),
                               ),
                             ],
