@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/colors.dart';
-import '../../../core/constants/sizes.dart';
+import '../../../core/utils/screen_utils.dart';
+import 'widgets/main_page_widgets.dart';
 
 class SelectOptionPage extends StatelessWidget {
   const SelectOptionPage({super.key});
@@ -9,129 +10,90 @@ class SelectOptionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        // appBar: AppBar(
-        //   title: const Text('Selecione uma opção'),
-        //   centerTitle: true,
-        // ),
-        body: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
-              const Text(
-                'Bem-vindo ao\nFinder',
-                style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Encontre o que precisa, de forma rápida e fácil',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: KColors.darkGrey,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final screenType = ScreenUtils.getDeviceType(constraints);
+
+          // Valores adaptáveis
+          final double verticalSpacingTop =
+              screenType == DeviceScreenType.mobile
+              ? MediaQuery.of(context).size.height * 0.1
+              : MediaQuery.of(context).size.height * 0.2;
+
+          final double verticalSpacingMid =
+              screenType == DeviceScreenType.mobile
+              ? MediaQuery.of(context).size.height * 0.05
+              : MediaQuery.of(context).size.height * 0.1;
+
+          final double titleFontSize = screenType == DeviceScreenType.mobile
+              ? 24
+              : 32;
+          final double subtitleFontSize = screenType == DeviceScreenType.mobile
+              ? 12
+              : 14;
+          final double iconSize = screenType == DeviceScreenType.mobile
+              ? 24
+              : 32;
+
+          return Scaffold(
+            body: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(32),
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 600),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.2,
+                      ),
+                      Text(
+                        'Bem-vindo ao\nFinder',
+                        style: TextStyle(
+                          fontSize: titleFontSize,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      SizedBox(height: 50),
+                      Text(
+                        'Encontre o que precisa, de forma rápida e fácil',
+                        style: TextStyle(
+                          fontSize: subtitleFontSize,
+                          fontWeight: FontWeight.w400,
+                          color: KColors.darkGrey,
+                        ),
+                      ),
+                      SizedBox(height: verticalSpacingMid),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          buildOptionCard(
+                            context,
+                            title: 'BIN',
+                            description: ' Encontrar\nDouble Bin',
+                            route: '/dtr-finder',
+                            iconColor: Colors.blue.shade700,
+                            textColor: KColors.textInformationPrimaryLight,
+                            iconSize: iconSize,
+                          ),
+                          buildOptionCard(
+                            context,
+                            title: 'PEP',
+                            description: '       Buscar\nOrientação PEP',
+                            route: '/pep-finder',
+                            iconColor: Colors.green.shade700,
+                            textColor: Colors.green.shade700,
+                            iconSize: iconSize,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/dtr-finder');
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(20),
-                          margin: const EdgeInsets.only(bottom: 16),
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade50,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 6,
-                                offset: Offset(0, 3),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            children: [
-                              Icon(Icons.search, color: Colors.blue.shade700),
-                              const SizedBox(width: 16),
-                              const Text(
-                                'BIN',
-                                style: TextStyle(
-                                  fontSize: KSizes.lg,
-                                  color: KColors.textInformationPrimaryLight,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const Text(
-                        ' Encontrar\nDouble Bin',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: KColors.darkGrey,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/pep-finder');
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(20),
-                          margin: const EdgeInsets.only(bottom: 16),
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade50,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 6,
-                                offset: Offset(0, 3),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            children: [
-                              Icon(Icons.search, color: Colors.green.shade700),
-                              const SizedBox(width: 16),
-                              Text(
-                                'PEP',
-                                style: TextStyle(
-                                  fontSize: KSizes.lg,
-                                  color: Colors.green.shade700,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const Text(
-                        '       Buscar\nOrientação PEP',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: KColors.darkGrey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+            ),
+          );
+        },
       ),
     );
   }

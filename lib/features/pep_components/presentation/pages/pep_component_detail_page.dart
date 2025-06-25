@@ -40,75 +40,80 @@ class PepComponentDetailPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 600),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back_ios_rounded),
-                    onPressed: () => Navigator.of(context).pop(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back_ios_rounded),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                      const Text(
+                        "Detalhes do Terminal",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(width: 48), // Espaço para o ícone de voltar
+                    ],
                   ),
-                  const Text(
-                    "Detalhes do Terminal",
-                    style: TextStyle(
-                      fontSize: 22,
+                  const SizedBox(height: 16),
+                  Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                        16,
+                      ), // Ajuste o raio como quiser
+                      child: Image.asset(
+                        itemImage,
+                        height: 200,
+                        width: 200,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    itemCode,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    "Descrição: $description",
+                    style: const TextStyle(
+                      color: Colors.blueGrey,
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(width: 48), // Espaço para o ícone de voltar
+                  Text(
+                    "Decapagem: $stripping",
+                    style: const TextStyle(
+                      color: Colors.blueGrey,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  const Divider(),
+                  const Text(
+                    "Para crimpagem use as seguintes ferramentas:",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  ),
+                  // const SizedBox(height: 8),
+              
+                  /// Tabela de dois blocos lado a lado
+                  _buildToolingTable(context),
                 ],
               ),
-              const SizedBox(height: 16),
-              Center(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(
-                    16,
-                  ), // Ajuste o raio como quiser
-                  child: Image.asset(
-                    itemImage,
-                    height: 200,
-                    width: 200,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 12),
-              Text(
-                itemCode,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-              Text(
-                "Descrição: $description",
-                style: const TextStyle(
-                  color: Colors.blueGrey,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              Text(
-                "Decapagem: $stripping",
-                style: const TextStyle(
-                  color: Colors.blueGrey,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Divider(),
-              const Text(
-                "Para crimpagem use as seguintes ferramentas:",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-              // const SizedBox(height: 8),
-
-              /// Tabela de dois blocos lado a lado
-              _buildToolingTable(context),
-            ],
+            ),
           ),
         ),
       ),
