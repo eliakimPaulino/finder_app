@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/colors.dart';
+import '../../../core/constants/sizes.dart';
 import '../../../core/utils/screen_utils.dart';
 import 'widgets/main_page_widgets.dart';
 
@@ -25,15 +26,14 @@ class SelectOptionPage extends StatelessWidget {
               ? MediaQuery.of(context).size.height * 0.05
               : MediaQuery.of(context).size.height * 0.1;
 
-          final double titleFontSize = screenType == DeviceScreenType.mobile
-              ? 24
-              : 32;
+          final double titleFontSize = KSizes.fontSizeDisplay;
+
           final double subtitleFontSize = screenType == DeviceScreenType.mobile
-              ? 12
-              : 14;
+              ? KSizes.fontSizeMd
+              : KSizes.fontSizeLg;
           final double iconSize = screenType == DeviceScreenType.mobile
-              ? 24
-              : 32;
+              ? KSizes.iconMd
+              : KSizes.iconLg;
 
           return Scaffold(
             body: Center(
