@@ -32,6 +32,7 @@ flutter:
   assets:
     - assets/data/components/components.json
     - assets/data/pep/pep_440_rev6.json
+    - assets/logos/
     - assets/images/
     - assets/images/components/
     - assets/images/tools/

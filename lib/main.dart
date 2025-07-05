@@ -7,8 +7,11 @@ import 'features/components/data/datasources/component_local_data_source.dart';
 import 'features/components/data/repositories/component_repository_impl.dart';
 import 'features/components/domain/usecases/get_items.dart';
 import 'features/components/presentation/controllers/component_controller.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(
     MultiProvider(
       providers: [
