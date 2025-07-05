@@ -34,147 +34,161 @@ class _ComponentPageState extends State<ComponentPage> {
         ),
       )..loadItems(),
       child: Scaffold(
-        body: Consumer<ComponentController>(
-          builder: (context, controller, _) {
-            if (controller.isLoading) {
-              return const Center(child: CircularProgressIndicator());
-            }
+        body: GestureDetector(
+          behavior: HitTestBehavior.translucent,
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Consumer<ComponentController>(
+            builder: (context, controller, _) {
+              if (controller.isLoading) {
+                return const Center(child: CircularProgressIndicator());
+              }
 
-            if (controller.error.isNotEmpty) {
-              return Center(child: Text('Erro: ${controller.error}'));
-            }
+              if (controller.error.isNotEmpty) {
+                return Center(child: Text('Erro: ${controller.error}'));
+              }
 
-            return SafeArea(
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 600),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 16),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.arrow_back_ios_rounded),
-                            onPressed: () => Navigator.of(context).pop(),
-                          ),
-                          const Text(
-                            'Componentes Double Bin',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
+              return SafeArea(
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 600),
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 16),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.arrow_back_ios_rounded),
+                              onPressed: () => Navigator.of(context).pop(),
                             ),
-                          ),
-                          const SizedBox(width: 48), // Placeholder for alignment
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        'Encontre o componente pelo código DTR.',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: dark ? KColors.textPrimaryDark : KColors.textPrimaryLight,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: TextField(
-                          controller: controller.searchController,
-                          decoration: InputDecoration(
-                            labelText: 'DTR',
-                            labelStyle: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: dark ? KColors.textPrimaryDark : KColors.textPrimaryLight,
-                            ),
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.search),
-                          ),
-                          keyboardType: TextInputType.number,
-                          onChanged: controller.search,
-                          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text(
-                              'Total: ${controller.items.length} itens',
+                            const Text(
+                              'Componentes Double Bin',
                               style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 48,
+                            ), // Placeholder for alignment
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Encontre o componente pelo código DTR.',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: dark
+                                ? KColors.textPrimaryDark
+                                : KColors.textPrimaryLight,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: TextField(
+                            controller: controller.searchController,
+                            decoration: InputDecoration(
+                              labelText: 'DTR',
+                              labelStyle: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: dark
                                     ? KColors.textPrimaryDark
                                     : KColors.textPrimaryLight,
                               ),
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.search),
                             ),
+                            keyboardType: TextInputType.number,
+                            onChanged: controller.search,
+                            inputFormatters: [
+                              FilteringTextInputFormatter.digitsOnly,
+                            ],
                           ),
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      Expanded(
-                        child: ListView.builder(
-                          itemCount: controller.items.length,
-                          itemBuilder: (_, index) {
-                            final component = controller.items[index]
-                                .formatarDescricao();
-                            return Container(
-                              margin: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 8,
-                              ),
-                              padding: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                color: dark
-                                    ? KColors.darkContainer
-                                    : KColors.lightContainer,
-                                borderRadius: BorderRadius.circular(12),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.1),
-                                    blurRadius: 6,
-                                    offset: Offset(0, 3),
-                                  ),
-                                ],
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    component.descricao,
-                                    style: const TextStyle(
-                                      fontSize: KSizes.fontSizeLg,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    component.item,
-                                    style: const TextStyle(
-                                      fontSize: KSizes.fontSizeLg,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  KBuildComponentInfo(
-                                    local: component.localReferencia,
-                                    shelf: component.prateleira,
-                                    position: component.posicao,
-                                    flow: component.fluxo,
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
                         ),
-                      ),
-                    ],
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16.0,
+                              ),
+                              child: Text(
+                                'Total: ${controller.items.length} itens',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: dark
+                                      ? KColors.textPrimaryDark
+                                      : KColors.textPrimaryLight,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        Expanded(
+                          child: ListView.builder(
+                            itemCount: controller.items.length,
+                            itemBuilder: (_, index) {
+                              final component = controller.items[index]
+                                  .formatarDescricao();
+                              return Container(
+                                margin: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 8,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                  color: dark
+                                      ? KColors.darkContainer
+                                      : KColors.lightContainer,
+                                  borderRadius: BorderRadius.circular(12),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      blurRadius: 6,
+                                      offset: Offset(0, 3),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      component.descricao,
+                                      style: const TextStyle(
+                                        fontSize: KSizes.fontSizeLg,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      component.item,
+                                      style: const TextStyle(
+                                        fontSize: KSizes.fontSizeLg,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    KBuildComponentInfo(
+                                      local: component.localReferencia,
+                                      shelf: component.prateleira,
+                                      position: component.posicao,
+                                      flow: component.fluxo,
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            );
-          },
+              );
+            },
+          ),
         ),
       ),
     );

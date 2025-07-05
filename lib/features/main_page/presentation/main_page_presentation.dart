@@ -16,10 +16,10 @@ class SelectOptionPage extends StatelessWidget {
           final screenType = ScreenUtils.getDeviceType(constraints);
 
           // Valores adaptáveis
-          final double verticalSpacingTop =
-              screenType == DeviceScreenType.mobile
-              ? MediaQuery.of(context).size.height * 0.1
-              : MediaQuery.of(context).size.height * 0.2;
+          // final double verticalSpacingTop =
+          //     screenType == DeviceScreenType.mobile
+          //     ? MediaQuery.of(context).size.height * 0.1
+          //     : MediaQuery.of(context).size.height * 0.2;
 
           final double verticalSpacingMid =
               screenType == DeviceScreenType.mobile

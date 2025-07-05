@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       onGenerateRoute: KFinderAppRoutes.onGenerateRoute,
-      initialRoute: '/',
+      initialRoute: '/login',
     );
   }
 }

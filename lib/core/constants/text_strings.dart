@@ -31,6 +31,7 @@ class KTexts {
   static const String rememberMe = "Lembre-me";
   static const String forgetPassword = "Esqueceu a senha?";
   static const String signIn = "Cadastrar-se";
+  static const String logIn = "Entrar";
   static const String createAccount = "Criar conta";
   static const String orSignInWith = "Ou entre com";
   static const String orSignUpWith = "Ou cadastre-se com";

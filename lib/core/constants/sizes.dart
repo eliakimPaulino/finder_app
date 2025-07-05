@@ -22,7 +22,7 @@ class KSizes {
   static const double fontSizeDisplay = 32.0; // Título grande ou destaque
 
   // Button sizes
-  static const double buttonHeight = 18.0;
+  static const double buttonHeight = 40.0;
   static const double buttonRadius = 12.0;
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
