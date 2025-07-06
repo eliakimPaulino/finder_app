@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                     Image(
                       height: 150,
                       image: AssetImage(
-                        dark ? KImages.lightAppLogo : KImages.darkAppLogo,
+                        dark ? KImages.darkAppLogo : KImages.lightAppLogo,
                       ),
                     ),
                     Text(

@@ -1,13 +1,13 @@
-flutter_native_splash: 
+flutter_native_splash:
   color: "#F3F5F7"
   color_dark: "#252525"
-  image: assets/logos/k-store-splash-logo-black.png
-  image_dark: assets/logos/k-store-splash-logo-white.png
+  image: assets/logos/light_finder_app_icon.png
+  image_dark: assets/logos/dark_finder_app_icon.png
 
   android_12: 
     color: "#F3F5F7"
     color_dark: "#252525"
-    image: assets/logos/k-store-splash-logo-black.png
-    image_dark: assets/logos/k-store-splash-logo-white.png  
+    image: assets/logos/light_finder_app_icon.png
+    image_dark: assets/logos/dark_finder_app_icon.png
 
   web: false

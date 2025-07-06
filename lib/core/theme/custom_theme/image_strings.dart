@@ -1,8 +1,8 @@
 class KImages {
 
   // -- App Logos
-  static const String darkAppLogo = 'assets/logos/k-store-splash-logo-black.png';
-  static const String lightAppLogo = 'assets/logos/k-store-splash-logo-white.png';
+  static const String darkAppLogo = 'assets/logos/dark_finder_app_icon.png';
+  static const String lightAppLogo = 'assets/logos/light_finder_app_icon.png';
 
   // -- App Icons
 
