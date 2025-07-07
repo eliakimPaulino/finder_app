@@ -65,6 +65,9 @@ class KTexts {
   static const String homeAppbarTitle = "Home Lorem";
   static const String homeAppbarSubTitle = "Home App Bar Finder Sub Title";
 
+  static const String toolPath = "assets/images/tools/";
+  static const String postionerPath = 'assets/images/tools/posicionador/';
+
 
 }
 

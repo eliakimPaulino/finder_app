@@ -1,3 +1,6 @@
+import 'dart:math' as math;
+
+import 'package:finder_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class PepComponentDetailPage extends StatelessWidget {
@@ -68,7 +71,7 @@ class PepComponentDetailPage extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(
                         16,
-                      ), // Ajuste o raio como quiser
+                      ),
                       child: Image.asset(
                         itemImage,
                         height: 200,
@@ -124,7 +127,7 @@ class PepComponentDetailPage extends StatelessWidget {
     final entries = [
       ["", toolImage, "", secondToolImage],
       ["Ferramenta", toolCode, "Ferramenta", secondToolCode],
-      ["Ajuste", toolAdjustment, "Ajuste", secondToolAdjustment],
+      ["Alcance do ajuste:", toolAdjustment, "Alcance do ajuste:", secondToolAdjustment],
       [
         "Posicionador Tourret",
         turretPositioning,
@@ -174,22 +177,25 @@ class PepComponentDetailPage extends StatelessWidget {
         isImage
             ? ClipRRect(
                 borderRadius: BorderRadius.circular(
-                  12,
+                  16,
                 ),
-                child: Image.asset(
-                  value,
-                  width: 120,
-                  height: 70,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => Container(
-                    width: 70,
-                    height: 70,
-                    color: Colors.grey.shade300,
-                    alignment: Alignment.center,
-                    child: const Text(
-                      "Sem imagem",
-                      style: TextStyle(fontSize: 12),
-                      textAlign: TextAlign.center,
+                child: Container(
+                  color: KColors.white,
+                  child: Image.asset(
+                    value,
+                    width: 120,
+                    height: 90,
+                    fit: BoxFit.fill,
+                    errorBuilder: (_, __, ___) => Container(
+                      width: 120,
+                      height: 90,
+                      color: Colors.grey.shade300,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "Sem imagem",
+                        style: TextStyle(color: KColors.black, fontSize: 12),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
