@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:finder_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 
