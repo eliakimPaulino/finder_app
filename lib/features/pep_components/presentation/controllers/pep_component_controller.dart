@@ -53,7 +53,6 @@ class GetPepItems {
 
   GetPepItems(this.repository);
   Future<List<PepComponentModel>> call() async {
-    // This method should be implemented to fetch PEP components.
 
     return await repository.getPepItems();
   }
@@ -61,9 +60,7 @@ class GetPepItems {
 
 // camada repository para interagir com a fonte de dados
 class PepComponentRepository {
-  // This class should be implemented to interact with the data source.
   Future<List<PepComponentModel>> getPepItems() async {
-    // This method should be implemented to fetch PEP components.
 
     return [];
   }
@@ -76,13 +73,11 @@ class PepComponentRepositoryImpl implements PepComponentRepository {
 
   @override
   Future<List<PepComponentModel>> getPepItems() async {
-    // This method should be implemented to fetch PEP components from the local data source.
     return await localDataSource.getPepItemsFromJson();
   }
 }
 
 abstract class PepComponentLocalDataSource {
-  // This class should be implemented to define the local data source methods.
   Future<List<PepComponentModel>> getPepItemsFromJson();
 }
 
@@ -90,7 +85,6 @@ abstract class PepComponentLocalDataSource {
 class PepComponentLocalDataSourceImpl implements PepComponentLocalDataSource{
   @override
   Future<List<PepComponentModel>> getPepItemsFromJson() async {
-    // This method should be implemented to load PEP components from a JSON file.
     final String response = await rootBundle.loadString('assets/data/pep/pep_440_rev6.json');
     final List<dynamic> data = json.decode(response);
 

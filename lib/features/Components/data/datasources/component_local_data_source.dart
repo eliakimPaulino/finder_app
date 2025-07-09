@@ -15,3 +15,4 @@ class ComponentLocalDataSourceImpl implements ComponentLocalDataSource {
     return data.map((json) => ComponentModel.fromJson(json)).toList();
   }
 }
+
