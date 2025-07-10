@@ -1,3 +1,4 @@
+import 'package:finder_app/features/production_page/presentation/production_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/authentication/presentation/page/login.dart';
@@ -19,6 +20,9 @@ class KFinderAppRoutes {
 
       case '/pep-finder':
         return MaterialPageRoute(builder: (_) => const PepComponentPage());
+
+      case '/production-page':
+        return MaterialPageRoute(builder: (_) => const ProductionPage());
 
       default:
         return _errorRoute();

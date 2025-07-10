@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../common/widgets/buttons/common_buttons.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
@@ -190,6 +191,7 @@ class _ComponentPageState extends State<ComponentPage> {
             },
           ),
         ),
+        floatingActionButton: KFloatingActionButton(),
       ),
     );
   }

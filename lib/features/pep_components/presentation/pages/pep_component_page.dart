@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../../../../common/widgets/buttons/common_buttons.dart';
 import '../../../../core/constants/colors.dart';
 import '../controllers/pep_component_controller.dart';
-import 'pep_component_detail_page.dart';
 import 'widgets/pepe_component_page_widget.dart';
 
 class PepComponentPage extends StatefulWidget {
@@ -158,6 +158,7 @@ class _PepComponentPageState extends State<PepComponentPage> {
             },
           ),
         ),
+        floatingActionButton: KFloatingActionButton(),
       ),
     );
   }

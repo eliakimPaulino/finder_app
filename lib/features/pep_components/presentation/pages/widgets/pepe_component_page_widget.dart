@@ -69,13 +69,16 @@ class KBuildPepComponent extends StatelessWidget {
               Row(
                 children: [
                   Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Image.asset(
-                        itemImage,
-                        height: 90,
-                        width: 90,
-                        fit: BoxFit.cover,
+                    child: GestureDetector(
+                      onTap: () => moveToDetailPage(),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.asset(
+                          itemImage,
+                          height: 90,
+                          width: 90,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -96,81 +99,72 @@ class KBuildPepComponent extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: KSizes.sm),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: 300,
-                            child: Text(
-                              itemName,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 1,
-                              style: TextStyle(
-                                fontSize: KSizes.fontSizeSm,
-                                color: dark
-                                    ? KColors.textSecondaryDark
-                                    : KColors.textSecondaryLight,
-                              ),
-                            ),
+                      SizedBox(
+                        width: 150,
+                        child: Text(
+                          itemName,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: TextStyle(
+                            fontSize: KSizes.fontSizeSm,
+                            color: dark
+                                ? KColors.textSecondaryDark
+                                : KColors.textSecondaryLight,
                           ),
-                        ],
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(context, moveToDetailPage());
+                        },
+                        child: Text(
+                          'Toque para saber mais',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: TextStyle(
+                            fontSize: KSizes.fontSizeSm,
+                            color: dark
+                                ? KColors.textSecondaryDark
+                                : KColors.textSecondaryLight,
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ],
               ),
-            ],
-          ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            spacing: 5,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PepComponentDetailPage(
-                        itemCode: dtr,
-                        description: itemName,
-                        stripping: stripping,
-                        itemImage: itemImage,
-                        toolCode: toolCode,
-                        toolImage: toolImage,
-                        turretPositioning: turretPositioning,
-                        turretPositioningImage: turretPositioningImage,
-                        toolAdjustment: toolAdjustment,
-                        secondToolCode: secondToolCode,
-                        secondToolImage: secondToolImage,
-                        secondMatrixPositioning: secondMatrixPositioning,
-                        secondMatrixPositioningImage:
-                            secondMatrixPositioningImage,
-                        secondToolAdjustment: secondToolAdjustment,
-                      ),
-                    ),
-                  );
-                },
-                child: Text(
-                  'Toque para saber mais',
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                  style: TextStyle(
-                    fontSize: KSizes.fontSizeSm,
-                    color: dark
-                        ? KColors.textSecondaryDark
-                        : KColors.textSecondaryLight,
-                  ),
-                ),
-              ),
               FloatingActionButton.small(
+                backgroundColor: dark ? KColors.darkerGrey : KColors.lightGrey,
                 tooltip: 'Adicionar à Lista de Produção',
-                onPressed: () {},
+                onPressed: () {
+                  // context.read<TerminalSelectionProvider>().adicionarTerminal();
+                },
                 child: const Icon(Icons.add),
               ),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  MaterialPageRoute<dynamic> moveToDetailPage() {
+    return MaterialPageRoute(
+      builder: (context) => PepComponentDetailPage(
+        itemCode: dtr,
+        description: itemName,
+        stripping: stripping,
+        itemImage: itemImage,
+        toolCode: toolCode,
+        toolImage: toolImage,
+        turretPositioning: turretPositioning,
+        turretPositioningImage: turretPositioningImage,
+        toolAdjustment: toolAdjustment,
+        secondToolCode: secondToolCode,
+        secondToolImage: secondToolImage,
+        secondMatrixPositioning: secondMatrixPositioning,
+        secondMatrixPositioningImage: secondMatrixPositioningImage,
+        secondToolAdjustment: secondToolAdjustment,
       ),
     );
   }
