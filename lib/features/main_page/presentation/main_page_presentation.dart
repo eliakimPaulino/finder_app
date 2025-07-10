@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../common/widgets/buttons/common_buttons.dart';
 import '../../../core/constants/colors.dart';
 import '../../../core/constants/sizes.dart';
 import '../../../core/utils/screen_utils.dart';
@@ -15,13 +14,7 @@ class SelectOptionPage extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           final screenType = ScreenUtils.getDeviceType(constraints);
-
-          // Valores adaptáveis
-          // final double verticalSpacingTop =
-          //     screenType == DeviceScreenType.mobile
-          //     ? MediaQuery.of(context).size.height * 0.1
-          //     : MediaQuery.of(context).size.height * 0.2;
-
+          
           final double verticalSpacingMid =
               screenType == DeviceScreenType.mobile
               ? MediaQuery.of(context).size.height * 0.05
