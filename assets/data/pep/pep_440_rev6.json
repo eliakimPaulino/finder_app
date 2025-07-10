@@ -35,7 +35,7 @@
     },
     {
         "item": "DTR0000139538",
-        "description": "MAL CT HAN D GOLDTEC 0.14mm²/0.37mm²",
+        "description": "MACHO CT HAN D GOLDTEC 0.14mm²/0.37mm²",
         "stripping": "8.0mm",
         "section": "0.37mm²",
         "item_image": "assets/images/components/DTR0000139538.png",
@@ -69,7 +69,7 @@
     },
     {
         "item": "DTR0000139529",
-        "description": "CONTATO MAL HAN D 0.5mm²",
+        "description": "CONTATO MACHO HAN D 0.5mm²",
         "stripping": "8.0mm",
         "section": "0.5mm²",
         "item_image": "assets/images/components/DTR0000139529.png",
@@ -335,23 +335,6 @@
         "tool_adjustment": "N/A",
         "second_tool_code": "N/A",
         "second_tool_image": "assets/images/tools/n_a.png",
-        "second_matrix_positioning": "N/A",
-        "second_matrix_positioning_image": "assets/images/tools/posicionador/n_a.png",
-        "second_tool_adjustment": "N/A"
-    },
-    {
-        "item": "HS00000781241",
-        "description": "CONTATO A SERTIR 0.3mm² • 0.5mm²",
-        "stripping": "3.5mm",
-        "section": "0.5mm²",
-        "item_image": "assets/images/components/HS00000781241.png",
-        "tool_code": " 09 99 000 0191 HARTING",
-        "tool_image": "assets/images/tools/harting_0191.png",
-        "turret_positioning": "Anexado à ferramenta",
-        "tourret_positioning_image": "assets/images/tools/posicionador/n_a.png",
-        "tool_adjustment": "0.25mm² • 0.56mm² • FC2",
-        "second_tool_code": "09 99 000 0772 HARTING",
-        "second_tool_image": "assets/images/tools/.png",
         "second_matrix_positioning": "N/A",
         "second_matrix_positioning_image": "assets/images/tools/posicionador/n_a.png",
         "second_tool_adjustment": "N/A"

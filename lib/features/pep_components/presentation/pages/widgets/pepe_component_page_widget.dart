@@ -1,0 +1,177 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:flutter/material.dart';
+
+import '../../../../../core/constants/colors.dart';
+import '../../../../../core/constants/sizes.dart';
+import '../pep_component_detail_page.dart';
+
+class KBuildPepComponent extends StatelessWidget {
+  final String dtr;
+  final String itemImage;
+  final String itemName;
+
+  // campos necessários pra navegação
+  final String stripping;
+  final String toolCode;
+  final String toolImage;
+  final String turretPositioning;
+  final String turretPositioningImage;
+  final String toolAdjustment;
+  final String secondToolCode;
+  final String secondToolImage;
+  final String secondMatrixPositioning;
+  final String secondMatrixPositioningImage;
+  final String secondToolAdjustment;
+
+  const KBuildPepComponent({
+    super.key,
+    required this.dtr,
+    required this.itemImage,
+    required this.itemName,
+    required this.stripping,
+    required this.toolCode,
+    required this.toolImage,
+    required this.turretPositioning,
+    required this.turretPositioningImage,
+    required this.toolAdjustment,
+    required this.secondToolCode,
+    required this.secondToolImage,
+    required this.secondMatrixPositioning,
+    required this.secondMatrixPositioningImage,
+    required this.secondToolAdjustment,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = MediaQuery.of(context).platformBrightness == Brightness.dark;
+    return Container(
+      margin: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+        color: dark ? KColors.darkContainer : KColors.lightContainer,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 6,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      padding: EdgeInsets.all(16),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            spacing: 20,
+            children: [
+              // -- Imagem
+              Row(
+                children: [
+                  Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        itemImage,
+                        height: 90,
+                        width: 90,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // -- DTR do componente
+                      Text(
+                        dtr,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: KSizes.fontSizeMd,
+                          color: dark
+                              ? KColors.textPrimaryDark
+                              : KColors.textPrimaryLight,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: KSizes.sm),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: 300,
+                            child: Text(
+                              itemName,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: KSizes.fontSizeSm,
+                                color: dark
+                                    ? KColors.textSecondaryDark
+                                    : KColors.textSecondaryLight,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            spacing: 5,
+            children: [
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PepComponentDetailPage(
+                        itemCode: dtr,
+                        description: itemName,
+                        stripping: stripping,
+                        itemImage: itemImage,
+                        toolCode: toolCode,
+                        toolImage: toolImage,
+                        turretPositioning: turretPositioning,
+                        turretPositioningImage: turretPositioningImage,
+                        toolAdjustment: toolAdjustment,
+                        secondToolCode: secondToolCode,
+                        secondToolImage: secondToolImage,
+                        secondMatrixPositioning: secondMatrixPositioning,
+                        secondMatrixPositioningImage:
+                            secondMatrixPositioningImage,
+                        secondToolAdjustment: secondToolAdjustment,
+                      ),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Toque para saber mais',
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontSize: KSizes.fontSizeSm,
+                    color: dark
+                        ? KColors.textSecondaryDark
+                        : KColors.textSecondaryLight,
+                  ),
+                ),
+              ),
+              FloatingActionButton.small(
+                tooltip: 'Adicionar à Lista de Produção',
+                onPressed: () {},
+                child: const Icon(Icons.add),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}

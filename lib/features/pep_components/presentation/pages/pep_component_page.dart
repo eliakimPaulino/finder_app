@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../../../core/constants/colors.dart';
 import '../controllers/pep_component_controller.dart';
 import 'pep_component_detail_page.dart';
+import 'widgets/pepe_component_page_widget.dart';
 
 class PepComponentPage extends StatefulWidget {
   const PepComponentPage({super.key});
@@ -121,74 +122,26 @@ class _PepComponentPageState extends State<PepComponentPage> {
                                 return SizedBox(
                                   child: Column(
                                     children: [
-                                      ListTile(
-                                        tileColor: Colors.transparent,
-                                        leading: CircleAvatar(
-                                          radius: 30,
-                                          child: ClipOval(
-                                            child: Image.asset(
-                                              item.itemImage,
-                                              fit: BoxFit.cover,
-                                              width: 60,
-                                              height: 60,
-                                              errorBuilder:
-                                                  (context, error, stackTrace) {
-                                                    return const Icon(
-                                                      Icons.broken_image,
-                                                      size: 30,
-                                                    );
-                                                  },
-                                            ),
-                                          ),
-                                        ),
-                                        title: Text(
-                                          item.item,
-                                          style: const TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                        subtitle: Text(
-                                          item.description,
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.grey,
-                                          ),
-                                        ),
-                                        trailing: const Icon(
-                                          Icons.arrow_forward_ios_rounded,
-                                        ),
-                                        onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                PepComponentDetailPage(
-                                                  itemCode: item.item,
-                                                  description: item.description,
-                                                  stripping: item.stripping,
-                                                  itemImage: item.itemImage,
-                                                  toolCode: item.toolCode,
-                                                  toolImage: item.toolImage,
-                                                  turretPositioning:
-                                                      item.turretPositioning,
-                                                  turretPositioningImage: item
-                                                      .turretPositioningImage,
-                                                  toolAdjustment:
-                                                      item.toolAdjustment,
-                                                  secondToolCode:
-                                                      item.secondToolCode,
-                                                  secondToolImage:
-                                                      item.secondToolImage,
-                                                  secondMatrixPositioning: item
-                                                      .secondMatrixPositioning,
-                                                  secondMatrixPositioningImage:
-                                                      item.secondMatrixPositioningImage,
-                                                  secondToolAdjustment:
-                                                      item.secondToolAdjustment,
-                                                ),
-                                          ),
-                                        ),
+                                      KBuildPepComponent(
+                                        dtr: item.item,
+                                        itemName: item.description,
+                                        itemImage: item.itemImage,
+                                        stripping: item.stripping,
+                                        toolCode: item.toolCode,
+                                        toolImage: item.toolImage,
+                                        turretPositioning:
+                                            item.turretPositioning,
+                                        turretPositioningImage:
+                                            item.turretPositioningImage,
+                                        toolAdjustment: item.toolAdjustment,
+                                        secondToolCode: item.secondToolCode,
+                                        secondToolImage: item.secondToolImage,
+                                        secondMatrixPositioning:
+                                            item.secondMatrixPositioning,
+                                        secondMatrixPositioningImage:
+                                            item.secondMatrixPositioningImage,
+                                        secondToolAdjustment:
+                                            item.secondToolAdjustment,
                                       ),
                                     ],
                                   ),
