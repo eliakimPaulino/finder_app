@@ -30,14 +30,19 @@ class ProductionPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 15),
+              const Text(
+                'Componentes Selecionados:',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+              const SizedBox(height: 10),
               Table(
                 border: TableBorder.all(color: Colors.grey.shade400),
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 columnWidths: const {
                   0: FixedColumnWidth(100),
                   1: FixedColumnWidth(100),
-                  2: FixedColumnWidth(60),
-                  3: FixedColumnWidth(80),
+                  2: FixedColumnWidth(90),
+                  3: FixedColumnWidth(50),
                   4: FixedColumnWidth(50),
                 },
                 children: [
@@ -100,7 +105,7 @@ class ProductionPage extends StatelessWidget {
                   crossAxisCount: 2,
                   crossAxisSpacing: 12,
                 ),
-                itemCount: 4, // Set to the number of tools you want to display
+                itemCount: 3, // Set to the number of tools you want to display
                 itemBuilder: (context, index) {
                   return GridTile(
                     header: const GridTileBar(
@@ -130,7 +135,7 @@ TableRow _buildHeaderRow() {
       _cell("DTR", isBold: true),
       _cell("DESCRIÇÃO", isBold: true),
       _cell("LOCAL", isBold: true),
-      _cell("PRATELEIRA", isBold: true),
+      _cell("PRAT.", isBold: true),
       _cell("FLUXO", isBold: true),
     ],
   );
