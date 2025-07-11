@@ -14,7 +14,7 @@ class SelectOptionPage extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           final screenType = ScreenUtils.getDeviceType(constraints);
-          
+
           final double verticalSpacingMid =
               screenType == DeviceScreenType.mobile
               ? MediaQuery.of(context).size.height * 0.05
@@ -64,7 +64,7 @@ class SelectOptionPage extends StatelessWidget {
                           buildOptionCard(
                             context,
                             title: 'BIN',
-                            description: ' Encontrar\nDouble Bin',
+                            description: 'Encontrar\nDouble Bin',
                             route: '/dtr-finder',
                             iconColor: Colors.blue.shade700,
                             textColor: KColors.textInformationPrimaryLight,
@@ -73,7 +73,7 @@ class SelectOptionPage extends StatelessWidget {
                           buildOptionCard(
                             context,
                             title: 'PEP',
-                            description: '       Buscar\nOrientação PEP',
+                            description: 'Buscar\nOrientaçã PEP',
                             route: '/pep-finder',
                             iconColor: Colors.green.shade700,
                             textColor: Colors.green.shade700,
