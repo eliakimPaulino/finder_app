@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'controller/production_page_component_data_provider.dart';
 
 class ProductionPage extends StatelessWidget {
   const ProductionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final list = context.watch<ProductionListProvider>().items;
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -34,92 +39,119 @@ class ProductionPage extends StatelessWidget {
                 'Componentes Selecionados:',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
-              const SizedBox(height: 10),
-              Table(
-                border: TableBorder.all(color: Colors.grey.shade400),
-                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                columnWidths: const {
-                  0: FixedColumnWidth(100),
-                  1: FixedColumnWidth(100),
-                  2: FixedColumnWidth(90),
-                  3: FixedColumnWidth(50),
-                  4: FixedColumnWidth(50),
-                },
-                children: [
-                  _buildHeaderRow(),
-                  _buildDataRow(
-                    "DTR0000139774",
-                    "CONTATO PRATEADO MACHO 1mm² HAN D",
-                    "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-                    "P275",
-                    "FL06",
-                  ),
-                  _buildDataRow(
-                    "DTR0000139774",
-                    "CONTATO PRATEADO MACHO 1mm² HAN D",
-                    "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-                    "P275",
-                    "FL06",
-                  ),
-                  _buildDataRow(
-                    "DTR0000139774",
-                    "CONTATO PRATEADO MACHO 1mm² HAN D",
-                    "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-                    "P275",
-                    "FL06",
-                  ),
-                  _buildDataRow(
-                    "DTR0000139774",
-                    "CONTATO PRATEADO MACHO 1mm² HAN D",
-                    "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-                    "P275",
-                    "FL06",
-                  ),
-                  _buildDataRow(
-                    "DTR0000139774",
-                    "CONTATO PRATEADO MACHO 1mm² HAN D",
-                    "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-                    "P275",
-                    "FL06",
-                  ),
-                  _buildDataRow(
-                    "DTR0000139774",
-                    "CONTATO PRATEADO MACHO 1mm² HAN D",
-                    "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-                    "P275",
-                    "FL06",
-                  ),
-                  // ... Adicione as outras linhas
-                ],
+              const SizedBox(height: 30),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: list.length,
+                  itemBuilder: (context, index) {
+                    final item = list[index];
+                
+                    return Card(
+                      child: ListTile(
+                        title: Text(
+                          item.location?.descricao ?? 'Sem localização',
+                        ),
+                        subtitle: Text(
+                          item.production?.toolCode ?? 'Sem ferramenta',
+                        ),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.delete),
+                          onPressed: () {
+                            context.read<ProductionListProvider>().removeItem(
+                              item.location?.item ?? item.production?.item ?? '',
+                            );
+                          },
+                        ),
+                      ),
+                    );
+                  },
+                ),
               ),
-              const SizedBox(height: 10),
+              // Table(
+              //   border: TableBorder.all(color: Colors.grey.shade400),
+              //   defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              //   columnWidths: const {
+              //     0: FixedColumnWidth(100),
+              //     1: FixedColumnWidth(100),
+              //     2: FixedColumnWidth(90),
+              //     3: FixedColumnWidth(50),
+              //     4: FixedColumnWidth(50),
+              //   },
+              //   children: [
+              //     _buildHeaderRow(),
+              //     _buildDataRow(
+              //       "DTR0000139774",
+              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
+              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
+              //       "P275",
+              //       "FL06",
+              //     ),
+              //     _buildDataRow(
+              //       "DTR0000139774",
+              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
+              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
+              //       "P275",
+              //       "FL06",
+              //     ),
+              //     _buildDataRow(
+              //       "DTR0000139774",
+              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
+              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
+              //       "P275",
+              //       "FL06",
+              //     ),
+              //     _buildDataRow(
+              //       "DTR0000139774",
+              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
+              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
+              //       "P275",
+              //       "FL06",
+              //     ),
+              //     _buildDataRow(
+              //       "DTR0000139774",
+              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
+              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
+              //       "P275",
+              //       "FL06",
+              //     ),
+              //     _buildDataRow(
+              //       "DTR0000139774",
+              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
+              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
+              //       "P275",
+              //       "FL06",
+              //     ),
+              //     // ... Adicione as outras linhas
+              //   ],
+              // ),
+              const SizedBox(height: 30),
               const Text(
                 'Ferramentas',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
-              const SizedBox(height: 10),
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                ),
-                itemCount: 3, // Set to the number of tools you want to display
-                itemBuilder: (context, index) {
-                  return GridTile(
-                    header: const GridTileBar(
-                      backgroundColor: Colors.black45,
-                      // leading: Icon(Icons.engineering_rounded),
-                      title: Text('Ferramenta:'),
-                    ),
-                    // footer: const GridTileBar(backgroundColor: Colors.black45, leading: Icon(Icons.engineering_rounded),),
-                    child: Image.asset(
-                      'assets/images/tools/09_99_000_0191_harting.png',
-                    ),
-                  );
-                },
-              ),
+              // const SizedBox(height: 10),
+              // GridView.builder(
+              //   shrinkWrap: true,
+              //   physics: const NeverScrollableScrollPhysics(),
+              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 2,
+              //     crossAxisSpacing: 12,
+              //   ),
+              //   itemCount: 3, // Set to the number of tools you want to display
+              //   itemBuilder: (context, index) {
+              //     return GridTile(
+              //       // header: const GridTileBar(
+              //         // backgroundColor: Colors.black45,
+              //         // leading: Icon(Icons.engineering_rounded),
+              //         // title: Text('Ferramenta:'),
+              //       // ),
+              //       // footer: const GridTileBar(backgroundColor: Colors.black45, leading: Icon(Icons.engineering_rounded),),
+              //       child: Image.asset(
+              //         'assets/images/tools/09_99_000_0191_harting.png',
+              //       ),
+              //     );
+              //   },
+              // ),
             ],
           ),
         ),

@@ -1,3 +1,4 @@
+import 'package:finder_app/features/components/data/models/component_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -142,6 +143,8 @@ class _PepComponentPageState extends State<PepComponentPage> {
                                             item.secondMatrixPositioningImage,
                                         secondToolAdjustment:
                                             item.secondToolAdjustment,
+                                            location: item as ComponentModel,
+                                            production: item,
                                       ),
                                     ],
                                   ),

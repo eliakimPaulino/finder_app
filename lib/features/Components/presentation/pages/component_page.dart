@@ -1,11 +1,14 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:finder_app/features/components/data/models/component_model.dart';
+import 'package:finder_app/features/pep_components/data/models/pep_component_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../common/widgets/buttons/common_buttons.dart';
 import '../../../../core/constants/sizes.dart';
+import '../../../production_page/presentation/controller/production_page_component_data_provider.dart';
 import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
 import '../../domain/usecases/get_items.dart';
@@ -154,28 +157,43 @@ class _ComponentPageState extends State<ComponentPage> {
                                     ),
                                   ],
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                child: Stack(
                                   children: [
-                                    Text(
-                                      component.descricao,
-                                      style: const TextStyle(
-                                        fontSize: KSizes.fontSizeLg,
-                                        fontWeight: FontWeight.bold,
+                                    Positioned(
+                                      right: 5,
+                                      top: 5,
+                                      child: TextButton(
+                                        onPressed: () {
+                                          context.read<ProductionListProvider>().addItem(component as ComponentModel, component as PepComponentModel);
+                                        },
+                                        child: Text('Add'),
                                       ),
                                     ),
-                                    Text(
-                                      component.item,
-                                      style: const TextStyle(
-                                        fontSize: KSizes.fontSizeLg,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    KBuildComponentInfo(
-                                      local: component.localReferencia,
-                                      shelf: component.prateleira,
-                                      position: component.posicao,
-                                      flow: component.fluxo,
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          component.descricao,
+                                          style: const TextStyle(
+                                            fontSize: KSizes.fontSizeLg,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Text(
+                                          component.item,
+                                          style: const TextStyle(
+                                            fontSize: KSizes.fontSizeLg,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        KBuildComponentInfo(
+                                          local: component.localReferencia,
+                                          shelf: component.prateleira,
+                                          position: component.posicao,
+                                          flow: component.fluxo,
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),

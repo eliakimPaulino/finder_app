@@ -7,7 +7,7 @@ import 'features/components/data/datasources/component_local_data_source.dart';
 import 'features/components/data/repositories/component_repository_impl.dart';
 import 'features/components/domain/usecases/get_items.dart';
 import 'features/components/presentation/controllers/component_controller.dart';
-// import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'features/production_page/presentation/controller/production_page_component_data_provider.dart';
 
 void main() {
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +15,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (_) => ProductionListProvider()),
         ChangeNotifierProvider(
           create: (_) {
             final controller = ComponentController(
@@ -24,7 +25,8 @@ void main() {
                 ),
               ),
             );
-            controller.loadItems(); // Chamada fora do construtor, para evitar problemas de ciclo de vida
+            controller
+                .loadItems(); // Chamada fora do construtor, para evitar problemas de ciclo de vida
             // Garante que a lista de itens seja carregada antes de ser usada na UI
             return controller;
           },

@@ -1,15 +1,21 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
+import '../../../../components/data/models/component_model.dart';
+import '../../../../production_page/presentation/controller/production_page_component_data_provider.dart';
+import '../../../data/models/pep_component_model.dart';
 import '../pep_component_detail_page.dart';
 
 class KBuildPepComponent extends StatelessWidget {
   final String dtr;
   final String itemImage;
   final String itemName;
+  final ComponentModel location;
+  final PepComponentModel production;
 
   // campos necessários pra navegação
   final String stripping;
@@ -40,6 +46,8 @@ class KBuildPepComponent extends StatelessWidget {
     required this.secondMatrixPositioning,
     required this.secondMatrixPositioningImage,
     required this.secondToolAdjustment,
+    required this.location,
+    required this.production,
   });
 
   @override
@@ -137,7 +145,7 @@ class KBuildPepComponent extends StatelessWidget {
                 backgroundColor: dark ? KColors.darkerGrey : KColors.lightGrey,
                 tooltip: 'Adicionar à Lista de Produção',
                 onPressed: () {
-                  // context.read<TerminalSelectionProvider>().adicionarTerminal();
+                  context.read<ProductionListProvider>().addItem(location, production);
                 },
                 child: const Icon(Icons.add),
               ),
