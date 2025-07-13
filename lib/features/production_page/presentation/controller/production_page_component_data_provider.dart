@@ -1,25 +1,28 @@
-import 'package:finder_app/features/production_page/data/model/component_combined.dart';
+import 'package:finder_app/features/pep_components/domain/entities/pep_component_entity.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/data/models/component_model.dart';
-import '../../../pep_components/data/models/pep_component_model.dart';
+import '../../../components/domain/entities/item_entity.dart';
+import '../../domain/entities/production_item.dart';
 
 class ProductionListProvider extends ChangeNotifier {
-  final List<ComponentCombined> _items = [];
+  final List<ProductionItem> _items = [];
 
-  List<ComponentCombined> get items => _items;
+  List<ProductionItem> get items => _items;
 
-  void addItem(ComponentModel? location, PepComponentModel? production) {
+  void addItem(ComponentEntity? location, PepComponentEntity? production) {
+    final itemCode = location?.item ?? production?.item;
     final alreadyExists = _items.any((e) =>
-        e.location?.item == location?.item || e.production?.item == production?.item);
+        e.location?.item == itemCode || e.production?.item == itemCode);
+
     if (!alreadyExists) {
-      _items.add(ComponentCombined(location: location, production: production));
+      _items.add(ProductionItem(location: location, production: production));
       notifyListeners();
     }
   }
 
   void removeItem(String itemCode) {
-    _items.removeWhere((e) => e.location?.item == itemCode || e.production?.item == itemCode);
+    _items.removeWhere((e) =>
+        e.location?.item == itemCode || e.production?.item == itemCode);
     notifyListeners();
   }
 
@@ -27,4 +30,12 @@ class ProductionListProvider extends ChangeNotifier {
     _items.clear();
     notifyListeners();
   }
+
+  ProductionItem? getByItemCode(String itemCode) {
+    return _items.firstWhere(
+      (e) => e.location?.item == itemCode || e.production?.item == itemCode,
+      /*orElse: () => null*/
+    );
+  }
 }
+

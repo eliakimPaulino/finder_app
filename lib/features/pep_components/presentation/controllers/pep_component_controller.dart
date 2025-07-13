@@ -1,9 +1,8 @@
 import 'dart:convert';
 
+import 'package:finder_app/features/pep_components/domain/entities/pep_component_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../../data/models/pep_component_model.dart';
 
 // camada controller para gerenciar o estado dos componentes PEP
 class PepComponentController extends ChangeNotifier{
@@ -13,12 +12,12 @@ class PepComponentController extends ChangeNotifier{
 
   final TextEditingController searchController = TextEditingController();
 
-  List<PepComponentModel> _allItems = [];
-  List<PepComponentModel> _filteredItems = [];
+  List<PepComponentEntity> _allItems = [];
+  List<PepComponentEntity> _filteredItems = [];
   bool _isLoading = true;
   String _error = '';
 
-  List<PepComponentModel> get items => _filteredItems;
+  List<PepComponentEntity> get items => _filteredItems;
   bool get isLoading => _isLoading;
   String get error => _error;
 
@@ -54,7 +53,7 @@ class GetPepItems {
   final PepComponentRepository repository;
 
   GetPepItems(this.repository);
-  Future<List<PepComponentModel>> call() async {
+  Future<List<PepComponentEntity>> call() async {
 
     return await repository.getPepItems();
   }
@@ -64,7 +63,7 @@ class GetPepItems {
 
   /* camada repository para interagir com a fonte de dados */
 class PepComponentRepository {
-  Future<List<PepComponentModel>> getPepItems() async {
+  Future<List<PepComponentEntity>> getPepItems() async {
 
     return [];
   }
@@ -76,7 +75,7 @@ class PepComponentRepositoryImpl implements PepComponentRepository {
   PepComponentRepositoryImpl({required this.localDataSource});
 
   @override
-  Future<List<PepComponentModel>> getPepItems() async {
+  Future<List<PepComponentEntity>> getPepItems() async {
     return await localDataSource.getPepItemsFromJson();
   }
 }
@@ -84,16 +83,16 @@ class PepComponentRepositoryImpl implements PepComponentRepository {
 // --
 
 abstract class PepComponentLocalDataSource {
-  Future<List<PepComponentModel>> getPepItemsFromJson();
+  Future<List<PepComponentEntity>> getPepItemsFromJson();
 }
 
 // camada local datasource para carregar os componentes PEP de um arquivo JSON
 class PepComponentLocalDataSourceImpl implements PepComponentLocalDataSource{
   @override
-  Future<List<PepComponentModel>> getPepItemsFromJson() async {
+  Future<List<PepComponentEntity>> getPepItemsFromJson() async {
     final String response = await rootBundle.loadString('assets/data/pep/pep_440_rev6.json');
     final List<dynamic> data = json.decode(response);
 
-    return data.map((json) => PepComponentModel.fromJson(json)).toList();
+    return data.map((json) => PepComponentEntity.fromJson(json)).toList();
   }
 }

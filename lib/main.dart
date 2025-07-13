@@ -1,3 +1,4 @@
+import 'package:finder_app/features/pep_components/presentation/controllers/pep_component_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +19,18 @@ void main() {
         ChangeNotifierProvider(create: (_) => ProductionListProvider()),
         ChangeNotifierProvider(
           create: (_) {
+            final controller = PepComponentController(
+              getPepItemsUseCase: GetPepItems(
+                PepComponentRepositoryImpl(
+                  localDataSource: PepComponentLocalDataSourceImpl(),
+                ),
+              ),
+            );
+            controller.loadItems();
+          },
+        ),
+        ChangeNotifierProvider(
+          create: (_) {
             final controller = ComponentController(
               getItemsUseCase: GetItems(
                 ComponentRepositoryImpl(
@@ -26,8 +39,7 @@ void main() {
               ),
             );
             controller
-                .loadItems(); // Chamada fora do construtor, para evitar problemas de ciclo de vida
-            // Garante que a lista de itens seja carregada antes de ser usada na UI
+                .loadItems();
             return controller;
           },
         ),

@@ -1,7 +1,10 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:finder_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'controller/production_page_component_data_provider.dart';
+import 'package:finder_app/features/production_page/presentation/controller/production_page_component_data_provider.dart';
 
 class ProductionPage extends StatelessWidget {
   const ProductionPage({super.key});
@@ -9,6 +12,11 @@ class ProductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final list = context.watch<ProductionListProvider>().items;
+
+    final seenCodes = <String>{};
+    final filteredList = list.where((item) {
+      return seenCodes.add(item.production!.toolCode);
+    }).toList();
 
     return Scaffold(
       body: SafeArea(
@@ -39,174 +47,295 @@ class ProductionPage extends StatelessWidget {
                 'Componentes Selecionados:',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
-              const SizedBox(height: 30),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: list.length,
-                  itemBuilder: (context, index) {
-                    final item = list[index];
-                
-                    return Card(
-                      child: ListTile(
-                        title: Text(
-                          item.location?.descricao ?? 'Sem localização',
-                        ),
-                        subtitle: Text(
-                          item.production?.toolCode ?? 'Sem ferramenta',
-                        ),
-                        trailing: IconButton(
-                          icon: const Icon(Icons.delete),
-                          onPressed: () {
-                            context.read<ProductionListProvider>().removeItem(
-                              item.location?.item ?? item.production?.item ?? '',
-                            );
-                          },
-                        ),
-                      ),
-                    );
-                  },
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  headerRow(100, 'DTR'),
+                  headerRow(100, 'DESCRIÇÃO'),
+                  headerRow(90, 'LOCAL'),
+                  headerRow(50, 'PRAT.'),
+                  headerRow(50, 'POS.'),
+                ],
+              ),
+              Flexible(
+                child: SizedBox(
+                  height: 200,
+                  child: ListView.builder(
+                    itemCount: list.length,
+                    itemBuilder: (context, index) {
+                      final item = list[index];
+
+                      return tableField(
+                        item.location!.item,
+                        item.location!.descricao,
+                        item.location!.localReferencia,
+                        item.location!.prateleira,
+                        item.location!.posicao,
+                      );
+                    },
+                  ),
                 ),
               ),
-              // Table(
-              //   border: TableBorder.all(color: Colors.grey.shade400),
-              //   defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-              //   columnWidths: const {
-              //     0: FixedColumnWidth(100),
-              //     1: FixedColumnWidth(100),
-              //     2: FixedColumnWidth(90),
-              //     3: FixedColumnWidth(50),
-              //     4: FixedColumnWidth(50),
-              //   },
-              //   children: [
-              //     _buildHeaderRow(),
-              //     _buildDataRow(
-              //       "DTR0000139774",
-              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
-              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-              //       "P275",
-              //       "FL06",
-              //     ),
-              //     _buildDataRow(
-              //       "DTR0000139774",
-              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
-              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-              //       "P275",
-              //       "FL06",
-              //     ),
-              //     _buildDataRow(
-              //       "DTR0000139774",
-              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
-              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-              //       "P275",
-              //       "FL06",
-              //     ),
-              //     _buildDataRow(
-              //       "DTR0000139774",
-              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
-              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-              //       "P275",
-              //       "FL06",
-              //     ),
-              //     _buildDataRow(
-              //       "DTR0000139774",
-              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
-              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-              //       "P275",
-              //       "FL06",
-              //     ),
-              //     _buildDataRow(
-              //       "DTR0000139774",
-              //       "CONTATO PRATEADO MACHO 1mm² HAN D",
-              //       "P.S.M.E. Pequenas Sub-Montagens Elétricas",
-              //       "P275",
-              //       "FL06",
-              //     ),
-              //     // ... Adicione as outras linhas
-              //   ],
-              // ),
               const SizedBox(height: 30),
               const Text(
-                'Ferramentas',
+                'Ferramentas para producão:',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
               // const SizedBox(height: 10),
-              // GridView.builder(
-              //   shrinkWrap: true,
-              //   physics: const NeverScrollableScrollPhysics(),
-              //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              //     crossAxisCount: 2,
-              //     crossAxisSpacing: 12,
-              //   ),
-              //   itemCount: 3, // Set to the number of tools you want to display
-              //   itemBuilder: (context, index) {
-              //     return GridTile(
-              //       // header: const GridTileBar(
-              //         // backgroundColor: Colors.black45,
-              //         // leading: Icon(Icons.engineering_rounded),
-              //         // title: Text('Ferramenta:'),
-              //       // ),
-              //       // footer: const GridTileBar(backgroundColor: Colors.black45, leading: Icon(Icons.engineering_rounded),),
-              //       child: Image.asset(
-              //         'assets/images/tools/09_99_000_0191_harting.png',
-              //       ),
-              //     );
-              //   },
-              // ),
+              Flexible(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      width: MediaQuery.of(context).size.width / 2.5,
+                      child: ListView.builder(
+                        itemCount: filteredList.length,
+                        itemBuilder: (context, index) {
+                          final item = filteredList[index];
+
+                          return Visibility(
+                            visible: item.production!.toolImage.contains('N/A')
+                                ? false
+                                : true,
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              clipBehavior: Clip.hardEdge,
+                              child: Stack(
+                                children: [
+                                  // 🔹 Imagem de fundo
+                                  Positioned.fill(
+                                    child: Image.asset(
+                                      item
+                                          .production!
+                                          .toolImage, // coloque o caminho da sua imagem aqui
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+
+                                  // 🔸 Gradiente escuro na base
+                                  Positioned.fill(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [
+                                            Colors.transparent,
+                                            Colors.black.withOpacity(0.6),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+
+                                  // 🔸 Texto posicionado
+                                  Positioned(
+                                    left: 10,
+                                    bottom: 10,
+                                    child: Text(
+                                      item.production!.toolCode,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+
+                    // --
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      width: MediaQuery.of(context).size.width / 2.5,
+                      child: ListView.builder(
+                        itemCount: filteredList
+                            .length, // Set to the number of tools you want to display
+                        itemBuilder: (context, index) {
+                          final item = filteredList[index];
+
+                          return Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            clipBehavior: Clip.hardEdge,
+                            child: Visibility(
+                              visible: !(item.production?.secondToolImage.contains('N') ?? true),
+                              child: Stack(
+                                children: [
+                                  // 🔹 Imagem de fundo
+                                  Positioned.fill(
+                                    child: Image.asset(
+                                      item
+                                          .production!
+                                          .secondToolImage, // coloque o caminho da sua imagem aqui
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                              
+                                  // 🔸 Gradiente escuro na base
+                                  Positioned.fill(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [
+                                            Colors.transparent,
+                                            Colors.black.withOpacity(0.6),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                              
+                                  // 🔸 Texto posicionado
+                                  Positioned(
+                                    left: 10,
+                                    bottom: 10,
+                                    child: Text(
+                                      item.production!.secondToolCode,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
   }
-}
 
-TableRow _buildHeaderRow() {
-  return TableRow(
-    decoration: BoxDecoration(color: Colors.blue),
-    children: [
-      _cell("DTR", isBold: true),
-      _cell("DESCRIÇÃO", isBold: true),
-      _cell("LOCAL", isBold: true),
-      _cell("PRAT.", isBold: true),
-      _cell("FLUXO", isBold: true),
-    ],
-  );
-}
+  Row tableField(
+    String dtr,
+    String description,
+    String local,
+    String shelf,
+    String flow,
+  ) {
+    return Row(
+      children: [
+        Container(
+          padding: EdgeInsets.all(2),
+          height: 25,
+          width: 100,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            border: Border.all(color: Colors.grey.shade400, width: .5),
+          ),
+          child: Center(child: Text(dtr, style: TextStyle(fontSize: 14))),
+        ),
+        Container(
+          padding: EdgeInsets.all(2),
+          height: 25,
+          width: 100,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            border: Border.all(color: Colors.grey.shade400, width: .5),
+          ),
+          child: Center(
+            child: Text(
+              description,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 14),
+            ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.all(2),
+          height: 25,
+          width: 90,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            border: Border.all(color: Colors.grey.shade400, width: .5),
+          ),
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 85,
+                  child: Text(
+                    local,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.all(2),
+          height: 25,
+          width: 50,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            border: Border.all(color: Colors.grey.shade400, width: .5),
+          ),
+          child: Center(child: Text(shelf, style: TextStyle(fontSize: 14))),
+        ),
+        Container(
+          padding: EdgeInsets.all(2),
+          height: 25,
+          width: 50,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            border: Border.all(color: Colors.grey.shade400, width: .5),
+          ),
+          child: Center(child: Text(flow, style: TextStyle(fontSize: 14))),
+        ),
+      ],
+    );
+  }
 
-TableRow _buildDataRow(
-  String dtr,
-  String description,
-  String local,
-  String shelf,
-  String flow,
-) {
-  return TableRow(
-    decoration: BoxDecoration(
-      color: description.contains("non insulated")
-          ? Colors.blue[50]
-          : Colors.transparent,
-    ),
-    children: [
-      _cell(dtr),
-      _cell(description),
-      _cell(local),
-      _cell(shelf),
-      _cell(flow),
-    ],
-  );
-}
-
-Widget _cell(String text, {bool isBold = false}) {
-  return Padding(
-    padding: const EdgeInsets.all(6.0),
-    child: Text(
-      text,
-      maxLines: 1,
-      overflow: TextOverflow.ellipsis,
-      style: TextStyle(
-        fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
-        fontSize: 14,
+  Container headerRow(double width, String columnName) {
+    return Container(
+      height: 25,
+      width: width,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(color: Colors.grey.shade400, width: .5),
       ),
-    ),
-  );
+      child: Center(
+        child: Text(
+          columnName,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
 }

@@ -1,6 +1,7 @@
 import '../../domain/entities/item_entity.dart';
 
 class ComponentModel extends ComponentEntity {
+  
   const ComponentModel({
     required super.item,
     required super.descricao,

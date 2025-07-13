@@ -5,17 +5,17 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
-import '../../../../components/data/models/component_model.dart';
+import '../../../../components/domain/entities/item_entity.dart';
+import '../../../../components/presentation/controllers/component_controller.dart';
 import '../../../../production_page/presentation/controller/production_page_component_data_provider.dart';
-import '../../../data/models/pep_component_model.dart';
+import '../../../domain/entities/pep_component_entity.dart';
 import '../pep_component_detail_page.dart';
 
 class KBuildPepComponent extends StatelessWidget {
   final String dtr;
   final String itemImage;
   final String itemName;
-  final ComponentModel location;
-  final PepComponentModel production;
+  final PepComponentEntity pepComponent;
 
   // campos necessários pra navegação
   final String stripping;
@@ -46,8 +46,7 @@ class KBuildPepComponent extends StatelessWidget {
     required this.secondMatrixPositioning,
     required this.secondMatrixPositioningImage,
     required this.secondToolAdjustment,
-    required this.location,
-    required this.production,
+    required this.pepComponent,
   });
 
   @override
@@ -96,7 +95,7 @@ class KBuildPepComponent extends StatelessWidget {
                     children: [
                       // -- DTR do componente
                       Text(
-                        dtr,
+                        pepComponent.item,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: KSizes.fontSizeMd,
@@ -110,7 +109,7 @@ class KBuildPepComponent extends StatelessWidget {
                       SizedBox(
                         width: 150,
                         child: Text(
-                          itemName,
+                          pepComponent.description,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           style: TextStyle(
@@ -145,7 +144,37 @@ class KBuildPepComponent extends StatelessWidget {
                 backgroundColor: dark ? KColors.darkerGrey : KColors.lightGrey,
                 tooltip: 'Adicionar à Lista de Produção',
                 onPressed: () {
-                  context.read<ProductionListProvider>().addItem(location, production);
+                  final componentController = context
+                      .read<ComponentController>();
+                  ComponentEntity? component;
+
+                  try {
+                    component = componentController.items.firstWhere(
+                      (c) => c.item == pepComponent.item,
+                    );
+                  } catch (_) {
+                    component = null;
+                  }
+
+                  if (component != null) {
+                    context.read<ProductionListProvider>().addItem(
+                      component,
+                      pepComponent,
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Componente físico não encontrado.'),
+                      ),
+                    );
+                  }
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        '${pepComponent.item} adicionado com sucesso!',
+                      ),
+                    ),
+                  );
                 },
                 child: const Icon(Icons.add),
               ),
