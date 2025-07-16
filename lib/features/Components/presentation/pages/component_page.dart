@@ -1,21 +1,22 @@
 // ignore_for_file: deprecated_member_use
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../common/widgets/buttons/common_buttons.dart';
 import '../../../../core/constants/sizes.dart';
+import '../../../production_page/presentation/controller/production_page_component_data_provider.dart';
 import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
+import '../../domain/entities/item_entity.dart';
 import '../../domain/usecases/get_items.dart';
 import '../controllers/component_controller.dart';
 import '../../../../core/constants/colors.dart';
 import 'widgets/component_page_widget.dart';
 
 class ComponentPage extends StatefulWidget {
-  const ComponentPage({super.key});
+  const ComponentPage({super.key, });
 
   @override
   State<ComponentPage> createState() => _ComponentPageState();
@@ -160,10 +161,72 @@ class _ComponentPageState extends State<ComponentPage> {
                                     Positioned(
                                       right: 5,
                                       top: 5,
-                                      child: TextButton(
+                                      child: FloatingActionButton.small(
+                                        backgroundColor: dark
+                                            ? KColors.darkerGrey
+                                            : KColors.lightGrey,
+                                        tooltip:
+                                            'Adicionar à Lista de Produção',
                                         onPressed: () {
+                                          final componentController = context
+                                              .read<ComponentController>();
+                                          ComponentEntity? component;
+
+                                          try {
+                                            component = componentController
+                                                .items
+                                                .firstWhere(
+                                                  (c) =>
+                                                      c.item ==
+                                                      component!.item,
+                                                );
+                                          } catch (_) {
+                                            component = null;
+                                          }
+
+                                          if (component != null) {
+                                            context
+                                                .read<ProductionListProvider>()
+                                                .addComponentLocationItem(
+                                                  component,
+                                                );
+                                            ScaffoldMessenger.of(
+                                              context,
+                                            ).showSnackBar(
+                                              SnackBar(
+                                                backgroundColor:
+                                                    KColors.successPrimary,
+                                                duration: Duration(seconds: 1),
+                                                content: Text(
+                                                  '${component.item} adicionado com sucesso!',
+                                                  style: TextStyle(
+                                                    color:
+                                                        KColors.textWhiteLight,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          } else {
+                                            ScaffoldMessenger.of(
+                                              context,
+                                            ).showSnackBar(
+                                              const SnackBar(
+                                                backgroundColor:
+                                                    KColors.errorSoft,
+                                                duration: Duration(seconds: 1),
+                                                content: Text(
+                                                  'Componente físico não encontrado.',
+                                                  style: TextStyle(
+                                                    color:
+                                                        KColors.textWhiteLight,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          }
                                         },
-                                        child: Text('Add'),
+                                        child: const Icon(Icons.add),
+                                        // child: AnimatedIconButton(),
                                       ),
                                     ),
                                     Column(

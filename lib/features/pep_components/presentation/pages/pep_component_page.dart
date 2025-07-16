@@ -40,10 +40,10 @@ class _PepComponentPageState extends State<PepComponentPage> {
 
               return SafeArea(
                 child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 600),
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(maxWidth: 600),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         spacing: 8.0,

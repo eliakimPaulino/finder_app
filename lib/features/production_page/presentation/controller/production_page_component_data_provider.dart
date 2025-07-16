@@ -6,13 +6,39 @@ import '../../domain/entities/production_item.dart';
 
 class ProductionListProvider extends ChangeNotifier {
   final List<ProductionItem> _items = [];
+  final List<ComponentEntity> _componentList = [];
 
   List<ProductionItem> get items => _items;
+  List<ComponentEntity> get componentList => _componentList;
+
+  void addComponentLocationItem(ComponentEntity? location) {
+    final itemCode = location?.item;
+    final alreadyExists = _componentList.any((e) => e.item == itemCode);
+
+    if (!alreadyExists) {
+      _componentList.add(
+        ComponentEntity(
+          area: location!.area,
+          descricao: location.descricao,
+          fluxo: location.fluxo,
+          item: location.item,
+          localReferencia: location.localReferencia,
+          montagem: location.montagem,
+          posicao: location.posicao,
+          prateleira: location.prateleira,
+          projeto: location.projeto,
+          sigla: location.sigla,
+        ),
+      );
+      notifyListeners();
+    }
+  }
 
   void addItem(ComponentEntity? location, PepComponentEntity? production) {
     final itemCode = location?.item ?? production?.item;
-    final alreadyExists = _items.any((e) =>
-        e.location?.item == itemCode || e.production?.item == itemCode);
+    final alreadyExists = _items.any(
+      (e) => e.location?.item == itemCode || e.production?.item == itemCode,
+    );
 
     if (!alreadyExists) {
       _items.add(ProductionItem(location: location, production: production));
@@ -21,8 +47,9 @@ class ProductionListProvider extends ChangeNotifier {
   }
 
   void removeItem(String itemCode) {
-    _items.removeWhere((e) =>
-        e.location?.item == itemCode || e.production?.item == itemCode);
+    _items.removeWhere(
+      (e) => e.location?.item == itemCode || e.production?.item == itemCode,
+    );
     notifyListeners();
   }
 
@@ -38,4 +65,3 @@ class ProductionListProvider extends ChangeNotifier {
     );
   }
 }
-

@@ -22,211 +22,136 @@ class ProductionPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Center(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 400),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back_ios_rounded),
-                    onPressed: () => Navigator.of(context).pop(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back_ios_rounded),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                      const Text(
+                        'Lista de Produção',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.expand_circle_down_sharp),
+                        onPressed: () {
+                          context.read<ProductionListProvider>().clear();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        backgroundColor: KColors.infoSoft,
+                        duration: Duration(seconds: 2),
+                        content: Text(
+                          'Lista foi limpa com sucesso!',
+                          style: TextStyle(color: KColors.textWhiteLight),
+                        ),
+                      ),
+                    );
+                        },
+                      ),
+                    ],
                   ),
+                  const SizedBox(height: 15),
                   const Text(
-                    'Lista de Produção',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+                    'Componentes Selecionados:',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                  IconButton(
-                    icon: const Icon(Icons.expand_circle_down_sharp),
-                    onPressed: () {},
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      headerRow(100, 'DTR'),
+                      headerRow(100, 'DESCRIÇÃO'),
+                      headerRow(90, 'LOCAL'),
+                      headerRow(50, 'PRAT.'),
+                      headerRow(50, 'POS.'),
+                    ],
                   ),
-                ],
-              ),
-              const SizedBox(height: 15),
-              const Text(
-                'Componentes Selecionados:',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                children: [
-                  headerRow(100, 'DTR'),
-                  headerRow(100, 'DESCRIÇÃO'),
-                  headerRow(90, 'LOCAL'),
-                  headerRow(50, 'PRAT.'),
-                  headerRow(50, 'POS.'),
-                ],
-              ),
-              Flexible(
-                child: SizedBox(
-                  height: 200,
-                  child: ListView.builder(
-                    itemCount: list.length,
-                    itemBuilder: (context, index) {
-                      final item = list[index];
+                  Flexible(
+                    child: Container(
+                      margin: const EdgeInsets.only(left: 3,),
+                      height: 200,
+                      child: ListView.builder(
+                        itemCount: list.length,
+                        itemBuilder: (context, index) {
+                          final item = list[index];
 
-                      return tableField(
-                        item.location!.item,
-                        item.location!.descricao,
-                        item.location!.localReferencia,
-                        item.location!.prateleira,
-                        item.location!.posicao,
-                      );
-                    },
+                          return tableField(
+                            item.location!.item,
+                            item.location!.descricao,
+                            item.location!.localReferencia,
+                            item.location!.prateleira,
+                            item.location!.posicao,
+                          );
+                        },
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              const SizedBox(height: 30),
-              const Text(
-                'Ferramentas para producão:',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
-              // const SizedBox(height: 10),
-              Flexible(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      width: MediaQuery.of(context).size.width / 2.5,
+                  const SizedBox(height: 30),
+                  const Text(
+                    'Ferramentas para producão:',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                  const SizedBox(height: 10),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      height: 300,
+                      margin: EdgeInsets.only(top: 5, bottom: 5),
                       child: ListView.builder(
                         itemCount: filteredList.length,
                         itemBuilder: (context, index) {
                           final item = filteredList[index];
 
-                          return Visibility(
-                            visible: item.production!.toolImage.contains('N/A')
-                                ? false
-                                : true,
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              clipBehavior: Clip.hardEdge,
-                              child: Stack(
-                                children: [
-                                  // 🔹 Imagem de fundo
-                                  Positioned.fill(
-                                    child: Image.asset(
-                                      item
-                                          .production!
-                                          .toolImage, // coloque o caminho da sua imagem aqui
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-
-                                  // 🔸 Gradiente escuro na base
-                                  Positioned.fill(
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Colors.transparent,
-                                            Colors.black.withOpacity(0.6),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                  // 🔸 Texto posicionado
-                                  Positioned(
-                                    left: 10,
-                                    bottom: 10,
-                                    child: Text(
-                                      item.production!.toolCode,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-
-                    // --
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      width: MediaQuery.of(context).size.width / 2.5,
-                      child: ListView.builder(
-                        itemCount: filteredList
-                            .length, // Set to the number of tools you want to display
-                        itemBuilder: (context, index) {
-                          final item = filteredList[index];
-
                           return Container(
-                            width: 100,
-                            height: 100,
                             decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(12.0),
                             ),
-                            clipBehavior: Clip.hardEdge,
-                            child: Visibility(
-                              visible: !(item.production?.secondToolImage.contains('N') ?? true),
-                              child: Stack(
-                                children: [
-                                  // 🔹 Imagem de fundo
-                                  Positioned.fill(
-                                    child: Image.asset(
-                                      item
-                                          .production!
-                                          .secondToolImage, // coloque o caminho da sua imagem aqui
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                              
-                                  // 🔸 Gradiente escuro na base
-                                  Positioned.fill(
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            Colors.transparent,
-                                            Colors.black.withOpacity(0.6),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                              
-                                  // 🔸 Texto posicionado
-                                  Positioned(
-                                    left: 10,
-                                    bottom: 10,
-                                    child: Text(
-                                      item.production!.secondToolCode,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                            child: ListTile(
+                              leading: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  item.production!.itemImage,
+                                  width: 50,
+                                  height: 50,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              title: Text(
+                                'Componente: ${item.location!.item}',
+                              ),
+                              subtitle: Text(
+                                'Ferramenta: ${item.production!.toolCode} ou ${item.production!.secondToolCode}',
+                              ),
+                              trailing: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  item.production!.toolImage,
+                                  width: 50,
+                                  height: 50,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           );
                         },
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),

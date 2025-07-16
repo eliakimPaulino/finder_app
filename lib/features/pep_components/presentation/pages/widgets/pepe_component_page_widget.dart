@@ -10,6 +10,7 @@ import '../../../../components/presentation/controllers/component_controller.dar
 import '../../../../production_page/presentation/controller/production_page_component_data_provider.dart';
 import '../../../domain/entities/pep_component_entity.dart';
 import '../pep_component_detail_page.dart';
+import 'button_animation.dart';
 
 class KBuildPepComponent extends StatelessWidget {
   final String dtr;
@@ -161,22 +162,31 @@ class KBuildPepComponent extends StatelessWidget {
                       component,
                       pepComponent,
                     );
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        backgroundColor: KColors.successPrimary,
+                        duration: Duration(seconds: 1),
+                        content: Text(
+                          '${pepComponent.item} adicionado com sucesso!',
+                          style: TextStyle(color: KColors.textWhiteLight),
+                        ),
+                      ),
+                    );
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
-                        content: Text('Componente físico não encontrado.'),
+                        backgroundColor: KColors.errorSoft,
+                        duration: Duration(seconds: 1),
+                        content: Text(
+                          'Componente físico não encontrado.',
+                          style: TextStyle(color: KColors.textWhiteLight),
+                        ),
                       ),
                     );
                   }
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        '${pepComponent.item} adicionado com sucesso!',
-                      ),
-                    ),
-                  );
                 },
                 child: const Icon(Icons.add),
+                // child: AnimatedIconButton(),
               ),
             ],
           ),
