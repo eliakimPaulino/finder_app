@@ -1,5 +1,3 @@
-import 'package:finder_app/features/pep_components/domain/entities/pep_component_entity.dart';
-
 class ComponentEntity {
   final String item;
   final String descricao;
