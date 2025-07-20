@@ -48,7 +48,7 @@ class PepComponentController extends ChangeNotifier{
 
 // --
 
-  // camada usecase para buscar os componentes PEP
+// camada usecase para buscar os componentes PEP
 class GetPepItems {
   final PepComponentRepository repository;
 
@@ -61,7 +61,7 @@ class GetPepItems {
 
 //--
 
-  /* camada repository para interagir com a fonte de dados */
+/* camada repository para interagir com a fonte de dados */
 class PepComponentRepository {
   Future<List<PepComponentEntity>> getPepItems() async {
 

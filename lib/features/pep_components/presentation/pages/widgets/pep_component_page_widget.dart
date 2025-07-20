@@ -35,6 +35,8 @@ class KBuildPepComponent extends StatelessWidget {
     required this.dtr,
     required this.itemImage,
     required this.itemName,
+    required this.pepComponent,
+    // campos necessários pra navegação
     required this.stripping,
     required this.toolCode,
     required this.toolImage,
@@ -46,7 +48,6 @@ class KBuildPepComponent extends StatelessWidget {
     required this.secondMatrixPositioning,
     required this.secondMatrixPositioningImage,
     required this.secondToolAdjustment,
-    required this.pepComponent,
   });
 
   @override
@@ -144,8 +145,8 @@ class KBuildPepComponent extends StatelessWidget {
                 backgroundColor: dark ? KColors.darkerGrey : KColors.lightGrey,
                 tooltip: 'Adicionar à Lista de Produção',
                 onPressed: () {
-                  final componentController = context
-                      .read<ComponentController>();
+                  final componentController = context.read<ComponentController>();
+                  
                   ComponentEntity? component;
 
                   try {
@@ -167,7 +168,7 @@ class KBuildPepComponent extends StatelessWidget {
                         duration: Duration(seconds: 1),
                         content: Text(
                           '${pepComponent.item} adicionado com sucesso!',
-                          style: TextStyle(color: KColors.textWhiteLight),
+                          style: TextStyle(color: KColors.textWhiteLight, fontWeight: FontWeight.bold),
                         ),
                       ),
                     );
@@ -177,7 +178,7 @@ class KBuildPepComponent extends StatelessWidget {
                         backgroundColor: KColors.errorSoft,
                         duration: Duration(seconds: 1),
                         content: Text(
-                          'Componente físico não encontrado.',
+                          'Componente não encontrado.',
                           style: TextStyle(color: KColors.textWhiteLight),
                         ),
                       ),

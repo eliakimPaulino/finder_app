@@ -108,9 +108,6 @@ class PepComponentDetailPage extends StatelessWidget {
                     "Para crimpagem use as seguintes ferramentas:",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   ),
-                  // const SizedBox(height: 8),
-              
-                  /// Tabela de dois blocos lado a lado
                   _buildToolingTable(context),
                 ],
               ),

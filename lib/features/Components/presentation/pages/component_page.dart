@@ -226,7 +226,6 @@ class _ComponentPageState extends State<ComponentPage> {
                                           }
                                         },
                                         child: const Icon(Icons.add),
-                                        // child: AnimatedIconButton(),
                                       ),
                                     ),
                                     Column(

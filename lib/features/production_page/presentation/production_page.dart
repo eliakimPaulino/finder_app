@@ -11,6 +11,7 @@ class ProductionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     final list = context.watch<ProductionListProvider>().items;
 
     final seenCodes = <String>{};
@@ -47,15 +48,15 @@ class ProductionPage extends StatelessWidget {
                         onPressed: () {
                           context.read<ProductionListProvider>().clear();
                           ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        backgroundColor: KColors.infoSoft,
-                        duration: Duration(seconds: 2),
-                        content: Text(
-                          'Lista foi limpa com sucesso!',
-                          style: TextStyle(color: KColors.textWhiteLight),
-                        ),
-                      ),
-                    );
+                            SnackBar(
+                              backgroundColor: KColors.infoSoft,
+                              duration: Duration(seconds: 2),
+                              content: Text(
+                                'Lista foi limpa com sucesso!',
+                                style: TextStyle(color: KColors.textWhiteLight),
+                              ),
+                            ),
+                          );
                         },
                       ),
                     ],
@@ -69,30 +70,34 @@ class ProductionPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      headerRow(100, 'DTR'),
-                      headerRow(100, 'DESCRIÇÃO'),
-                      headerRow(90, 'LOCAL'),
-                      headerRow(50, 'PRAT.'),
+                      headerRow(120, 'DTR'),
+                      headerRow(100, 'LOCAL'),
+                      headerRow(80, 'PRAT.'),
                       headerRow(50, 'POS.'),
                     ],
                   ),
-                  Flexible(
-                    child: Container(
-                      margin: const EdgeInsets.only(left: 3,),
+                  Center(
+                    child: SizedBox(
                       height: 200,
-                      child: ListView.builder(
-                        itemCount: list.length,
-                        itemBuilder: (context, index) {
-                          final item = list[index];
+                      width: 350,
+                      child: SizedBox(
+                        height: 200,
+                        width: 350,
+                        child: Center(
+                          child: ListView.builder(
+                            itemCount: list.length,
+                            itemBuilder: (context, index) {
+                              final item = list[index];
 
-                          return tableField(
-                            item.location!.item,
-                            item.location!.descricao,
-                            item.location!.localReferencia,
-                            item.location!.prateleira,
-                            item.location!.posicao,
-                          );
-                        },
+                              return tableField(
+                                item.location!.item,
+                                item.location!.localReferencia,
+                                item.location!.prateleira,
+                                item.location!.posicao,
+                              );
+                            },
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -115,10 +120,20 @@ class ProductionPage extends StatelessWidget {
                           final item = filteredList[index];
 
                           return Container(
+                            margin: EdgeInsets.only(top: 4),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.0),
+                              color: dark ? KColors.darkerGrey : KColors.lightContainer,
+                              boxShadow: [
+                                BoxShadow(
+                                  color:Colors.black.withOpacity(0.1),
+                                  blurRadius: 6,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
                             ),
                             child: ListTile(
+                              tileColor: Colors.transparent,
                               leading: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
@@ -128,11 +143,9 @@ class ProductionPage extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              title: Text(
-                                'Componente: ${item.location!.item}',
-                              ),
+                              title: Text(item.location!.item, style: TextStyle(fontWeight: FontWeight.bold),),
                               subtitle: Text(
-                                'Ferramenta: ${item.production!.toolCode} ou ${item.production!.secondToolCode}',
+                                'Ferramentas:\n• ${item.production!.toolCode}\n• ${item.production!.secondToolCode}',
                               ),
                               trailing: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
@@ -158,86 +171,68 @@ class ProductionPage extends StatelessWidget {
     );
   }
 
-  Row tableField(
-    String dtr,
-    String description,
-    String local,
-    String shelf,
-    String flow,
-  ) {
+  Row tableField(String dtr, String local, String shelf, String flow) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          padding: EdgeInsets.all(2),
-          height: 25,
-          width: 100,
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            border: Border.all(color: Colors.grey.shade400, width: .5),
-          ),
-          child: Center(child: Text(dtr, style: TextStyle(fontSize: 14))),
-        ),
-        Container(
-          padding: EdgeInsets.all(2),
-          height: 25,
-          width: 100,
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            border: Border.all(color: Colors.grey.shade400, width: .5),
-          ),
-          child: Center(
-            child: Text(
-              description,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontSize: 14),
+        Row(
+          children: [
+            // -- DTR
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 25,
+              width: 120,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                border: Border.all(color: Colors.grey.shade400, width: .5),
+              ),
+              child: Center(child: Text(dtr, style: TextStyle(fontSize: 14))),
             ),
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.all(2),
-          height: 25,
-          width: 90,
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            border: Border.all(color: Colors.grey.shade400, width: .5),
-          ),
-          child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 85,
-                  child: Text(
-                    local,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 14),
-                  ),
+
+            //-- LOCAL
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 25,
+              width: 100,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                border: Border.all(color: Colors.grey.shade400, width: .5),
+              ),
+              child: SizedBox(
+                width: 85,
+                child: Text(
+                  local,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontSize: 14),
                 ),
-              ],
+              ),
             ),
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.all(2),
-          height: 25,
-          width: 50,
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            border: Border.all(color: Colors.grey.shade400, width: .5),
-          ),
-          child: Center(child: Text(shelf, style: TextStyle(fontSize: 14))),
-        ),
-        Container(
-          padding: EdgeInsets.all(2),
-          height: 25,
-          width: 50,
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            border: Border.all(color: Colors.grey.shade400, width: .5),
-          ),
-          child: Center(child: Text(flow, style: TextStyle(fontSize: 14))),
+
+            //-- PRATELEIRA
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 25,
+              width: 80,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                border: Border.all(color: Colors.grey.shade400, width: .5),
+              ),
+              child: Center(child: Text(shelf, style: TextStyle(fontSize: 14))),
+            ),
+
+            //-- POSICAO
+            Container(
+              padding: EdgeInsets.all(2),
+              height: 25,
+              width: 50,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                border: Border.all(color: Colors.grey.shade400, width: .5),
+              ),
+              child: Center(child: Text(flow, style: TextStyle(fontSize: 14))),
+            ),
+          ],
         ),
       ],
     );

@@ -12,11 +12,11 @@ class ProductionListProvider extends ChangeNotifier {
   List<ComponentEntity> get componentList => _componentList;
 
   void addComponentLocationItem(ComponentEntity? location) {
-    final itemCode = location?.item;
-    final alreadyExists = _componentList.any((e) => e.item == itemCode);
+    final componentCode = location?.item;
+    final alreadyExists = componentList.any((component) => component.item == componentCode);
 
     if (!alreadyExists) {
-      _componentList.add(
+      componentList.add(
         ComponentEntity(
           area: location!.area,
           descricao: location.descricao,
@@ -40,6 +40,8 @@ class ProductionListProvider extends ChangeNotifier {
       (e) => e.location?.item == itemCode || e.production?.item == itemCode,
     );
 
+    if (itemCode == null) return;
+    
     if (!alreadyExists) {
       _items.add(ProductionItem(location: location, production: production));
       notifyListeners();

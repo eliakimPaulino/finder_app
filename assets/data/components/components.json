@@ -30285,6 +30285,15 @@
   "fluxo": "FL06"
 },
   {
+  "item": "FICT000000486",
+  "description": "CONTACT SOCKET CRIMPING",
+  "area": "COMPO",
+  "local_referencia": "Looming 2",
+  "prateleira": "P89",
+  "posicao": "D06",
+  "fluxo": "Indefinido"
+},
+  {
   "item": "DTR0000048638",
   "description": "MODULO MACHO GIGABIT 8 VIAS CAT6A",
   "area": "COMPO",
