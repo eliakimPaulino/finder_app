@@ -12,7 +12,7 @@ class ComponentController extends ChangeNotifier {
   List<ComponentEntity> _allItems = [];
   List<ComponentEntity> _filteredItems = [];
   bool _isLoading = true;
-  String _error = 'error';
+  String _error = '';
 
   List<ComponentEntity> get items => _filteredItems;
   bool get isLoading => _isLoading;
@@ -26,7 +26,7 @@ class ComponentController extends ChangeNotifier {
       final items = await getItemsUseCase();
       _allItems = items;
       _filteredItems = items;
-      _error = 'error';
+      _error = '';
     } catch (e) {
       _error = e.toString();
     }

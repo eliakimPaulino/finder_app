@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../components/domain/entities/item_entity.dart';
 import '../../domain/entities/production_item.dart';
 
-class ProductionListProvider extends ChangeNotifier {
+class PepProductionListProvider extends ChangeNotifier {
   final List<ProductionItem> _items = [];
   final List<ComponentEntity> _componentList = [];
 

@@ -4,20 +4,20 @@ import 'package:finder_app/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:finder_app/features/production_page/presentation/controller/production_page_component_data_provider.dart';
+import 'package:finder_app/features/pep_production_page/presentation/controller/pep_production_page_component_data_provider.dart';
 
-class ProductionPage extends StatelessWidget {
-  const ProductionPage({super.key});
+class PepProductionPage extends StatelessWidget {
+  const PepProductionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final dark = MediaQuery.of(context).platformBrightness == Brightness.dark;
-    final list = context.watch<ProductionListProvider>().items;
+    final list = context.watch<PepProductionListProvider>().items;
 
-    final seenCodes = <String>{};
+    /*final seenCodes = <String>{};
     final filteredList = list.where((item) {
       return seenCodes.add(item.production!.toolCode);
-    }).toList();
+    }).toList();*/
 
     return Scaffold(
       body: SafeArea(
@@ -46,7 +46,7 @@ class ProductionPage extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.expand_circle_down_sharp),
                         onPressed: () {
-                          context.read<ProductionListProvider>().clear();
+                          context.read<PepProductionListProvider>().clear();
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               backgroundColor: KColors.infoSoft,
@@ -110,14 +110,14 @@ class ProductionPage extends StatelessWidget {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12.0),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
-                      height: 300,
+                      height: 310,
                       margin: EdgeInsets.only(top: 5, bottom: 5),
                       child: ListView.builder(
-                        itemCount: filteredList.length,
+                        itemCount: list.length,
                         itemBuilder: (context, index) {
-                          final item = filteredList[index];
+                          final item = list[index];
 
                           return Container(
                             margin: EdgeInsets.only(top: 4),
@@ -147,14 +147,28 @@ class ProductionPage extends StatelessWidget {
                               subtitle: Text(
                                 'Ferramentas:\n• ${item.production!.toolCode}\n• ${item.production!.secondToolCode}',
                               ),
-                              trailing: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.asset(
-                                  item.production!.toolImage,
-                                  width: 50,
-                                  height: 50,
-                                  fit: BoxFit.cover,
-                                ),
+                              trailing: Column(
+                                spacing: 4,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(4.0),
+                                    child: Image.asset(
+                                      item.production!.toolImage,
+                                      width: 45,
+                                      height: 22,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(4.0),
+                                    child: Image.asset(
+                                      item.production!.secondToolImage,
+                                      width: 45,
+                                      height: 22,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           );
@@ -191,7 +205,7 @@ class ProductionPage extends StatelessWidget {
 
             //-- LOCAL
             Container(
-              padding: EdgeInsets.all(2),
+              padding: EdgeInsets.all(3),
               height: 25,
               width: 100,
               decoration: BoxDecoration(

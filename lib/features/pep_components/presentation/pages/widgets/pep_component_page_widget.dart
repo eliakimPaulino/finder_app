@@ -7,7 +7,7 @@ import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
 import '../../../../components/domain/entities/item_entity.dart';
 import '../../../../components/presentation/controllers/component_controller.dart';
-import '../../../../production_page/presentation/controller/production_page_component_data_provider.dart';
+import '../../../../pep_production_page/presentation/controller/pep_production_page_component_data_provider.dart';
 import '../../../domain/entities/pep_component_entity.dart';
 import '../pep_component_detail_page.dart';
 
@@ -69,123 +69,142 @@ class KBuildPepComponent extends StatelessWidget {
       padding: EdgeInsets.all(16),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            spacing: 20,
+          Stack(
             children: [
-              // -- Imagem
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                spacing: 20,
                 children: [
-                  Center(
-                    child: GestureDetector(
-                      onTap: () => moveToDetailPage(),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Image.asset(
-                          itemImage,
-                          height: 90,
-                          width: 90,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  // -- Imagem
+                  Row(
                     children: [
-                      // -- DTR do componente
-                      Text(
-                        pepComponent.item,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: KSizes.fontSizeMd,
-                          color: dark
-                              ? KColors.textPrimaryDark
-                              : KColors.textPrimaryLight,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(height: KSizes.sm),
-                      SizedBox(
-                        width: 150,
-                        child: Text(
-                          pepComponent.description,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: TextStyle(
-                            fontSize: KSizes.fontSizeSm,
-                            color: dark
-                                ? KColors.textSecondaryDark
-                                : KColors.textSecondaryLight,
+                      Center(
+                        child: GestureDetector(
+                          onTap: () => moveToDetailPage(),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.asset(
+                              itemImage,
+                              height: 90,
+                              width: 90,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.push(context, moveToDetailPage());
-                        },
-                        child: Text(
-                          'Toque para saber mais',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: TextStyle(
-                            fontSize: KSizes.fontSizeSm,
-                            color: dark
-                                ? KColors.textSecondaryDark
-                                : KColors.textSecondaryLight,
+                      const SizedBox(width: 12),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // -- DTR do componente
+                          Text(
+                            pepComponent.item,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: KSizes.fontSizeMd,
+                              color: dark
+                                  ? KColors.textPrimaryDark
+                                  : KColors.textPrimaryLight,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
+                          SizedBox(height: KSizes.sm),
+                          SizedBox(
+                            width: 150,
+                            child: Text(
+                              pepComponent.description,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: KSizes.fontSizeSm,
+                                color: dark
+                                    ? KColors.textSecondaryDark
+                                    : KColors.textSecondaryLight,
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(context, moveToDetailPage());
+                            },
+                            child: Text(
+                              'Toque para saber mais',
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                              style: TextStyle(
+                                fontSize: KSizes.fontSizeSm,
+                                color: dark
+                                    ? KColors.textSecondaryDark
+                                    : KColors.textSecondaryLight,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
                 ],
               ),
-              FloatingActionButton.small(
-                backgroundColor: dark ? KColors.darkerGrey : KColors.lightGrey,
-                tooltip: 'Adicionar à Lista de Produção',
-                onPressed: () {
-                  final componentController = context.read<ComponentController>();
-                  
-                  ComponentEntity? component;
+              Positioned(
+                top: 2,
+                right: 5,
+                child: FloatingActionButton.small(
+                  backgroundColor: dark
+                      ? KColors.darkerGrey
+                      : KColors.lightGrey,
+                  tooltip: 'Adicionar à Lista de Produção',
+                  onPressed: () async {
+                    final componentController = context
+                        .read<ComponentController>();
 
-                  try {
-                    component = componentController.items.firstWhere(
-                      (c) => c.item == pepComponent.item,
-                    );
-                  } catch (_) {
-                    component = null;
-                  }
+                    ComponentEntity? component;
 
-                  if (component != null) {
-                    context.read<ProductionListProvider>().addItem(
-                      component,
-                      pepComponent,
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        backgroundColor: KColors.successPrimary,
-                        duration: Duration(seconds: 1),
-                        content: Text(
-                          '${pepComponent.item} adicionado com sucesso!',
-                          style: TextStyle(color: KColors.textWhiteLight, fontWeight: FontWeight.bold),
+                    await Future.delayed(Duration(milliseconds: 200));
+                    try {
+                      print(
+                        'Itens no controller: ${componentController.items.length}',
+                      );
+                      print('Buscando por item: ${pepComponent.item}');
+                      component = componentController.items.firstWhere(
+                        (c) => c.item == pepComponent.item,
+                      );
+                    } catch (_) {
+                      component = null;
+                    }
+
+                    if (component != null) {
+                      context.read<PepProductionListProvider>().addItem(
+                        component,
+                        pepComponent,
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          backgroundColor: KColors.successPrimary,
+                          duration: Duration(seconds: 1),
+                          content: Text(
+                            '${pepComponent.item} adicionado com sucesso!',
+                            style: TextStyle(
+                              color: KColors.textWhiteLight,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
-                      ),
-                    );
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        backgroundColor: KColors.errorSoft,
-                        duration: Duration(seconds: 1),
-                        content: Text(
-                          'Componente não encontrado.',
-                          style: TextStyle(color: KColors.textWhiteLight),
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          backgroundColor: KColors.errorSoft,
+                          duration: Duration(seconds: 1),
+                          content: Text(
+                            'Componente não encontrado.',
+                            style: TextStyle(color: KColors.textWhiteLight),
+                          ),
                         ),
-                      ),
-                    );
-                  }
-                },
-                child: const Icon(Icons.add),
+                      );
+                    }
+                  },
+                  child: const Icon(Icons.add),
+                ),
               ),
             ],
           ),

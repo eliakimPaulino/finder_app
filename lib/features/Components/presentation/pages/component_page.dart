@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../../../../common/widgets/buttons/common_buttons.dart';
 import '../../../../core/constants/sizes.dart';
-import '../../../production_page/presentation/controller/production_page_component_data_provider.dart';
+import '../../../pep_production_page/presentation/controller/pep_production_page_component_data_provider.dart';
 import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
 import '../../domain/entities/item_entity.dart';
@@ -186,7 +186,7 @@ class _ComponentPageState extends State<ComponentPage> {
 
                                           if (component != null) {
                                             context
-                                                .read<ProductionListProvider>()
+                                                .read<PepProductionListProvider>()
                                                 .addComponentLocationItem(
                                                   component,
                                                 );
