@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../domain/entities/item_entity.dart';
+import '../../domain/entities/component_entity.dart';
 import '../../domain/usecases/get_items.dart';
 
 class ComponentController extends ChangeNotifier {
@@ -37,7 +37,7 @@ class ComponentController extends ChangeNotifier {
 
   void search(String query) {
     _filteredItems = _allItems
-        .where((item) => item.item.toLowerCase().contains(query))
+        .where((item) => item.dtr.toLowerCase().contains(query))
         .toList();
     notifyListeners();
   }

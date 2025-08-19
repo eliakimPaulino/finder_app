@@ -1,47 +1,34 @@
-import '../../domain/entities/item_entity.dart';
+import '../../domain/entities/component_entity.dart';
 
 class ComponentModel extends ComponentEntity {
-  
   const ComponentModel({
-    required super.item,
-    required super.descricao,
+    required super.dtr,
+    required super.description,
     required super.area,
-    required super.localReferencia,
-    required super.prateleira,
-    required super.posicao,
-    required super.projeto,
-    required super.sigla,
-    required super.montagem,
-    required super.fluxo,
+    required super.referenceLocation,
+    required super.shelf,
+    required super.position,
   });
 
   factory ComponentModel.fromJson(Map<String, dynamic> json) {
     return ComponentModel(
-      item: json['item'] ?? '',
-      descricao: json['description'] ?? '',
-      area: json['area'] ?? '',
-      localReferencia: json['local_referencia'] ?? '',
-      prateleira: json['prateleira'] ?? '',
-      posicao: json['posicao'] ?? '',
-      projeto: json['projeto'] ?? '',
-      sigla: json['sigla'] ?? '',
-      montagem: json['montagem'] ?? '',
-      fluxo: json['fluxo'] ?? '',
+      dtr: json['dtr']?.toString() ?? '',
+      description: json['description']?.toString() ?? '',
+      area: json['area']?.toString() ?? '',
+      referenceLocation: json['reference_location']?.toString() ?? '',
+      shelf: json['shelf']?.toString() ?? '',
+      position: json['position']?.toString() ?? '',
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'item': item,
-      'description': descricao,
+      'dtr': dtr,
+      'description': description,
       'area': area,
-      'local_referencia': localReferencia,
-      'prateleira': prateleira,
-      'posicao': posicao,
-      'projeto': projeto,
-      'sigla': sigla,
-      'montagem': montagem,
-      'fluxo': fluxo,
+      'reference_location': referenceLocation,
+      'shelf': shelf,
+      'position': position,
     };
   }
 }

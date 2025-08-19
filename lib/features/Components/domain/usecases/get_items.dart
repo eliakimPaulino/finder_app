@@ -1,4 +1,4 @@
-import '../entities/item_entity.dart';
+import '../entities/component_entity.dart';
 import '../repositories/item_repository.dart';
 
 class GetItems {

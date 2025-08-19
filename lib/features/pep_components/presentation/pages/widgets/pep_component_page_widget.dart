@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
-import '../../../../components/domain/entities/item_entity.dart';
+import '../../../../components/domain/entities/component_entity.dart';
 import '../../../../components/presentation/controllers/component_controller.dart';
 import '../../../../pep_production_page/presentation/controller/pep_production_page_component_data_provider.dart';
 import '../../../domain/entities/pep_component_entity.dart';
@@ -166,7 +166,7 @@ class KBuildPepComponent extends StatelessWidget {
                       );
                       print('Buscando por item: ${pepComponent.item}');
                       component = componentController.items.firstWhere(
-                        (c) => c.item == pepComponent.item,
+                        (c) => c.dtr == pepComponent.item,
                       );
                     } catch (_) {
                       component = null;

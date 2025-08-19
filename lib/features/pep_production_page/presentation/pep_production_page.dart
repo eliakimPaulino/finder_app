@@ -90,10 +90,10 @@ class PepProductionPage extends StatelessWidget {
                               final item = list[index];
 
                               return tableField(
-                                item.location!.item,
-                                item.location!.localReferencia,
-                                item.location!.prateleira,
-                                item.location!.posicao,
+                                item.location!.dtr,
+                                item.location!.referenceLocation,
+                                item.location!.shelf,
+                                item.location!.position,
                               );
                             },
                           ),
@@ -143,7 +143,7 @@ class PepProductionPage extends StatelessWidget {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              title: Text(item.location!.item, style: TextStyle(fontWeight: FontWeight.bold),),
+                              title: Text(item.location!.dtr, style: TextStyle(fontWeight: FontWeight.bold),),
                               subtitle: Text(
                                 'Ferramentas:\n• ${item.production!.toolCode}\n• ${item.production!.secondToolCode}',
                               ),

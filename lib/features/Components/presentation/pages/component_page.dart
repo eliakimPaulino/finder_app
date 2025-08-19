@@ -1,22 +1,22 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:finder_app/features/regular_production_page/presentation/controller/regular_production_page_component_data_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../common/widgets/buttons/common_buttons.dart';
 import '../../../../core/constants/sizes.dart';
-import '../../../pep_production_page/presentation/controller/pep_production_page_component_data_provider.dart';
 import '../../data/datasources/component_local_data_source.dart';
 import '../../data/repositories/component_repository_impl.dart';
-import '../../domain/entities/item_entity.dart';
+// import '../../domain/entities/component_entity.dart';
 import '../../domain/usecases/get_items.dart';
 import '../controllers/component_controller.dart';
 import '../../../../core/constants/colors.dart';
 import 'widgets/component_page_widget.dart';
 
 class ComponentPage extends StatefulWidget {
-  const ComponentPage({super.key, });
+  const ComponentPage({super.key});
 
   @override
   State<ComponentPage> createState() => _ComponentPageState();
@@ -87,6 +87,16 @@ class _ComponentPageState extends State<ComponentPage> {
                                 : KColors.textPrimaryLight,
                           ),
                         ),
+                        Text(
+                          'Lista atualizada em 25/07/2025',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: dark
+                                ? KColors.buttonSecondary
+                                : KColors.darkBackground,
+                          ),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(16.0),
                           child: TextField(
@@ -135,8 +145,8 @@ class _ComponentPageState extends State<ComponentPage> {
                           child: ListView.builder(
                             itemCount: controller.items.length,
                             itemBuilder: (_, index) {
-                              final component = controller.items[index]
-                                  .formatarDescricao();
+                              final component = controller.items[index];
+                                  // .formatarDescricao();
                               return Container(
                                 margin: const EdgeInsets.symmetric(
                                   horizontal: 16,
@@ -169,54 +179,38 @@ class _ComponentPageState extends State<ComponentPage> {
                                             'Adicionar à Lista de Produção',
                                         onPressed: () {
                                           final componentController = context
-                                              .read<ComponentController>();
-                                          ComponentEntity? component;
+                                              .read<
+                                                RegularProductionListProvider
+                                              >();
 
-                                          try {
-                                            component = componentController
-                                                .items
-                                                .firstWhere(
-                                                  (c) =>
-                                                      c.item ==
-                                                      component!.item,
-                                                );
-                                          } catch (_) {
-                                            component = null;
-                                          }
+                                          final components = componentController
+                                              .componentList
+                                              .where(
+                                                (c) => c.dtr == component.dtr,
+                                              )
+                                              .toList();
 
-                                          if (component != null) {
+                                          for (var component in components) {
                                             context
-                                                .read<PepProductionListProvider>()
+                                                .read<
+                                                  RegularProductionListProvider
+                                                >()
                                                 .addComponentLocationItem(
                                                   component,
                                                 );
+
                                             ScaffoldMessenger.of(
                                               context,
                                             ).showSnackBar(
                                               SnackBar(
                                                 backgroundColor:
                                                     KColors.successPrimary,
-                                                duration: Duration(seconds: 1),
-                                                content: Text(
-                                                  '${component.item} adicionado com sucesso!',
-                                                  style: TextStyle(
-                                                    color:
-                                                        KColors.textWhiteLight,
-                                                  ),
+                                                duration: const Duration(
+                                                  seconds: 1,
                                                 ),
-                                              ),
-                                            );
-                                          } else {
-                                            ScaffoldMessenger.of(
-                                              context,
-                                            ).showSnackBar(
-                                              const SnackBar(
-                                                backgroundColor:
-                                                    KColors.errorSoft,
-                                                duration: Duration(seconds: 1),
                                                 content: Text(
-                                                  'Componente físico não encontrado.',
-                                                  style: TextStyle(
+                                                  '${component.dtr} adicionado com sucesso!',
+                                                  style: const TextStyle(
                                                     color:
                                                         KColors.textWhiteLight,
                                                   ),
@@ -224,6 +218,14 @@ class _ComponentPageState extends State<ComponentPage> {
                                               ),
                                             );
                                           }
+
+                                          context
+                                              .read<
+                                                RegularProductionListProvider
+                                              >()
+                                              .addComponentLocationItem(
+                                                component,
+                                              );
                                         },
                                         child: const Icon(Icons.add),
                                       ),
@@ -233,24 +235,23 @@ class _ComponentPageState extends State<ComponentPage> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          component.descricao,
+                                          component.description,
                                           style: const TextStyle(
                                             fontSize: KSizes.fontSizeLg,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                         Text(
-                                          component.item,
+                                          component.dtr,
                                           style: const TextStyle(
                                             fontSize: KSizes.fontSizeLg,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                         KBuildComponentInfo(
-                                          local: component.localReferencia,
-                                          shelf: component.prateleira,
-                                          position: component.posicao,
-                                          flow: component.fluxo,
+                                          location: component.referenceLocation,
+                                          shelf: component.shelf,
+                                          position: component.position,
                                         ),
                                       ],
                                     ),
@@ -268,7 +269,9 @@ class _ComponentPageState extends State<ComponentPage> {
             },
           ),
         ),
-        floatingActionButton: KFloatingActionButton(),
+        floatingActionButton: KFloatingActionButton(
+          routeName: '/production-page',
+        ),
       ),
     );
   }

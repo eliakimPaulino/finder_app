@@ -3,17 +3,15 @@ import 'package:finder_app/core/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class KBuildComponentInfo extends StatelessWidget {
-  final String local;
+  final String location;
   final String shelf;
   final String position;
-  final String flow;
 
   const KBuildComponentInfo({
     super.key,
-    required this.local,
+    required this.location,
     required this.shelf,
     required this.position,
-    required this.flow,
   });
 
   @override
@@ -26,7 +24,7 @@ class KBuildComponentInfo extends StatelessWidget {
         children: [
           SizedBox(height: 4),
           Text(
-            local,
+            'Local: $location',
             style: TextStyle(
               fontSize: KSizes.fontSizeMd,
               color: dark ? KColors.textPrimaryDark : KColors.textPrimaryLight,
@@ -35,18 +33,27 @@ class KBuildComponentInfo extends StatelessWidget {
           ),
           SizedBox(height: 12),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
                 "Prateleira: $shelf",
-                 
-                style: TextStyle(fontSize: KSizes.fontSizeSm, color: dark ? KColors.textSecondaryDark : KColors.textSecondaryLight),
+
+                style: TextStyle(
+                  fontSize: KSizes.fontSizeSm,
+                  color: dark
+                      ? KColors.textSecondaryDark
+                      : KColors.textSecondaryLight,
+                ),
               ),
               Text(
                 'Posição: $position',
-                style: TextStyle(fontSize: KSizes.fontSizeSm, color: dark ? KColors.textSecondaryDark : KColors.textSecondaryLight),
+                style: TextStyle(
+                  fontSize: KSizes.fontSizeSm,
+                  color: dark
+                      ? KColors.textSecondaryDark
+                      : KColors.textSecondaryLight,
+                ),
               ),
-              Text("Fluxo: $flow", style: TextStyle(fontSize: KSizes.fontSizeSm, color: dark ? KColors.textSecondaryDark : KColors.textSecondaryLight)),
             ],
           ),
         ],

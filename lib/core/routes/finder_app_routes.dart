@@ -1,4 +1,4 @@
-import 'package:finder_app/features/production_page/presentation/production_page.dart';
+import 'package:finder_app/features/regular_production_page/presentation/controller/regular_production_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/authentication/presentation/page/login.dart';
@@ -22,7 +22,7 @@ class KFinderAppRoutes {
         return MaterialPageRoute(builder: (_) => const PepComponentPage());
 
       case '/production-page':
-        return MaterialPageRoute(builder: (_) => const ProductionPage());
+        return MaterialPageRoute(builder: (_) => const RegularProductionPage());
 
       default:
         return _errorRoute();

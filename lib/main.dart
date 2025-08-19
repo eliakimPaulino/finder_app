@@ -1,4 +1,5 @@
 import 'package:finder_app/features/pep_components/presentation/controllers/pep_component_controller.dart';
+import 'package:finder_app/features/regular_production_page/presentation/controller/regular_production_page_component_data_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,8 +9,6 @@ import 'features/components/data/datasources/component_local_data_source.dart';
 import 'features/components/data/repositories/component_repository_impl.dart';
 import 'features/components/domain/usecases/get_items.dart';
 import 'features/components/presentation/controllers/component_controller.dart';
-import 'features/pep_components/domain/entities/pep_component_entity.dart';
-import 'features/production_page/presentation/controller/production_page_component_data_provider.dart';
 
 void main() {
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +16,13 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ProductionListProvider()),
+        ChangeNotifierProvider(
+          create: (_) {
+            final controller = RegularProductionListProvider();
+            controller.addComponentLocationItem(null); // Initialize with null or appropriate value
+            return controller;
+          },
+        ),
         ChangeNotifierProvider(
           create: (_) {
             final controller = PepComponentController(
